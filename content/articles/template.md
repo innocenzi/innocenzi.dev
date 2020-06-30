@@ -2,7 +2,11 @@
 title: Blog title
 published: false
 date: 30-06-2020
-tags: []
+tags: ['Blog']
 description: ''
 cover_image: '../images/landscape.jpg'
 ---
+
+```php
+$test = '';
+```
