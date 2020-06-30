@@ -5,6 +5,7 @@ const main = new Theme() //
 		background: '#f4f5f7',
 		'on-background': '#061030',
 		surface: '#ffffff',
+		'on-surface': '#061030',
 		brand: '#4854bc',
 		'on-brand': '#ffffff',
 		navigation: '#1a202c',
@@ -13,11 +14,14 @@ const main = new Theme() //
 		icon: '#e4f7ff',
 		'on-icon': '#4854bc',
 		technology: '#5e6890',
+		callout: '#4854bc',
+		'on-callout': '#ffffff',
 	})
-	.addOpacityVariant('muted', 0.75, 'on-background')
-	.addOpacityVariant('bullet', 0.25, 'technology')
 	.addColorVariant('1', '#f9dbff', 'highlight')
 	.addColorVariant('2', '#dbf5ff', 'highlight')
+	.addColorVariant('muted', '#727ee6', 'on-callout')
+	.addOpacityVariant('muted', 0.75, 'on-background')
+	.addOpacityVariant('bullet', 0.25, 'technology')
 	.addColorVariant('hover', '#2d384d', 'navigation')
 	.setVariable('focus', 'inset 0 0 0 4px rgba(66, 153, 225, 0.5)', 'boxShadow', 'shadow')
 	.setVariable('article', '#f4f5f7', 'borderColor', 'border');
@@ -35,11 +39,14 @@ const dark = new Theme() //
 		icon: '#ecb0e2',
 		'on-icon': '#21001c',
 		technology: '#95a0cc',
+		callout: '#21001c',
+		'on-callout': '#727ee6',
 	})
-	.addOpacityVariant('muted', 0.75, 'on-background')
-	.addOpacityVariant('bullet', 0.25, 'technology')
 	.addColorVariant('1', '#4c426d', 'highlight')
 	.addColorVariant('2', '#6e4141', 'highlight')
+	.addColorVariant('muted', '#727ee6', 'on-callout')
+	.addOpacityVariant('muted', 0.75, 'on-background')
+	.addOpacityVariant('bullet', 0.25, 'technology')
 	.addColorVariant('hover', '#252833', 'navigation')
 	.setVariable('focus', 'inset 0 0 0 4px rgba(66, 153, 225, 0.5)', 'boxShadow', 'shadow')
 	.setVariable('article', '#f4f5f7', 'borderColor', 'border');

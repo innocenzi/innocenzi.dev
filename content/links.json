@@ -13,5 +13,10 @@
 		"label": "Articles",
 		"url": "/articles/",
 		"order": "3"
+	},
+	"mail": {
+		"label": "Mail",
+		"url": "mailto:enzo@innocenzi.dev",
+		"order": "4"
 	}
 }

@@ -60,6 +60,17 @@
 				</ul>
 			</article>
 		</home-section>
+
+		<!-- Mail -->
+		<section class="flex justify-between w-full p-8 mt-24 rounded-md shadow-md bg-callout text-on-callout">
+			<div class="flex items-center">
+				<icon-at class="w-12 h-12 mr-4 text-on-callout-muted" />
+				<span class="text-2xl">If you want to reach out to me, feel free to send me an email.</span>
+			</div>
+			<a :href="$page.mail.url" class="transition-transform duration-150 transform rounded-full hover:scale-110">
+				<icon-arrow class="w-12 h-12" />
+			</a>
+		</section>
 	</Layout>
 </template>
 
@@ -121,6 +132,9 @@ export default {
 <page-query>
 query {
   twitter: link (id: "twitter") {
+    url
+  }
+  mail: link (id: "mail") {
     url
   }
   stack: allTechnology (filter: { main: { eq: true } }) {
