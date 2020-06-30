@@ -36,7 +36,7 @@ module.exports = {
 	css: {
 		loaderOptions: {
 			postcss: {
-				plugins: [require('tailwindcss'), require('postcss-font-magician')],
+				plugins: [require('tailwindcss'), require('postcss-nested'), require('postcss-font-magician')],
 			},
 		},
 	},

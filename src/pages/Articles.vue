@@ -1,18 +1,34 @@
 <template>
 	<Layout>
-		<h1>About us</h1>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a
-			voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime!
-			Iusto.
-		</p>
+		<article-list
+			:title="hasArticles ? 'Articles' : 'Come back later'"
+			:subtitle="hasArticles ? 'Here is some of the stuff I wrote.' : 'I did not write anything yet.'"
+			:articles="articles"
+			:class="{ 'mt-40': !hasArticles }"
+		/>
 	</Layout>
 </template>
 
 <script>
+import { DateTime } from 'luxon';
+import HomeSection from '~/components/HomeSection.vue';
+import ArticleList from '~/components/ArticleList.vue';
+
 export default {
 	metaInfo: {
-		title: 'About us',
+		title: 'Articles',
+	},
+	components: {
+		HomeSection,
+		ArticleList,
+	},
+	computed: {
+		hasArticles() {
+			return this.articles.length > 0;
+		},
+		articles() {
+			return this.$page.articles.edges.map(({ node }) => node);
+		},
 	},
 };
 </script>
@@ -25,8 +41,10 @@ query {
 				id
 				title
 				description
-				cover_image (width: 770, height: 380, blur: 10)
+				excerpt
         path
+        date
+        timeToRead
         tags {
           id
           title

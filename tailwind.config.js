@@ -17,8 +17,10 @@ module.exports = {
 	variants: {
 		rotate: ['hover'],
 		height: ['responsive'],
-		display: ['last', 'responsive'],
+		display: ['last', 'responsive', 'group-hover'],
 		boxShadow: ['focus'],
+		scale: ['responsive', 'hover', 'focus', 'group-hover'],
+		textDecoration: ['responsive', 'hover', 'focus'],
 	},
 
 	plugins: [require('tailwindcss-theming')],

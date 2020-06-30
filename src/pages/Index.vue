@@ -23,7 +23,7 @@
 		</section>
 
 		<!-- Stack -->
-		<home-section title="Stack" subtitle="Everyone has a favorite stack. Here's mine.">
+		<home-section title="Stack" subtitle="Everyone has a favorite stack. Here's mine." :grid="true" class="mt-40">
 			<article v-for="tech in stack" :key="tech.id" class="flex mb-12">
 				<div class="mr-8">
 					<div class="flex items-center justify-center w-20 h-20 rounded-full bg-icon text-on-icon">
@@ -41,6 +41,8 @@
 		<home-section
 			title="Other technologies I work with"
 			subtitle="I may have favorites, though some other are worth being mentioned."
+			class="mt-40"
+			:grid="true"
 		>
 			<article v-for="(category, id) of categories" :key="id" class="flex flex-col mb-16">
 				<header class="flex items-center mb-4">

@@ -2,10 +2,8 @@ const { Theme, ThemeManager } = require('tailwindcss-theming/api');
 
 const main = new Theme() //
 	.addColors({
-		background: '#f4f5f7',
+		background: '#ffffff',
 		'on-background': '#061030',
-		surface: '#ffffff',
-		'on-surface': '#061030',
 		brand: '#4854bc',
 		'on-brand': '#ffffff',
 		navigation: '#1a202c',
@@ -16,13 +14,16 @@ const main = new Theme() //
 		technology: '#5e6890',
 		callout: '#4854bc',
 		'on-callout': '#ffffff',
+		metadata: '#6f7895',
 	})
 	.addColorVariant('1', '#f9dbff', 'highlight')
 	.addColorVariant('2', '#dbf5ff', 'highlight')
 	.addColorVariant('muted', '#727ee6', 'on-callout')
-	.addOpacityVariant('muted', 0.75, 'on-background')
+	.addOpacityVariant('muted', 0.75, 'metadata')
+	.addOpacityVariant('muted', 0.5, 'on-background')
 	.addOpacityVariant('bullet', 0.25, 'technology')
 	.addColorVariant('hover', '#2d384d', 'navigation')
+	.setVariable('underline', 'inset 0 -2px 0 rgba(78,160,250,.5)', 'boxShadow', 'shadow')
 	.setVariable('focus', 'inset 0 0 0 4px rgba(66, 153, 225, 0.5)', 'boxShadow', 'shadow')
 	.setVariable('article', '#f4f5f7', 'borderColor', 'border');
 
@@ -30,7 +31,6 @@ const dark = new Theme() //
 	.addColors({
 		background: '#1c1e26',
 		'on-background': '#f1f1f1',
-		surface: '#1c1e26',
 		brand: '#ecb0e2',
 		'on-brand': '#21001c',
 		navigation: '#2f3344',

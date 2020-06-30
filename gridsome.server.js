@@ -17,7 +17,7 @@ module.exports = function(api) {
 	addJsonSource('./content/technologies.json', 'Technology');
 	addJsonSource('./content/links.json', 'Link');
 
-	api.createPages(({ createPage }) => {
-		// Use the Pages API here: https://gridsome.org/docs/pages-api/
+	api.loadSource(async (store) => {
+		store.addMetadata('siteUrl', 'https://innocenzi.dev');
 	});
 };
