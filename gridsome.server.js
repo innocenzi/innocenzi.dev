@@ -6,17 +6,16 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function(api) {
-	api.loadSource(async (actions) => {
-		const technologies = require('./content/technologies.json');
-
-		const collection = actions.addCollection({
-			typeName: 'Technology',
+	const addJsonSource = (path, typeName) => {
+		api.loadSource(async (actions) => {
+			const data = require(path);
+			const collection = actions.addCollection({ typeName });
+			Object.entries(data).forEach(([id, item]) => collection.addNode({ id, ...item }));
 		});
+	};
 
-		for (const technology of Object.values(technologies)) {
-			collection.addNode(technology);
-		}
-	});
+	addJsonSource('./content/technologies.json', 'Technology');
+	addJsonSource('./content/links.json', 'Link');
 
 	api.createPages(({ createPage }) => {
 		// Use the Pages API here: https://gridsome.org/docs/pages-api/

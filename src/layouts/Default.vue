@@ -1,17 +1,21 @@
 <template>
-	<div class="layout">
-		<header class="header">
-			<strong>
-				<g-link to="/">{{ $static.metadata.siteName }}</g-link>
-			</strong>
-			<nav class="nav">
-				<g-link class="nav__link" to="/">Home</g-link>
-				<g-link class="nav__link" to="/about/">About</g-link>
-			</nav>
-		</header>
-		<slot />
-	</div>
+	<main class="h-full min-h-screen antialiased bg-surface text-on-background">
+		<page-header class="container mx-auto mt-12" />
+		<section class="container mx-auto mt-12">
+			<slot />
+		</section>
+	</main>
 </template>
+
+<script>
+import PageHeader from '~/components/Header.vue';
+
+export default {
+	components: {
+		PageHeader,
+	},
+};
+</script>
 
 <static-query>
 query {

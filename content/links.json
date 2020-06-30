@@ -1,0 +1,17 @@
+{
+	"github": {
+		"label": "GitHub",
+		"url": "https://github.com/innocenzi",
+		"order": "1"
+	},
+	"twitter": {
+		"label": "Twitter",
+		"url": "https://twitter.com/enzoinnocenzi",
+		"order": "2"
+	},
+	"articles": {
+		"label": "Articles",
+		"url": "/articles/",
+		"order": "3"
+	}
+}
