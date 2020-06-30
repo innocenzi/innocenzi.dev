@@ -6,8 +6,16 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function(api) {
-	api.loadSource(({ addCollection }) => {
-		// Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+	api.loadSource(async (actions) => {
+		const technologies = require('./content/technologies.json');
+
+		const collection = actions.addCollection({
+			typeName: 'Technology',
+		});
+
+		for (const technology of Object.values(technologies)) {
+			collection.addNode(technology);
+		}
 	});
 
 	api.createPages(({ createPage }) => {

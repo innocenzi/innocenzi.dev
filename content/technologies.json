@@ -1,0 +1,110 @@
+{
+	"laravel": {
+		"name": "Laravel",
+		"icon": "laravel",
+		"description": "The most popular PHP framework. Super pleasant to work with, extremely active ecosystem. 10/10",
+		"main": true,
+		"categories": ["backend"]
+	},
+	"tailwind": {
+		"name": "Tailwind CSS",
+		"icon": "tailwind",
+		"description": "A low-level, utility-first CSS framework. One of the best tools available in the modern web. It made me appreciate front-end.",
+		"main": true,
+		"categories": ["frontend"]
+	},
+	"alpine": {
+		"name": "Alpine.js",
+		"icon": "alpine",
+		"description": "A minimalist, Vue-like framework. Kind of the Tailwind CSS of JavaScript.",
+		"main": true,
+		"categories": ["frontend"]
+	},
+	"livewire": {
+		"name": "Livewire",
+		"icon": "livewire",
+		"description": "A powerful full-stack user interface framework for Laravel. It makes things simple.",
+		"main": true,
+		"categories": ["backend"]
+	},
+	"php": {
+		"name": "PHP",
+		"categories": ["backend"]
+	},
+	"postgresql": {
+		"name": "PostgreSQL",
+		"categories": ["backend"]
+	},
+	"typescript": {
+		"name": "TypeScript",
+		"categories": ["backend", "frontend"]
+	},
+	"inertia": {
+		"name": "Inertia.js",
+		"categories": ["backend"]
+	},
+	"mysql": {
+		"name": "MySQL",
+		"categories": ["backend"]
+	},
+	"node": {
+		"name": "Node.js",
+		"categories": ["backend"]
+	},
+	"symfony": {
+		"name": "Symfony",
+		"categories": ["backend"]
+	},
+	"javascript": {
+		"name": "JavaScript",
+		"categories": ["frontend"]
+	},
+	"vue": {
+		"name": "Vue.js",
+		"categories": ["frontend"]
+	},
+	"postcss": {
+		"name": "PostCSS",
+		"categories": ["frontend"]
+	},
+	"sass": {
+		"name": "SASS",
+		"categories": ["frontend"]
+	},
+	"bootstrap": {
+		"name": "Bootstrap",
+		"categories": ["frontend"]
+	},
+	"jquery": {
+		"name": "jQuery",
+		"categories": ["frontend"]
+	},
+	"git": {
+		"name": "Git",
+		"categories": ["tool"]
+	},
+	"jest": {
+		"name": "Jest",
+		"categories": ["tool"]
+	},
+	"mix": {
+		"name": "Laravel Mix",
+		"categories": ["tool"]
+	},
+	"encore": {
+		"name": "Webpack Encore",
+		"categories": ["tool"]
+	},
+	"yarn": {
+		"name": "Yarn",
+		"categories": ["tool"]
+	},
+	"npm": {
+		"name": "NPM",
+		"categories": ["tool"]
+	},
+	"figma": {
+		"name": "Figma",
+		"categories": ["design", "tool"]
+	}
+}
