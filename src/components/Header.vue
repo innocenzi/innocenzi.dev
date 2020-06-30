@@ -19,6 +19,8 @@
 				v-for="link in links"
 				:key="link.id"
 				:to="link.url"
+				target="_self"
+				active-class="bg-navigation-active shadow-navigation-active"
 				class="px-5 py-4 transition-colors duration-150 hover:bg-navigation-hover focus:outline-none focus:bg-navigation-hover"
 			>
 				{{ link.label }}

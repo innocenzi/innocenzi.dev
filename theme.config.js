@@ -23,7 +23,8 @@ const main = new Theme() //
 	.addOpacityVariant('muted', 0.5, 'on-background')
 	.addOpacityVariant('bullet', 0.25, 'technology')
 	.addColorVariant('hover', '#2d384d', 'navigation')
-	.setVariable('underline', 'inset 0 -2px 0 rgba(78,160,250,.5)', 'boxShadow', 'shadow')
+	.addColorVariant('active', '#242b3a', 'navigation')
+	.setVariable('navigation-active', 'inset 0 -4px #6b6e75', 'boxShadow', 'shadow')
 	.setVariable('focus', 'inset 0 0 0 4px rgba(66, 153, 225, 0.5)', 'boxShadow', 'shadow')
 	.setVariable('article', '#f4f5f7', 'borderColor', 'border');
 
