@@ -11,7 +11,7 @@ const main = new Theme() //
 		'on-navigation': '#ffffff',
 		highlight: '#f9dbff',
 		icon: '#e4f7ff',
-		'on-icon': '#005071',
+		'on-icon': '#4854bc',
 		technology: '#5e6890',
 	})
 	.addOpacityVariant('muted', 0.75, 'on-background')

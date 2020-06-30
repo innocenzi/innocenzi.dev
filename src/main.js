@@ -4,6 +4,16 @@ import '~/main.css';
 import DefaultLayout from '~/layouts/Default.vue';
 
 export default function(Vue, { router, head, isClient }) {
-	// Set default layout as a global component
 	Vue.component('Layout', DefaultLayout);
+
+	const requirements = require.context('./components/icons', false, /[A-Z]\w+\.(vue|js)$/);
+	requirements.keys().forEach((filename) => {
+		const config = requirements(filename);
+		const name = filename
+			.split('/')
+			.pop()
+			.replace(/\.\w+$/, '');
+
+		Vue.component(name, config.default ?? config);
+	});
 }

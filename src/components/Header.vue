@@ -1,8 +1,9 @@
 <template>
-	<header class="flex items-center justify-between">
+	<header class="flex flex-col items-center justify-between lg:flex-row">
 		<g-link
 			to="/"
 			:class="[
+				'mb-6 lg:mb-0',
 				'rounded-full',
 				'flex items-center',
 				'transition-transform duration-200',
