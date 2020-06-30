@@ -7,6 +7,9 @@
 		"explore": "gridsome explore"
 	},
 	"dependencies": {
+		"@gridsome/remark-prismjs": "^0.3.0",
+		"@gridsome/source-filesystem": "^0.6.2",
+		"@gridsome/transformer-remark": "^0.6.0",
 		"gridsome": "^0.7.0",
 		"postcss-font-magician": "^2.3.1",
 		"tailwindcss": "^1.4.6",
