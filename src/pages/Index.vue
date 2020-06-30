@@ -1,5 +1,6 @@
 <template>
 	<Layout>
+		<!-- Header -->
 		<section class="flex flex-col items-center lg:space-x-16 lg:flex-row lg:mt-40">
 			<div class="px-12 text-6xl font-bold leading-tight tracking-tighter md:px-0 lg:w-1/2">
 				Hey, I am <a :href="$page.twitter.url" class="text-brand">Enzo Innocenzi</a>.
@@ -21,37 +22,97 @@
 			</div>
 		</section>
 
-		<section class="mt-40">
-			<header class="mx-auto mb-24 text-center">
-				<h1 class="text-6xl font-bold leading-tight tracking-tighter">Stack</h1>
-				<span class="text-3xl text-brand">Everyone has a favorite stack. Here's mine.</span>
-			</header>
+		<!-- Stack -->
+		<home-section title="Stack" subtitle="Everyone has a favorite stack. Here's mine.">
+			<article v-for="tech in stack" :key="tech.id" class="flex mb-12">
+				<div class="mr-8">
+					<div class="flex items-center justify-center w-20 h-20 rounded-full bg-icon text-on-icon">
+						<component v-if="tech.icon" :is="`icon-${tech.icon}`" class="w-12 h-12" />
+					</div>
+				</div>
+				<div>
+					<h1 class="text-3xl font-bold tracking-tight uppercase text-brand" v-text="tech.name" />
+					<p class="text-2xl" v-text="tech.description" />
+				</div>
+			</article>
+		</home-section>
 
-			<div class="grid justify-center grid-cols-2 gap-8">
-				<article v-for="tech in stack" :key="tech.id" class="flex">
-					<div class="w-1/4">
-						<div class="flex items-center justify-center w-20 h-20 mx-auto rounded-full bg-icon text-on-icon">
-							<component v-if="tech.icon" :is="`icon-${tech.icon}`" class="w-12 h-12" />
-						</div>
+		<!-- Technologies -->
+		<home-section
+			title="Other technologies I work with"
+			subtitle="I may have favorites, though some other are worth being mentioned."
+		>
+			<article v-for="(category, id) of categories" :key="id" class="flex flex-col mb-16">
+				<header class="flex items-center mb-4">
+					<div class="flex items-center justify-center w-10 h-10 rounded-full bg-on-icon text-icon">
+						<component :is="`icon-${category.icon}`" class="w-6 h-6" />
 					</div>
-					<div class="w-3/4">
-						<h1 class="text-3xl font-bold tracking-tight uppercase text-brand" v-text="tech.name" />
-						<p class="text-2xl" v-text="tech.description" />
-					</div>
-				</article>
-			</div>
-		</section>
+					<h1 v-text="category.name" class="ml-4 text-3xl font-bold tracking-tighter uppercase text-brand"></h1>
+				</header>
+
+				<ul class="flex flex-wrap text-2xl leading-loose tracking-wider">
+					<li class="text-technology" v-for="(tech, id) in category.items" :key="id">
+						<span>{{ tech.name }}</span>
+						<span class="mx-3 text-technology-bullet" :class="{ 'last:hidden': isLast(category, id) }">
+							•
+						</span>
+					</li>
+				</ul>
+			</article>
+		</home-section>
 	</Layout>
 </template>
 
 <script>
+import HomeSection from '~/components/HomeSection.vue';
+
 export default {
 	metaInfo: {
 		title: 'Enzo Innocenzi — Web developer',
 	},
+	components: { HomeSection },
 	computed: {
 		stack() {
 			return this.$page.stack.edges.map(({ node }) => node);
+		},
+		technologies() {
+			return this.$page.technologies.edges.map(({ node }) => node);
+		},
+		categories() {
+			const categories = {
+				backend: {
+					name: 'Back-end',
+					icon: 'terminal',
+					items: [],
+				},
+				frontend: {
+					name: 'Front-end',
+					icon: 'color-swatch',
+					items: [],
+				},
+				tool: {
+					name: 'Other tools & software',
+					icon: 'briefcase',
+					items: [],
+				},
+			};
+
+			this.technologies.forEach((technology) => {
+				technology.categories.forEach((category) => {
+					if (!categories[category]) {
+						categories[category] = { name: category, items: [] };
+					}
+
+					categories[category].items.push(technology);
+				});
+			});
+
+			return categories;
+		},
+	},
+	methods: {
+		isLast(category, id) {
+			return id === Object.keys(category.items).length - 1;
 		},
 	},
 };
@@ -62,13 +123,24 @@ query {
   twitter: link (id: "twitter") {
     url
   }
-  stack: allTechnology (filter: {main: {eq: true}}) {
+  stack: allTechnology (filter: { main: { eq: true } }) {
     edges {
       node {
         id
         icon
         name
         description
+      }
+    }
+  }
+	technologies: allTechnology(filter: { main: { ne: true } }) {
+    edges {
+      node {
+        id
+        name
+        description
+        icon
+				categories
       }
     }
   }
