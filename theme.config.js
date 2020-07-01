@@ -17,6 +17,8 @@ const main = new Theme() //
 		callout: '#4854bc',
 		'on-callout': '#ffffff',
 		metadata: '#6f7895',
+		scrollbar: '#e1e1e1',
+		'scrollbar-thumb': '#4854bc',
 	})
 	.addColorVariant('reverse', '#4854bc', 'icon')
 	.addColorVariant('reverse', '#e4f7ff', 'on-icon')
@@ -48,6 +50,9 @@ const dark = new Theme() //
 		technology: '#95a0cc',
 		callout: '#272a35',
 		'on-callout': '#ecb0e2',
+		metadata: '#6f7895',
+		scrollbar: '#2f3343',
+		'scrollbar-thumb': '#ecb0e2',
 	})
 	.addColorVariant('reverse', '#252832', 'icon')
 	.addColorVariant('reverse', '#ecb0e2', 'on-icon')

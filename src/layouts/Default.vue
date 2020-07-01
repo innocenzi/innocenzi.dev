@@ -85,4 +85,20 @@ query {
 *:focus {
 	@apply outline-none shadow-outline;
 }
+
+* {
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		@apply bg-scrollbar;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		@apply bg-scrollbar-thumb rounded-md cursor-pointer;
+	}
+}
 </style>
