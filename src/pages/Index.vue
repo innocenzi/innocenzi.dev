@@ -84,6 +84,25 @@ import HomeSection from '~/components/HomeSection.vue';
 export default {
 	metaInfo: {
 		title: 'Enzo Innocenzi — Web developer',
+		link: [{ rel: 'canonical', href: this.$page.metadata.siteUrl }],
+		meta: [
+			{
+				key: 'description',
+				name: 'description',
+				content: 'Hey. I am a full-stack web developer. Nothing much to say.',
+			},
+			{ property: 'og:type', content: 'profile' },
+			{ property: 'og:profile:first_name', content: 'Enzo' },
+			{ property: 'og:profile:last_name', content: 'Innocenzi' },
+			{ property: 'og:profile:username', content: 'innocenzi' },
+			{ property: 'og:profile:gender', content: 'male' },
+			{ name: 'twitter:card', content: 'summary' },
+			{ name: 'twitter:title', content: 'Enzo Innocenzi — Web developer' },
+			{ name: 'twitter:description', content: 'Hey. I am a full-stack web developer. Nothing much to say.' },
+			{ name: 'twitter:site', content: '@innocenzi' },
+			{ name: 'twitter:creator', content: '@innocenzi' },
+			// { name: 'twitter:image', content: this.ogImageUrl },
+		],
 	},
 	components: { HomeSection },
 	computed: {
@@ -140,6 +159,9 @@ query {
   }
   mail: link (id: "mail") {
     url
+  }
+  metadata {
+    siteUrl
   }
   stack: allTechnology (filter: { main: { eq: true } }) {
     edges {
