@@ -27,6 +27,10 @@ export default {
 					content: this.$page.metadata.siteDescription,
 				},
 				{ property: 'og:type', content: 'profile' },
+				{ property: 'og:url', content: this.$page.metadata.siteUrl + this.$route.path },
+				{ property: 'og:title', content: this.$page.metadata.siteName },
+				{ property: 'og:site_name', content: this.$page.metadata.siteName },
+				{ property: 'og:description', content: this.$page.metadata.siteDescription },
 				{ property: 'og:profile:first_name', content: 'Enzo' },
 				{ property: 'og:profile:last_name', content: 'Innocenzi' },
 				{ property: 'og:profile:gender', content: 'male' },
@@ -47,6 +51,8 @@ export default {
 query {
 	metadata {
 		siteUrl
+		siteDescription
+		siteName
 	}
 }
 </page-query>

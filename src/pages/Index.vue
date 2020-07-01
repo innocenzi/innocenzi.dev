@@ -91,7 +91,6 @@ export default {
 		return {
 			title: `${this.$page.metadata.siteName} — Software developer`,
 			titleTemplate: '%s',
-			// link: [{ rel: 'canonical', href: this.$page.metadata.siteUrl }],
 		};
 	},
 	components: { HomeSection },
