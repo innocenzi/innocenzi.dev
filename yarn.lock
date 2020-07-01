@@ -853,6 +853,15 @@
     sort-package-json "^1.15.0"
     update-notifier "^4.1.0"
 
+"@gridsome/plugin-sitemap@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/plugin-sitemap/-/plugin-sitemap-0.3.0.tgz#2ab1a0c0bc73ab4d7724fbedf4994daaf77c99b5"
+  integrity sha512-T7Av4kHOUJW0wynuQTY6sL6pk4NT2sZ34zarDaMF+spr+iqXDrXJsyhOd3+d4C/EfmoP+K2DizQRRR1efACaPA==
+  dependencies:
+    fs-extra "^7.0.0"
+    micromatch "^3.1.10"
+    sitemap "^2.1.0"
+
 "@gridsome/remark-prismjs@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@gridsome/remark-prismjs/-/remark-prismjs-0.3.0.tgz#3a0a6f67ab518ff9d42b75c1f97f834806181d04"
@@ -4384,6 +4393,13 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
+gridsome-plugin-rss@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-rss/-/gridsome-plugin-rss-1.2.0.tgz#9614f16bf77b97b8e6471428c8487195cf7f9168"
+  integrity sha512-rC96wu1RhMjHnrdH2AKz6zcBkdNfGSVyULXUQeFlvp74uNT9u71roRI/JlMLayk+ViMsUnxMFSJ6ExIwHTSYZQ==
+  dependencies:
+    rss "^1.2.2"
+
 gridsome@^0.7.0:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.17.tgz#c15fc04d26ce9ff635d956c23358498d87b672dd"
@@ -6044,6 +6060,18 @@ mime-db@1.44.0, mime-db@^1.28.0:
   version "1.44.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.44.0.tgz#fa11c5eb0aca1334b4233cb4d52f10c5a6272f92"
   integrity sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
+
+mime-db@~1.25.0:
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.25.0.tgz#c18dbd7c73a5dbf6f44a024dc0d165a1e7b1c392"
+  integrity sha1-wY29fHOl2/b0SgJNwNFloeexw5I=
+
+mime-types@2.1.13:
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.13.tgz#e07aaa9c6c6b9a7ca3012c69003ad25a39e92a88"
+  integrity sha1-4HqqnGxrmnyjASxpADrSWjnpKog=
+  dependencies:
+    mime-db "~1.25.0"
 
 mime-types@^2.1.12, mime-types@^2.1.21, mime-types@~2.1.19, mime-types@~2.1.24:
   version "2.1.27"
@@ -7979,6 +8007,14 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rss@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/rss/-/rss-1.2.2.tgz#50a1698876138133a74f9a05d2bdc8db8d27a921"
+  integrity sha1-UKFpiHYTgTOnT5oF0r3I240nqSE=
+  dependencies:
+    mime-types "2.1.13"
+    xml "1.0.1"
+
 run-parallel@^1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.1.9.tgz#c9dd3a7cf9f4b2c4b6244e173a6ed866e61dd679"
@@ -8238,6 +8274,15 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+sitemap@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-2.2.0.tgz#98b8502762c5d7e8c77c9be5061dce85b326f1b0"
+  integrity sha512-9Zoi3UBhSIt5jWENDRUbzsqLMJ+Fha3P2aQ2PRghmh0FOivtHsC4FAJdkAEKHvATajd74BWp/57Yh7kz/UA53Q==
+  dependencies:
+    lodash "^4.17.10"
+    url-join "^4.0.0"
+    xmlbuilder "^10.0.0"
 
 slash@^1.0.0:
   version "1.0.0"
@@ -9341,6 +9386,11 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
+url-join@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
+  integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
+
 url-loader@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-1.1.2.tgz#b971d191b83af693c5e3fea4064be9e1f2d7f8d8"
@@ -9780,6 +9830,16 @@ xdg-basedir@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
+
+xml@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
+  integrity sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
+
+xmlbuilder@^10.0.0:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-10.1.1.tgz#8cae6688cc9b38d850b7c8d3c0a4161dcaf475b0"
+  integrity sha512-OyzrcFLL/nb6fMGHbiRDuPup9ljBycsdCypwuyg5AAHvyWzGfChJpCXMG88AGTIMFhGZ9RccFN1e6lhg3hkwKg==
 
 xss@^1.0.6:
   version "1.0.7"

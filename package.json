@@ -7,10 +7,12 @@
 		"explore": "gridsome explore"
 	},
 	"dependencies": {
+		"@gridsome/plugin-sitemap": "^0.3.0",
 		"@gridsome/remark-prismjs": "^0.3.0",
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/transformer-remark": "^0.6.0",
 		"gridsome": "^0.7.0",
+		"gridsome-plugin-rss": "^1.2.0",
 		"luxon": "^1.24.1",
 		"medium-zoom": "^1.0.5",
 		"postcss-font-magician": "^2.3.1",
