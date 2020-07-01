@@ -16,7 +16,7 @@
 	"alpine": {
 		"name": "Alpine.js",
 		"icon": "alpine",
-		"description": "A minimalist, Vue-like framework. Kind of the Tailwind CSS of JavaScript.",
+		"description": "A minimalistic, Vue-like framework. Kind of the Tailwind CSS of JavaScript.",
 		"main": true,
 		"categories": ["frontend"]
 	},

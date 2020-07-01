@@ -164,7 +164,7 @@ query {
 		siteUrl
 		siteDescription
 	}
-  stack: allTechnology (filter: { main: { eq: true } }) {
+  stack: allTechnology (filter: { main: { eq: true } }, order: ASC) {
     edges {
       node {
         id
@@ -174,7 +174,7 @@ query {
       }
     }
   }
-	technologies: allTechnology(filter: { main: { ne: true } }) {
+	technologies: allTechnology(filter: { main: { ne: true } }, order: ASC) {
     edges {
       node {
         id
