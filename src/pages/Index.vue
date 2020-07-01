@@ -25,13 +25,13 @@
 
 		<!-- Stack -->
 		<home-section title="Stack" subtitle="Everyone has a favorite stack. Here's mine." :grid="true" class="mt-40">
-			<article v-for="tech in stack" :key="tech.id" class="flex mb-12">
-				<div class="mr-8">
+			<article v-for="tech in stack" :key="tech.id" class="flex flex-col items-center mb-12 sm:flex-row sm:items-start">
+				<div class="mb-8 sm:mr-8">
 					<div class="flex items-center justify-center w-20 h-20 rounded-full bg-icon text-on-icon">
 						<component v-if="tech.icon" :is="`icon-${tech.icon}`" class="w-12 h-12" />
 					</div>
 				</div>
-				<div>
+				<div class="text-center sm:text-left">
 					<h2 class="text-3xl font-bold tracking-tight uppercase text-brand" v-text="tech.name" />
 					<p class="text-2xl" v-text="tech.description" />
 				</div>
@@ -46,11 +46,16 @@
 			:grid="true"
 		>
 			<article v-for="(category, id) of categories" :key="id" class="flex flex-col items-center mb-16 lg:items-start">
-				<header class="flex items-center mb-4">
-					<div class="flex items-center justify-center w-10 h-10 rounded-full bg-icon-reverse text-on-icon-reverse">
+				<header class="flex flex-col items-center mb-4 md:flex-row">
+					<div
+						class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-icon-reverse text-on-icon-reverse md:mb-0"
+					>
 						<component :is="`icon-${category.icon}`" class="w-6 h-6" />
 					</div>
-					<h2 v-text="category.name" class="ml-4 text-3xl font-bold tracking-tighter uppercase text-brand" />
+					<h2
+						v-text="category.name"
+						class="text-3xl font-bold tracking-tighter text-center uppercase md:ml-4 md:text-left text-brand"
+					/>
 				</header>
 
 				<ul class="flex flex-wrap justify-center text-2xl leading-loose tracking-wider lg:justify-start">
@@ -76,7 +81,7 @@
 					<span class="text-2xl">If you want to reach out to me, feel free to send me an email.</span>
 				</div>
 				<icon-chevron-right
-					class="w-12 h-12 transition-transform duration-150 transform group-hover:scale-110 text-on-callout-muted"
+					class="w-24 h-24 ml-8 transition-transform duration-150 transform md:w-12 md:h-12 group-hover:scale-110 text-on-callout-muted"
 				/>
 			</a>
 		</section>

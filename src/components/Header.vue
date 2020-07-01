@@ -21,7 +21,15 @@
 			/>
 		</g-link>
 
-		<nav class="flex overflow-hidden rounded-lg shadow-md bg-navigation text-on-navigation">
+		<nav
+			:class="[
+				'flex flex-wrap justify-center',
+				'overflow-hidden',
+				'mx-3 sm:mx-0 rounded-lg shadow-md',
+				'sm:flex-no-wrap',
+				'bg-navigation text-on-navigation',
+			]"
+		>
 			<g-link
 				v-for="link in links"
 				:key="link.id"

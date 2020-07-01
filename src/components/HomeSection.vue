@@ -1,7 +1,9 @@
 <template>
 	<section>
 		<header class="w-2/3 mx-auto mb-24 text-center md:w-full">
-			<h1 class="text-6xl font-bold leading-tight tracking-tighter">{{ title }}</h1>
+			<h1 class="text-5xl font-bold leading-tight tracking-tighter md:text-6xl">
+				{{ title }}
+			</h1>
 			<span class="text-3xl text-brand">{{ subtitle }}</span>
 		</header>
 
