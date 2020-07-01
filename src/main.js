@@ -19,4 +19,42 @@ export default function(Vue, { router, head, isClient }) {
 
 		Vue.component(name, config.default ?? config);
 	});
+
+	// Add the theme switcher
+	Vue.mixin({
+		data: () => ({
+			theme: 'dark',
+		}),
+		mounted() {
+			const savedTheme = localStorage.getItem('theme');
+
+			if (savedTheme) {
+				this.setTheme(savedTheme);
+				return;
+			}
+
+			const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+			this.setTheme(userPrefersDark ? 'dark' : userPrefersLight ? 'light' : this.theme);
+		},
+		computed: {
+			isDarkTheme() {
+				return this.theme === 'dark';
+			},
+			isLightTheme() {
+				return this.theme === 'light';
+			},
+		},
+		methods: {
+			toggleTheme() {
+				this.setTheme(this.isDarkTheme ? 'light' : this.isLightTheme ? 'dark' : this.theme);
+			},
+			setTheme(scheme) {
+				localStorage.setItem('theme', scheme);
+				document.querySelector('body').dataset.theme = scheme;
+				this.theme = scheme;
+			},
+		},
+	});
 }

@@ -1,6 +1,8 @@
 const { Theme, ThemeManager } = require('tailwindcss-theming/api');
 
 const main = new Theme() //
+	.setName('light')
+	.targetable()
 	.addColors({
 		background: '#ffffff',
 		'on-background': '#061030',
@@ -16,6 +18,8 @@ const main = new Theme() //
 		'on-callout': '#ffffff',
 		metadata: '#6f7895',
 	})
+	.addColorVariant('reverse', '#4854bc', 'icon')
+	.addColorVariant('reverse', '#e4f7ff', 'on-icon')
 	.addColorVariant('1', '#f9dbff', 'highlight')
 	.addColorVariant('2', '#dbf5ff', 'highlight')
 	.addColorVariant('muted', '#727ee6', 'on-callout')
@@ -29,6 +33,8 @@ const main = new Theme() //
 	.setVariable('article', '#f4f5f7', 'borderColor', 'border');
 
 const dark = new Theme() //
+	.setName('dark')
+	.targetable()
 	.addColors({
 		background: '#1c1e26',
 		'on-background': '#f1f1f1',
@@ -40,12 +46,14 @@ const dark = new Theme() //
 		icon: '#ecb0e2',
 		'on-icon': '#21001c',
 		technology: '#95a0cc',
-		callout: '#21001c',
-		'on-callout': '#727ee6',
+		callout: '#272a35',
+		'on-callout': '#ecb0e2',
 	})
+	.addColorVariant('reverse', '#252832', 'icon')
+	.addColorVariant('reverse', '#ecb0e2', 'on-icon')
 	.addColorVariant('1', '#4c426d', 'highlight')
 	.addColorVariant('2', '#6e4141', 'highlight')
-	.addColorVariant('muted', '#727ee6', 'on-callout')
+	.addColorVariant('muted', '#343846', 'on-callout')
 	.addOpacityVariant('muted', 0.75, 'on-background')
 	.addOpacityVariant('bullet', 0.25, 'technology')
 	.addColorVariant('hover', '#252833', 'navigation')
@@ -53,5 +61,5 @@ const dark = new Theme() //
 	.setVariable('article', '#f4f5f7', 'borderColor', 'border');
 
 module.exports = new ThemeManager() //
-	.setDefaultTheme(main);
-// .setDefaultDarkTheme(dark);
+	.setDefaultTheme(main)
+	.setDefaultDarkTheme(dark);

@@ -26,13 +26,27 @@
 				v-for="link in links"
 				:key="link.id"
 				:to="link.url"
-				:title="link.label"
+				:title="link.title"
 				target="_self"
-				active-class="bg-navigation-active shadow-navigation-active"
-				class="px-5 py-4 transition-colors duration-150 hover:bg-navigation-hover focus:outline-none focus:bg-navigation-hover"
+				class="px-5 py-4 transition-colors duration-150 hover:bg-navigation-hover focus:outline-none focus:shadow-none focus:bg-navigation-hover"
 			>
 				{{ link.label }}
 			</g-link>
+
+			<!-- Theme switcher -->
+			<button
+				@click="toggleTheme"
+				:title="isLightTheme ? 'Turn off the god damn so bright light' : 'I wanna see what it looks like in white'"
+				:class="[
+					'px-4 py-4',
+					'transition-colors duration-150',
+					'text-on-navigation hover:bg-navigation-hover',
+					'focus:outline-none focus:bg-navigation-hover focus:shadow-none',
+				]"
+			>
+				<icon-sun-outline class="w-5 h-5" v-if="isLightTheme" />
+				<icon-sun-solid class="w-5 h-5" v-if="isDarkTheme" />
+			</button>
 		</nav>
 	</header>
 </template>
@@ -54,7 +68,8 @@ query {
       node {
         id,
         label,
-        url
+        url,
+				title
       }
     }
   }

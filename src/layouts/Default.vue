@@ -1,5 +1,13 @@
 <template>
-	<main class="flex flex-col h-full min-h-screen py-12 antialiased bg-background text-on-background">
+	<main
+		:class="[
+			'py-12',
+			'h-full min-h-screen',
+			'flex flex-col',
+			'transition-colors duration-150',
+			'bg-background text-on-background antialiased',
+		]"
+	>
 		<page-header class="container mx-auto md:px-16" />
 		<section class="container flex-1 mx-auto mt-16 md:px-16">
 			<slot />

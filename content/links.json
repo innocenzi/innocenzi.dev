@@ -1,21 +1,25 @@
 {
 	"github": {
 		"label": "GitHub",
+		"title": "Take a look at my GitHub",
 		"url": "https://github.com/innocenzi",
-		"order": "1"
+		"order": "2"
 	},
 	"twitter": {
 		"label": "Twitter",
+		"title": "Visit my Twitter",
 		"url": "https://twitter.com/enzoinnocenzi",
-		"order": "2"
+		"order": "3"
 	},
 	"articles": {
 		"label": "Articles",
+		"title": "Check out my articles",
 		"url": "/articles/",
-		"order": "3"
+		"order": "1"
 	},
 	"mail": {
 		"label": "Mail",
+		"title": "Send me an email",
 		"url": "mailto:enzo@innocenzi.dev",
 		"order": "4"
 	}

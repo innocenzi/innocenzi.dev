@@ -11,13 +11,13 @@
 
 			<div class="px-12 mt-12 text-2xl leading-relaxed md:px-0 lg:mt-0 lg:text-right lg:w-1/2">
 				<p class="mb-8">
-					I am passionate about development — <span class="px-1 bg-highlight-1">I love automating things</span>,
-					<span class="px-1 bg-highlight-1">modern technologies</span> and
-					<span class="px-1 bg-highlight-1">good developer experience</span>.
+					I am passionate about development —
+					<span class="hl-1">I love automating things</span>, <span class="hl-1">modern technologies</span> and
+					<span class="hl-1">good developer experience</span>.
 				</p>
 				<p>
-					<span class="px-1 bg-highlight-2">I am a perfectionnist</span>. I pay attention to details, because I love
-					when things look good and professionnal. I am also <span class="px-1 bg-highlight-2">self-taught</span>, and
+					<span class="hl-2">I am a perfectionnist</span>. I pay attention to details, because I love when things look
+					good and professionnal. I am also <span class="hl-2">self-taught</span>, and
 					<a href="https://youtu.be/Cv1RJTHf5fk?t=11" title="Knowlegde">I never stop learning</a>.
 				</p>
 			</div>
@@ -47,7 +47,7 @@
 		>
 			<article v-for="(category, id) of categories" :key="id" class="flex flex-col items-center mb-16 lg:items-start">
 				<header class="flex items-center mb-4">
-					<div class="flex items-center justify-center w-10 h-10 rounded-full bg-on-icon text-icon">
+					<div class="flex items-center justify-center w-10 h-10 rounded-full bg-icon-reverse text-on-icon-reverse">
 						<component :is="`icon-${category.icon}`" class="w-6 h-6" />
 					</div>
 					<h2 v-text="category.name" class="ml-4 text-3xl font-bold tracking-tighter uppercase text-brand" />
@@ -65,21 +65,19 @@
 		</home-section>
 
 		<!-- Mail -->
-		<section
-			class="flex items-center justify-between w-10/12 p-8 mx-auto mt-24 rounded-md shadow-md md:w-full bg-callout text-on-callout"
-		>
-			<div class="flex items-center">
-				<icon-at class="hidden w-12 h-12 mr-4 text-on-callout-muted sm:block" />
-				<span class="text-2xl">If you want to reach out to me, feel free to send me an email.</span>
-			</div>
-			<a
-				:href="$page.mail.url"
-				title="Send an email"
-				class="ml-8 transition-transform duration-150 transform rounded-full hover:scale-110"
+		<a :href="$page.mail.url" title="Send an email" class="block ml-8 rounded-full group ">
+			<section
+				class="flex items-center justify-between w-10/12 p-8 mx-auto mt-24 rounded-md shadow-md md:w-full bg-callout text-on-callout"
 			>
-				<icon-arrow class="w-12 h-12" />
-			</a>
-		</section>
+				<div class="flex items-center">
+					<icon-at class="hidden w-12 h-12 mr-4 text-on-callout-muted sm:block" />
+					<span class="text-2xl">If you want to reach out to me, feel free to send me an email.</span>
+				</div>
+				<icon-chevron-right
+					class="w-12 h-12 transition-transform duration-150 transform group-hover:scale-110 text-on-callout-muted"
+				/>
+			</section>
+		</a>
 	</Layout>
 </template>
 
@@ -140,6 +138,16 @@ export default {
 	},
 };
 </script>
+
+<style lang="postcss" scoped>
+.hl-1 {
+	@apply px-1 transition-colors duration-150 text-on-background bg-highlight-1;
+}
+
+.hl-2 {
+	@apply px-1 transition-colors duration-150 text-on-background bg-highlight-2;
+}
+</style>
 
 <page-query>
 query {
