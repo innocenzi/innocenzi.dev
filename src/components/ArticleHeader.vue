@@ -14,6 +14,7 @@
 		<g-link
 			class="flex items-center justify-between mb-4 text-4xl group hover:text-brand focus:underline focus:shadow-none"
 			:to="article.path"
+			:title="article.title"
 			v-if="displayTitle"
 		>
 			<h1>{{ article.title }}</h1>

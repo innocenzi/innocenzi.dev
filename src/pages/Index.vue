@@ -3,7 +3,8 @@
 		<!-- Header -->
 		<section class="flex flex-col items-center lg:space-x-16 lg:flex-row lg:mt-8 xl:mt-24">
 			<div class="px-12 text-6xl font-bold leading-tight tracking-tighter md:px-0 lg:w-1/2">
-				Hey, I am <a :href="$page.twitter.url" class="text-brand">Enzo Innocenzi</a>.
+				Hey, I am
+				<a :href="$page.twitter.url" title="Go to Enzo Innocenzi's Twitter" class="text-brand">Enzo Innocenzi</a>.
 				<br />
 				Full-stack web developer, from France.
 			</div>
@@ -17,7 +18,7 @@
 				<p>
 					<span class="px-1 bg-highlight-2">I am a perfectionnist</span>. I pay attention to details, because I love
 					when things look good and professionnal. I am also <span class="px-1 bg-highlight-2">self-taught</span>, and
-					<a href="https://youtu.be/Cv1RJTHf5fk?t=11">I never stop learning</a>.
+					<a href="https://youtu.be/Cv1RJTHf5fk?t=11" title="Knowlegde">I never stop learning</a>.
 				</p>
 			</div>
 		</section>
@@ -71,7 +72,11 @@
 				<icon-at class="hidden w-12 h-12 mr-4 text-on-callout-muted sm:block" />
 				<span class="text-2xl">If you want to reach out to me, feel free to send me an email.</span>
 			</div>
-			<a :href="$page.mail.url" class="ml-8 transition-transform duration-150 transform rounded-full hover:scale-110">
+			<a
+				:href="$page.mail.url"
+				title="Send an email"
+				class="ml-8 transition-transform duration-150 transform rounded-full hover:scale-110"
+			>
 				<icon-arrow class="w-12 h-12" />
 			</a>
 		</section>

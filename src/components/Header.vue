@@ -2,6 +2,7 @@
 	<header class="flex flex-col items-center justify-between lg:flex-row">
 		<g-link
 			to="/"
+			title="Go to the homepage"
 			:class="[
 				'mb-6 lg:mb-0',
 				'rounded-full',
@@ -19,6 +20,7 @@
 				v-for="link in links"
 				:key="link.id"
 				:to="link.url"
+				:title="link.label"
 				target="_self"
 				active-class="bg-navigation-active shadow-navigation-active"
 				class="px-5 py-4 transition-colors duration-150 hover:bg-navigation-hover focus:outline-none focus:bg-navigation-hover"
