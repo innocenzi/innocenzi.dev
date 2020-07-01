@@ -1,4 +1,4 @@
-const siteUrl = 'https://innocenzi.netlify.com';
+const siteUrl = 'https://innocenzi.dev';
 
 module.exports = {
 	siteName: 'Enzo Innocenzi',
