@@ -12,7 +12,13 @@
 				'focus:outline-none focus:shadow-outline',
 			]"
 		>
-			<g-image src="../favicon.png" width="52" alt="Enzo Innocenzi's profile picture" />
+			<g-image
+				src="~/../static/profile.png"
+				quality="100"
+				width="52"
+				alt="Enzo Innocenzi's profile picture"
+				class="rounded-full"
+			/>
 		</g-link>
 
 		<nav class="flex overflow-hidden rounded-lg shadow-md bg-navigation text-on-navigation">
