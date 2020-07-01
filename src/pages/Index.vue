@@ -65,9 +65,11 @@
 		</home-section>
 
 		<!-- Mail -->
-		<a :href="$page.mail.url" title="Send an email" class="block ml-8 rounded-full group ">
-			<section
-				class="flex items-center justify-between w-10/12 p-8 mx-auto mt-24 rounded-md shadow-md md:w-full bg-callout text-on-callout"
+		<section class="w-10/12 mx-auto mt-24 rounded-md shadow-md md:w-full bg-callout text-on-callout group">
+			<a
+				:href="$page.mail.url"
+				title="Send an email"
+				class="flex items-center justify-between w-full h-full p-8 rounded-md"
 			>
 				<div class="flex items-center">
 					<icon-at class="hidden w-12 h-12 mr-4 text-on-callout-muted sm:block" />
@@ -76,8 +78,8 @@
 				<icon-chevron-right
 					class="w-12 h-12 transition-transform duration-150 transform group-hover:scale-110 text-on-callout-muted"
 				/>
-			</section>
-		</a>
+			</a>
+		</section>
 	</Layout>
 </template>
 
