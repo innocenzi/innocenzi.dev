@@ -16,8 +16,4 @@ module.exports = function(api) {
 
 	addJsonSource('./content/technologies.json', 'Technology');
 	addJsonSource('./content/links.json', 'Link');
-
-	api.loadSource(async (store) => {
-		store.addMetadata('siteUrl', 'https://innocenzi.dev');
-	});
 };

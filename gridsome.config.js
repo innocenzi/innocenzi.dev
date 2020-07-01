@@ -1,6 +1,8 @@
 module.exports = {
 	siteName: 'Enzo Innocenzi',
-	siteDescription: '',
+	titleTemplate: '%s — Enzo Innocenzi',
+	siteDescription: 'Hey. My name is Enzo Innocenzi. I am a software developer, with a particular focus on the web.',
+	siteUrl: 'https://innocenzi.netlify.com',
 
 	templates: {
 		Article: '/article/:title',

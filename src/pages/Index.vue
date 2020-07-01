@@ -31,7 +31,7 @@
 					</div>
 				</div>
 				<div>
-					<h1 class="text-3xl font-bold tracking-tight uppercase text-brand" v-text="tech.name" />
+					<h2 class="text-3xl font-bold tracking-tight uppercase text-brand" v-text="tech.name" />
 					<p class="text-2xl" v-text="tech.description" />
 				</div>
 			</article>
@@ -49,7 +49,7 @@
 					<div class="flex items-center justify-center w-10 h-10 rounded-full bg-on-icon text-icon">
 						<component :is="`icon-${category.icon}`" class="w-6 h-6" />
 					</div>
-					<h1 v-text="category.name" class="ml-4 text-3xl font-bold tracking-tighter uppercase text-brand"></h1>
+					<h2 v-text="category.name" class="ml-4 text-3xl font-bold tracking-tighter uppercase text-brand" />
 				</header>
 
 				<ul class="flex flex-wrap justify-center text-2xl leading-loose tracking-wider lg:justify-start">
@@ -82,27 +82,12 @@
 import HomeSection from '~/components/HomeSection.vue';
 
 export default {
-	metaInfo: {
-		title: 'Enzo Innocenzi — Web developer',
-		link: [{ rel: 'canonical', href: this.$page.metadata.siteUrl }],
-		meta: [
-			{
-				key: 'description',
-				name: 'description',
-				content: 'Hey. I am a full-stack web developer. Nothing much to say.',
-			},
-			{ property: 'og:type', content: 'profile' },
-			{ property: 'og:profile:first_name', content: 'Enzo' },
-			{ property: 'og:profile:last_name', content: 'Innocenzi' },
-			{ property: 'og:profile:username', content: 'innocenzi' },
-			{ property: 'og:profile:gender', content: 'male' },
-			{ name: 'twitter:card', content: 'summary' },
-			{ name: 'twitter:title', content: 'Enzo Innocenzi — Web developer' },
-			{ name: 'twitter:description', content: 'Hey. I am a full-stack web developer. Nothing much to say.' },
-			{ name: 'twitter:site', content: '@innocenzi' },
-			{ name: 'twitter:creator', content: '@innocenzi' },
-			// { name: 'twitter:image', content: this.ogImageUrl },
-		],
+	metaInfo() {
+		return {
+			title: `${this.$page.metadata.siteName} — Software developer`,
+			titleTemplate: '%s',
+			// link: [{ rel: 'canonical', href: this.$page.metadata.siteUrl }],
+		};
 	},
 	components: { HomeSection },
 	computed: {
@@ -162,6 +147,7 @@ query {
   }
   metadata {
     siteUrl
+		siteName
   }
   stack: allTechnology (filter: { main: { eq: true } }) {
     edges {
