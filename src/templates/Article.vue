@@ -1,9 +1,13 @@
 <template>
 	<Layout>
-		<home-section :title="$page.article.title">
-			<article-header :article="$page.article" :display-title="false" />
-			<article class="markdown" v-html="$page.article.content" />
-		</home-section>
+		<header class="w-2/3 mx-auto mb-24 text-center md:w-full">
+			<h1 class="text-6xl font-bold leading-tight tracking-tighter">{{ $page.article.title }}</h1>
+			<div class="mt-3 font-sans text-lg font-bold text-on-background-muted">
+				{{ readableDate }}
+			</div>
+		</header>
+
+		<article class="markdown" v-html="$page.article.content" />
 	</Layout>
 </template>
 
@@ -20,6 +24,7 @@ export default {
 	metaInfo() {
 		return {
 			title: `${this.$page.article.title} ${this.$page.article.tag ? '- ' + this.$page.article.tag.name : ''}`,
+			link: [{ rel: 'canonical', href: this.articleUrl }],
 			meta: [
 				{
 					key: 'description',
@@ -34,7 +39,7 @@ export default {
 					property: 'article:published_time',
 					content: this.ogPublishedTime,
 				},
-				{ property: 'og:image', content: this.getOgImageUrl },
+				{ property: 'og:image', content: this.ogImageUrl },
 				{ name: 'twitter:card', content: 'summary_large_image' },
 				{ name: 'twitter:title', content: this.$page.article.title },
 				{ name: 'twitter:description', content: this.description },
@@ -50,15 +55,21 @@ export default {
 		});
 	},
 	computed: {
+		writeDate() {
+			return DateTime.fromFormat(this.$page.article.date, 'dd-MM-yyyy');
+		},
+		readableDate() {
+			return this.writeDate.setLocale('en-US').toLocaleString(DateTime.DATE_FULL);
+		},
 		description() {
 			const description = this.$page.article.description || this.$page.article.excerpt;
 			return description.substr(0, 170);
 		},
 		ogPublishedTime() {
-			return DateTime.fromFormat(this.$page.article.date, 'dd-mm-yyyy', { locale: 'en-US' }).toFormat('YYYY-MM-DD');
+			return this.writeDate.toISODate();
 		},
 		ogImageUrl() {
-			return this.$page.metadata.siteUrl + this.$page.article.path;
+			return this.$page.metadata.siteUrl + this.$page.article.path + this.$page.article.cover_image;
 		},
 		articleUrl() {
 			return this.$page.metadata.siteUrl + this.$page.article.path;
@@ -159,6 +170,7 @@ query Article ($id: ID!) {
 		description
 		excerpt
 		timeToRead
+		cover_image
 		path
 		tags {
 			id

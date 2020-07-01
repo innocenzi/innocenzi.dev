@@ -14,7 +14,7 @@ module.exports = {
 				typeName: 'Article',
 				baseDir: './content/articles',
 				pathPrefix: '/article',
-				path: '*.md',
+				path: '**/*.md',
 				refs: {
 					tags: {
 						typeName: 'Tag',

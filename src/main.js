@@ -5,8 +5,10 @@ import 'prism-themes/themes/prism-hopscotch.css';
 import DefaultLayout from '~/layouts/Default.vue';
 
 export default function(Vue, { router, head, isClient }) {
+	// Set the layout
 	Vue.component('Layout', DefaultLayout);
 
+	// Add icons
 	const requirements = require.context('./components/icons', false, /[A-Z]\w+\.(vue|js)$/);
 	requirements.keys().forEach((filename) => {
 		const config = requirements(filename);
