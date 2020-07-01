@@ -149,10 +149,11 @@ query {
   mail: link (id: "mail") {
     url
   }
-  metadata {
-    siteUrl
+	metadata {
 		siteName
-  }
+		siteUrl
+		siteDescription
+	}
   stack: allTechnology (filter: { main: { eq: true } }) {
     edges {
       node {

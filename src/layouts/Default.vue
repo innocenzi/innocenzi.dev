@@ -19,43 +19,43 @@ export default {
 	},
 	metaInfo() {
 		return {
-			link: [{ rel: 'canonical', href: this.$page.metadata.siteUrl + this.$route.path }],
+			link: [{ rel: 'canonical', href: this.$static.metadata.siteUrl + this.$route.path }],
 			meta: [
 				{
 					key: 'description',
 					name: 'description',
-					content: this.$page.metadata.siteDescription,
+					content: this.$static.metadata.siteDescription,
 				},
 				{ property: 'og:type', content: 'profile' },
-				{ property: 'og:url', content: this.$page.metadata.siteUrl + this.$route.path },
-				{ property: 'og:title', content: this.$page.metadata.siteName },
-				{ property: 'og:site_name', content: this.$page.metadata.siteName },
-				{ property: 'og:description', content: this.$page.metadata.siteDescription },
+				{ property: 'og:url', content: this.$static.metadata.siteUrl + this.$route.path },
+				{ property: 'og:title', content: this.$static.metadata.siteName },
+				{ property: 'og:site_name', content: this.$static.metadata.siteName },
+				{ property: 'og:description', content: this.$static.metadata.siteDescription },
 				{ property: 'og:profile:first_name', content: 'Enzo' },
 				{ property: 'og:profile:last_name', content: 'Innocenzi' },
 				{ property: 'og:profile:gender', content: 'male' },
-				{ property: 'og:image', content: `${this.$page.metadata.siteUrl}/profile.png` },
+				{ property: 'og:image', content: `${this.$static.metadata.siteUrl}/profile.png` },
 				{ name: 'twitter:card', content: 'summary_large_image' },
-				{ name: 'twitter:title', content: this.$page.metadata.siteName },
-				{ name: 'twitter:description', content: this.$page.metadata.siteDescription },
+				{ name: 'twitter:title', content: this.$static.metadata.siteName },
+				{ name: 'twitter:description', content: this.$static.metadata.siteDescription },
 				{ name: 'twitter:site', content: '@innocenzi' },
 				{ name: 'twitter:creator', content: '@innocenzi' },
-				{ name: 'twitter:image', content: `${this.$page.metadata.siteUrl}/profile.png` },
+				{ name: 'twitter:image', content: `${this.$static.metadata.siteUrl}/profile.png` },
 			],
 		};
 	},
 };
 </script>
 
-<page-query>
+<static-query>
 query {
 	metadata {
 		siteUrl
-		siteDescription
 		siteName
+		siteDescription
 	}
 }
-</page-query>
+</static-query>
 
 <style>
 :root {
