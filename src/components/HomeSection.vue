@@ -7,7 +7,7 @@
 			<span class="text-3xl text-brand">{{ subtitle }}</span>
 		</header>
 
-		<div class="grid justify-center w-10/12 grid-cols-1 gap-8 mx-auto md:w-full lg:grid-cols-2" v-if="grid">
+		<div class="grid justify-center w-10/12 grid-cols-1 gap-20 mx-auto md:w-full lg:grid-cols-2" v-if="grid">
 			<slot />
 		</div>
 

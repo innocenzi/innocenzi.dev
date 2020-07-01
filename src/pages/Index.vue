@@ -25,7 +25,7 @@
 
 		<!-- Stack -->
 		<home-section title="Stack" subtitle="Everyone has a favorite stack. Here's mine." :grid="true" class="mt-40">
-			<article v-for="tech in stack" :key="tech.id" class="flex flex-col items-center mb-12 sm:flex-row sm:items-start">
+			<article v-for="tech in stack" :key="tech.id" class="flex flex-col items-center mb-10 sm:flex-row sm:items-start">
 				<div class="mb-8 sm:mr-8">
 					<div class="flex items-center justify-center w-20 h-20 rounded-full bg-icon text-on-icon">
 						<component v-if="tech.icon" :is="`icon-${tech.icon}`" class="w-12 h-12" />
@@ -45,7 +45,7 @@
 			class="mt-40"
 			:grid="true"
 		>
-			<article v-for="(category, id) of categories" :key="id" class="flex flex-col items-center mb-16 lg:items-start">
+			<article v-for="(category, id) of categories" :key="id" class="flex flex-col items-center mb-10 lg:items-start">
 				<header class="flex flex-col items-center mb-4 md:flex-row">
 					<div
 						class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-icon-reverse text-on-icon-reverse md:mb-0"
