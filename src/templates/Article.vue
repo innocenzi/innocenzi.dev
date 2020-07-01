@@ -7,7 +7,7 @@
 			</div>
 		</header>
 
-		<article class="markdown" v-html="$page.article.content" />
+		<article class="w-10/12 mx-auto md:w-full markdown" v-html="$page.article.content" />
 	</Layout>
 </template>
 
