@@ -32,7 +32,13 @@
 					</div>
 				</div>
 				<div class="text-center sm:text-left">
-					<h2 class="text-3xl font-bold tracking-tight uppercase text-brand" v-text="tech.name" />
+					<a
+						class="text-3xl font-bold tracking-tight uppercase text-brand"
+						:href="tech.url"
+						:title="tech.name"
+						v-text="tech.name"
+						rel="nofollow noopener"
+					/>
 					<p class="text-2xl" v-text="tech.description" />
 				</div>
 			</article>
@@ -60,7 +66,7 @@
 
 				<ul class="flex flex-wrap justify-center text-2xl leading-loose tracking-wider lg:justify-start">
 					<li class="text-technology" v-for="(tech, id) in category.items" :key="id">
-						<span>{{ tech.name }}</span>
+						<a :href="tech.url" :title="tech.name" rel="nofollow noopenner">{{ tech.name }}</a>
 						<span class="mx-3 text-technology-bullet" :class="{ 'last:hidden': isLast(category, id) }">
 							•
 						</span>
@@ -176,6 +182,7 @@ query {
         icon
         name
         description
+				url
       }
     }
   }
@@ -187,6 +194,7 @@ query {
         description
         icon
 				categories
+				url
       }
     }
   }

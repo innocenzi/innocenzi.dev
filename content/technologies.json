@@ -2,7 +2,8 @@
 	"laravel": {
 		"name": "Laravel",
 		"icon": "laravel",
-		"description": "The most popular PHP framework. Super pleasant to work with, extremely active ecosystem. 10/10",
+		"description": "The most popular PHP framework. Super pleasant to work with, extremely active ecosystem.",
+		"url": "https://laravel.com",
 		"main": true,
 		"categories": ["backend"]
 	},
@@ -10,6 +11,7 @@
 		"name": "Tailwind CSS",
 		"icon": "tailwind",
 		"description": "A low-level, utility-first CSS framework. One of the best tools available in the modern web. It made me appreciate front-end.",
+		"url": "https://tailwindcss.com",
 		"main": true,
 		"categories": ["frontend"]
 	},
@@ -17,94 +19,125 @@
 		"name": "Alpine.js",
 		"icon": "alpine",
 		"description": "A minimalistic, Vue-like framework. Kind of the Tailwind CSS of JavaScript.",
+		"url": "https://github.com/alpinejs/alpine",
+		"categories": ["frontend"]
+	},
+	"vue": {
+		"name": "Vue.js",
+		"icon": "vue",
+		"description": "A progressive, versatile, and performant JavaScript framework.",
+		"url": "https://vuejs.org",
 		"main": true,
 		"categories": ["frontend"]
+	},
+	"inertia": {
+		"name": "Inertia.js",
+		"icon": "inertia",
+		"description": "A monolith library for making server-driven single page applications.",
+		"url": "https://inertiajs.com",
+		"main": true,
+		"categories": ["backend"]
 	},
 	"livewire": {
 		"name": "Livewire",
 		"icon": "livewire",
 		"description": "A powerful full-stack user interface framework for Laravel. It makes things simple.",
-		"main": true,
+		"url": "https://laravel-livewire.com",
 		"categories": ["backend"]
 	},
 	"php": {
 		"name": "PHP",
+		"url": "https://php.net",
 		"categories": ["backend"]
 	},
 	"postgresql": {
 		"name": "PostgreSQL",
+		"url": "https://www.postgresql.org/",
 		"categories": ["backend"]
 	},
 	"typescript": {
 		"name": "TypeScript",
+		"url": "https://www.typescriptlang.org/",
 		"categories": ["backend", "frontend"]
-	},
-	"inertia": {
-		"name": "Inertia.js",
-		"categories": ["backend"]
 	},
 	"mysql": {
 		"name": "MySQL",
+		"url": "https://www.mysql.com/",
 		"categories": ["backend"]
 	},
 	"node": {
 		"name": "Node.js",
+		"url": "https://nodejs.org/",
 		"categories": ["backend"]
 	},
 	"symfony": {
 		"name": "Symfony",
+		"url": "http://symfony.com/",
 		"categories": ["backend"]
 	},
 	"javascript": {
 		"name": "JavaScript",
-		"categories": ["frontend"]
-	},
-	"vue": {
-		"name": "Vue.js",
+		"url": "https://tc39.es/",
 		"categories": ["frontend"]
 	},
 	"postcss": {
 		"name": "PostCSS",
+		"url": "https://postcss.org/",
 		"categories": ["frontend"]
 	},
 	"sass": {
 		"name": "SASS",
+		"url": "https://sass-lang.com/",
 		"categories": ["frontend"]
 	},
 	"bootstrap": {
 		"name": "Bootstrap",
+		"url": "https://getbootstrap.com/",
 		"categories": ["frontend"]
 	},
 	"jquery": {
 		"name": "jQuery",
+		"url": "https://jquery.com/",
 		"categories": ["frontend"]
+	},
+	"preset": {
+		"name": "Preset",
+		"url": "https://usepreset.dev/",
+		"categories": ["tool"]
 	},
 	"git": {
 		"name": "Git",
+		"url": "https://git-scm.com/",
 		"categories": ["tool"]
 	},
 	"jest": {
 		"name": "Jest",
+		"url": "https://jestjs.io/",
 		"categories": ["tool"]
 	},
 	"mix": {
 		"name": "Laravel Mix",
+		"url": "https://laravel-mix.com/",
 		"categories": ["tool"]
 	},
 	"encore": {
 		"name": "Webpack Encore",
+		"url": "https://symfony.com/doc/current/frontend.html",
 		"categories": ["tool"]
 	},
 	"yarn": {
 		"name": "Yarn",
+		"url": "http://yarnpkg.com/",
 		"categories": ["tool"]
 	},
 	"npm": {
 		"name": "NPM",
+		"url": "https://www.npmjs.com/",
 		"categories": ["tool"]
 	},
 	"figma": {
 		"name": "Figma",
+		"url": "https://www.figma.com/",
 		"categories": ["tool"]
 	}
 }
