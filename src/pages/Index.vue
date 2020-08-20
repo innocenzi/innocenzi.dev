@@ -16,7 +16,7 @@
 					<span class="hl-1">good developer experience</span>.
 				</p>
 				<p>
-					<span class="hl-2">I am a perfectionnist</span>. I pay attention to details, because I love when things look
+					<span class="hl-2">I am a perfectionist</span>. I pay attention to details, because I love when things look
 					good and professionnal. I am also <span class="hl-2">self-taught</span>, and
 					<a href="https://youtu.be/Cv1RJTHf5fk?t=11" title="Knowlegde">I never stop learning</a>.
 				</p>
