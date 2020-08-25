@@ -23,7 +23,7 @@
 		"categories": ["frontend"]
 	},
 	"vue": {
-		"name": "Vue.js",
+		"name": "Vue",
 		"icon": "vue",
 		"description": "A progressive, versatile, and performant JavaScript framework.",
 		"url": "https://vuejs.org",
@@ -31,7 +31,7 @@
 		"categories": ["frontend"]
 	},
 	"inertia": {
-		"name": "Inertia.js",
+		"name": "Inertia",
 		"icon": "inertia",
 		"description": "A monolith library for making server-driven single page applications.",
 		"url": "https://inertiajs.com",
