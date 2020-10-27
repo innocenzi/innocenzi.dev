@@ -47,7 +47,7 @@
 		<!-- Technologies -->
 		<home-section
 			title="Other technologies I work with"
-			subtitle="I may have favorites, though some other are worth being mentioned."
+			subtitle="Although I have favorites, I still work with a lot of other tools."
 			class="mt-40"
 			:grid="true"
 		>
