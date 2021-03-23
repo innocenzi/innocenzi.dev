@@ -20,7 +20,6 @@
 		"icon": "vite",
 		"description": "Fast, ESM-based development server and bundler, with an incredible developer experience.",
 		"url": "https://github.com/vitejs/vite",
-		"main": true,
 		"categories": ["frontend"]
 	},
 	"alpine": {
