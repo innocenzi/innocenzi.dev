@@ -15,6 +15,14 @@
 		"main": true,
 		"categories": ["frontend"]
 	},
+	"vite": {
+		"name": "Vite",
+		"icon": "vite",
+		"description": "Fast, ESM-based development server and bundler, with an incredible developer experience.",
+		"url": "https://github.com/vitejs/vite",
+		"main": true,
+		"categories": ["frontend"]
+	},
 	"alpine": {
 		"name": "Alpine.js",
 		"icon": "alpine",
