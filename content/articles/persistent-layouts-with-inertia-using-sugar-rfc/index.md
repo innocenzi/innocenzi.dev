@@ -6,8 +6,6 @@ tags: ['Inertia']
 description: ' '
 ---
 
-## The issue
-
 The `setup` sugar is still in the [RFC](https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md) process. It grants a pretty neat syntax that replaces the classic `defineComponent`: 
 
 ```html
