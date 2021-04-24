@@ -18,7 +18,6 @@
 			v-if="displayTitle"
 		>
 			<h1>{{ article.title }}</h1>
-			<span class="hidden px-3 py-1 text-lg rounded-full bg-icon group-hover:block">Read</span>
 		</g-link>
 
 		<!-- Other content -->

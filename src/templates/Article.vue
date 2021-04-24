@@ -2,9 +2,7 @@
 	<Layout>
 		<header class="w-2/3 mx-auto mb-24 text-center md:w-full">
 			<h1 class="text-6xl font-bold leading-tight tracking-tighter">{{ $page.article.title }}</h1>
-			<div class="mt-3 font-sans text-lg font-bold text-on-background-muted">
-				{{ readableDate }}
-			</div>
+			<div class="mt-3 font-sans text-lg font-bold text-on-background-muted">{{ readableDate }}</div>
 		</header>
 
 		<article class="w-10/12 mx-auto md:w-full markdown" v-html="$page.article.content" />
@@ -80,6 +78,10 @@ export default {
 
 <style lang="postcss">
 .markdown {
+	a {
+		@apply text-brand;
+	}
+
 	h1,
 	h2,
 	h3,
@@ -110,6 +112,16 @@ export default {
 
 	p {
 		@apply mb-4 text-lg leading-relaxed;
+
+		code {
+			background: rgba(1, 1, 1, 0.25);
+			padding-top: 0.2rem;
+			padding-bottom: 0.3rem;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+			font-size: 0.8em;
+			@apply rounded;
+		}
 	}
 
 	img {

@@ -10,14 +10,18 @@
 			>
 				<!-- Time -->
 				<aside class="w-1/4">
-					<time :datetime="article.date" class="block font-mono text-lg text-metadata">
-						{{ getReadableDate(article) }}
-					</time>
+					<time
+						:datetime="article.date"
+						class="block font-mono text-lg text-metadata"
+					>{{ getReadableDate(article) }}</time>
 				</aside>
 
 				<!-- Content -->
 				<article-header :article="article" class="w-2/4">
-					<p class="text-lg leading-relaxed opacity-75">{{ article.description || article.excerpt + '...' }}</p>
+					<p
+						class="text-lg leading-relaxed opacity-75"
+						v-html="article.description || article.excerpt + '...'"
+					/>
 				</article-header>
 			</article>
 		</section>
