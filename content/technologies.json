@@ -62,6 +62,11 @@
 		"url": "https://www.postgresql.org/",
 		"categories": ["backend"]
 	},
+	"pestphp": {
+		"name": "Pest",
+		"url": "https://pestphp.com/",
+		"categories": ["backend"]
+	},
 	"typescript": {
 		"name": "TypeScript",
 		"url": "https://www.typescriptlang.org/",
