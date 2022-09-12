@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/navigation.vue'
+import '@fontsource/karla/variable.css'
 import Header from '../components/header.astro'
 
 export type Props = {
@@ -11,17 +11,26 @@ const title = Astro.props['full-title'] ?? `${Astro.props.title} - Enzo Innocenz
 ---
 
 <!DOCTYPE html>
-<html class="h-full antialiased" lang="en">
+<html class="h-full antialiased dark" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>
-	<body class="flex h-full flex-col bg-zinc-50 dark:bg-zinc-900">
-		<main class="container mx-auto">
+	<body class="flex h-full flex-col bg-zinc-100 dark:bg-black text-zinc-600 dark:text-zinc-400">
+		<div class="fixed inset-0 flex justify-center">
+			<div class="flex w-full max-w-7xl">
+				<div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+			</div>
+		</div>
+		<div class="relative">
+			<main class="container max-w-6xl mx-auto px-6 sm:px-12">
 				<Header />
-		</main>
-		<slot />
+				<section class="mt-8 md:mt-32">
+					<slot />
+				</section>
+			</main>
+		</div>
 	</body>
 </html>

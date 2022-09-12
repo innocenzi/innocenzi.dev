@@ -18,15 +18,15 @@ function isCurrent(href: string) {
 					:class="[
 						'relative block px-4 py-3 transition group',
 						isCurrent(route.href)
-							? 'text-teal-500 dark:text-teal-400'
-							: 'hover:text-teal-500 dark:hover:text-teal-400'
+							? 'text-pink-500 dark:text-pink-300'
+							: 'hover:text-pink-500 dark:hover:text-pink-300'
 					]"
 					:href="route.href"
 					rel="prefetch"
 				>
 					{{ route.name }}
 					<span
-						class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 transition dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"
+						class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-500/0 via-pink-500/40 to-pink-500/0 transition dark:from-pink-300/0 dark:via-pink-300/40 dark:to-pink-300/0"
 						:class="[
 							isCurrent(route.href)
 								? 'opacity-100'

@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Laravel",
+		"url": "https://laravel.com",
+		"categories": ["back-end"],
+		"description": "The most popular PHP framework. Super pleasant to work with, extremely active ecosystem.",
+		"icon": "laravel"
+	},
+	{
+		"name": "Tailwind CSS",
+		"url": "https://tailwindcss.com",
+		"categories": ["front-end", "css"],
+		"description": "A low-level, utility-first CSS framework. One of the best tools available in the modern web. It made me appreciate front-end.",
+		"icon": "tailwindcss"
+	},
+	{
+		"name": "Vue",
+		"url": "https://vuejs.org",
+		"categories": ["front-end"],
+		"description": "My go-to UI framework. Versatile, performant, very active ecosystem and incredible developer experience.",
+		"icon": "vuejs"
+	},
+	{
+		"name": "Inertia",
+		"url": "https://inertiajs.com",
+		"categories": ["back-end", "front-end"],
+		"description": "A library for making server-driven single page applications, architectured as monoliths.",
+		"icon": "inertia"
+	}
+]

@@ -1,0 +1,37 @@
+[
+	{ "name": "TypeScript", "url": "https://typescriptlang.org", "categories": ["language", "front-end"] },
+	{ "name": "PHP", "url": "https://php.net", "categories": ["language", "back-end"] },
+
+	{ "name": "Node", "url": "https://nodejs.org", "categories": ["back-end"] },
+
+	{ "name": "Laravel", "url": "https://laravel.com", "categories": ["framework", "back-end"] },
+	{ "name": "Symfony", "url": "https://symfony.com", "categories": ["framework", "back-end"] },
+
+	{ "name": "PostgreSQL", "url": "https://www.postgresql.org", "categories": ["database", "back-end"] },
+	{ "name": "MySQL", "url": "https://www.myqsl.com", "categories": ["database", "back-end"] },
+
+	{ "name": "Vite", "url": "https://vitejs.dev", "categories": ["front-end"] },
+	{ "name": "Pest", "url": "https://pestphp.com", "categories": ["testing", "back-end"] },
+	{ "name": "Vitest", "url": "https://vitest.dev", "categories": ["testing", "back-end", "front-end"] },
+
+	{ "name": "Tailwind CSS", "url": "https://tailwindcss.com", "categories": ["css", "front-end"] },
+	{ "name": "Post CSS", "url": "https://postcss.org", "categories": ["css", "front-end"] },
+
+	{ "name": "Vue", "url": "https://vuejs.com", "categories": ["framework", "front-end"] },
+	{ "name": "Alpine.js", "url": "https://alpinejs.dev/", "categories": ["framework", "front-end"] },
+
+	{ "name": "Laravel Mix", "url": "https://laravel-mix.com", "categories": ["front-end"] },
+	{ "name": "Webpack Encore", "url": "https://symfony.com/doc/current/frontend.html", "categories": ["front-end"] },
+
+	{ "name": "GraphQL", "url": "https://graphql.org/", "categories": [] },
+	{ "name": "Preset", "url": "https://preset.dev", "categories": [] },
+	{ "name": "Figma", "url": "https://figma.com", "categories": ["design"] },
+
+	{ "name": "Code", "url": "https://code.visualstudio.com", "categories": ["ide"] },
+	{ "name": "TablePlus", "url": "https://tableplus.com/", "categories": ["tool"] },
+	{ "name": "Insomnia", "url": "https://insomnia.rest/", "categories": ["tool"] },
+
+	{ "name": "PNPM", "url": "https://pnpm.io", "categories": ["front-end", "package-manager"] },
+	{ "name": "Yarn", "url": "https://yarnpkg.com", "categories": ["front-end", "package-manager"] },
+	{ "name": "Composer", "url": "https://getcomposer.org", "categories": ["back-end", "package-manager"] }
+]

@@ -1,0 +1,25 @@
+{
+	"twitter": {
+		"title": "Twitter",
+		"icon": "twitter",
+		"url": "https://twitter.com/enzoinnocenzi",
+		"username": "@enzoinnocenzi"
+	},
+	"github": {
+		"title": "Github",
+		"icon": "github",
+		"url": "https://github.com/innocenzi",
+		"username": "innocenzi"
+	},
+	"linkedin": {
+		"title": "LinkedIn",
+		"icon": "linkedin",
+		"url": "https://linkedin.com/in/enzo-innocenzi",
+		"username": "enzo-innocenzi"
+	},
+	"email": {
+		"title": "email",
+		"icon": "email",
+		"url": "mailto:enzo@innocenzi.dev"
+	}
+}

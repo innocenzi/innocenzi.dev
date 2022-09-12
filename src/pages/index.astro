@@ -1,6 +1,40 @@
 ---
 import Layout from '../layouts/layout.astro'
+import Badge from '../components/badge.vue'
+import Icon from '../components/icon.vue'
+import Stack from '../components/home/stack.vue'
+import Tools from '../components/home/tools.vue'
+import socials from '../data/socials.json'
 ---
 
 <Layout full-title="Enzo Innocenzi - Software developer">
+	<header class="max-w-2xl">
+		<p class="text-4xl font-bold tracking-tight sm:leading-tight text-zinc-800 dark:text-zinc-200 sm:text-5xl">
+			Hey, I am Enzo Innocenzi. <br />
+			Full-stack web developer, from France.
+		</p>
+	</header>
+	
+	<div class="max-w-2xl mt-12">
+		<p class="text-xl">
+			I am passionate about development — <Badge color="secondary" class="-ml-3 sm:ml-auto">I love automating things</Badge>,
+			<Badge color="secondary" transparent>modern technologies</Badge> and <Badge color="secondary" transparent>good developer experience</Badge>.
+		</p>
+		<p class="mt-6 text-xl">
+			<Badge color="primary" class="-ml-3">I am a perfectionist</Badge>.
+			I pay attention to details, because I love when things look <Badge color="primary" transparent>good</Badge> and <Badge color="primary" transparent>professionnal</Badge>.
+			I am also self-taught, and <a href="https://www.youtube.com/watch?v=Cv1RJTHf5fk&t=11s"><Badge color="primary" transparent>I never stop learning</Badge></a>.
+		</p>
+		
+		<div class="mt-8 flex gap-6">
+			{Object.values(socials).map(social => (
+				<a href={social.url} title={social.title} class="text-zinc-500 hover:text-zinc-200 transition" rel="nofollow noopener" target="_blank">
+					<Icon icon={social.icon as any} class="w-6 h-6" />
+				</a>
+			))}
+		</div>
+	</div>
+
+	<Stack class="mt-8 md:mt-24" />
+	<Tools />
 </Layout>
