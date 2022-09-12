@@ -1,3 +1,16 @@
 {
-	"extends": "@innocenzi/eslint-config/vue"
+	"extends": [
+		"plugin:astro/recommended",
+		"@innocenzi/eslint-config/vue"
+	],
+	"overrides": [
+		{
+			"files": ["*.astro"],
+			"parser": "astro-eslint-parser",
+			"parserOptions": {
+				"parser": "@typescript-eslint/parser",
+				"extraFileExtensions": [".astro"]
+			}
+		}
+	]
 }

@@ -1,0 +1,23 @@
+[
+	{
+		"icon_url": "",
+		"project_url": "https://github.com/preset/preset",
+		"documentation_url": "https://preset.dev",
+		"title": "Preset",
+		"description": "Elegant, ecosystem-agnostic preset mechanism. Takes your scaffolding to the next level."
+	},
+	{
+		"icon_url": "",
+		"project_url": "https://github.com/innocenzi/laravel-vite",
+		"documentation_url": "https://laravel-vite.dev",
+		"title": "Laravel Vite",
+		"description": "Vite integration for the Laravel framework."
+	},
+	{
+		"icon_url": "",
+		"project_url": "https://github.com/monolikit/monolikit",
+		"documentation_url": "",
+		"title": "Monolikit",
+		"description": "Solution to develop server-driven, client-rendered applications."
+	}
+]

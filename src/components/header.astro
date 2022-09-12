@@ -1,0 +1,23 @@
+---
+import { Image } from '@astrojs/image/components'
+import Navigation from './navigation.vue'
+import avatar from '../assets/avatar.jpg'
+---
+
+<header class="flex w-full justify-between mt-20">
+	<div
+		class="h-11 w-11 shrink-0 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
+	>
+		<a href="/" class="pointer-events-auto" aria-label="Home" rel="prefetch">
+			<Image
+			src={avatar}
+			width={44}
+			height={44}
+			aspectRatio="1:1"
+			alt="Enzo Innocenzi"
+			class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
+			/>
+		</a>
+	</div>
+	<Navigation url={Astro.url} />
+</header>
