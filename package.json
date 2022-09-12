@@ -9,7 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.2.1"
+    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vue": "^1.0.1",
+    "astro": "^1.2.1",
+    "vue": "^3.2.39"
   },
   "devDependencies": {
     "@innocenzi/eslint-config": "^0.12.0",
