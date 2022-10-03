@@ -7,6 +7,12 @@ import laravel from '~icons/mdi/laravel'
 import vuejs from '~icons/mdi/vuejs'
 import tailwindcss from '~icons/mdi/tailwind'
 import inertia from '~icons/ic/baseline-double-arrow'
+import arrowLeft from '~icons/heroicons-solid/arrow-narrow-left'
+import arrowRight from '~icons/heroicons-solid/arrow-narrow-right'
+import backend from '~icons/bxs/terminal'
+import frontend from '~icons/mdi/palette-swatch-variant'
+import other from '~icons/mdi/briefcase-variant'
+import heart from '~icons/heroicons/heart-20-solid'
 
 const icons = {
 	github,
@@ -17,6 +23,12 @@ const icons = {
 	vuejs,
 	tailwindcss,
 	inertia,
+	arrowLeft,
+	arrowRight,
+	backend,
+	frontend,
+	other,
+	heart,
 }
 
 defineProps<{
@@ -26,5 +38,5 @@ defineProps<{
 </script>
 
 <template>
-	<component :is="icons[icon]" :class="$props.class" />
+	<component :is="icons[icon]" :class="$props.class" aria-hidden="true" />
 </template>

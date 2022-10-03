@@ -11,8 +11,8 @@
 	{ "name": "MySQL", "url": "https://www.myqsl.com", "categories": ["database", "back-end"] },
 
 	{ "name": "Vite", "url": "https://vitejs.dev", "categories": ["front-end"] },
-	{ "name": "Pest", "url": "https://pestphp.com", "categories": ["testing", "back-end"] },
-	{ "name": "Vitest", "url": "https://vitest.dev", "categories": ["testing", "back-end", "front-end"] },
+	{ "name": "Pest", "url": "https://pestphp.com", "categories": ["testing"] },
+	{ "name": "Vitest", "url": "https://vitest.dev", "categories": ["testing"] },
 
 	{ "name": "Tailwind CSS", "url": "https://tailwindcss.com", "categories": ["css", "front-end"] },
 	{ "name": "Post CSS", "url": "https://postcss.org", "categories": ["css", "front-end"] },
@@ -31,7 +31,7 @@
 	{ "name": "TablePlus", "url": "https://tableplus.com/", "categories": ["tool"] },
 	{ "name": "Insomnia", "url": "https://insomnia.rest/", "categories": ["tool"] },
 
-	{ "name": "PNPM", "url": "https://pnpm.io", "categories": ["front-end", "package-manager"] },
+	{ "name": "pnpm", "url": "https://pnpm.io", "favorite": "true", "categories": ["front-end", "package-manager"] },
 	{ "name": "Yarn", "url": "https://yarnpkg.com", "categories": ["front-end", "package-manager"] },
 	{ "name": "Composer", "url": "https://getcomposer.org", "categories": ["back-end", "package-manager"] }
 ]

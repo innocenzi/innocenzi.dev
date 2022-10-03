@@ -10,13 +10,13 @@ defineProps<{
 	<span
 		:class="[
 			$props.class,
-			'rounded-full whitespace-nowrap',
+			'md:whitespace-nowrap rounded-full',
 			{
 				'text-pink-900/80 dark:text-pink-200/90': color === 'primary',
 				'text-teal-900/80 dark:text-teal-200/90': color === 'secondary',
-				'bg-pink-100 dark:bg-pink-200/10': color === 'primary' && !transparent,
-				'bg-teal-100 dark:bg-teal-200/10': color === 'secondary' && !transparent,
-				'px-3 py-0.5': !transparent
+				'md:bg-pink-100 dark:md:bg-pink-200/10': color === 'primary' && !transparent,
+				'md:bg-teal-100 dark:md:bg-teal-200/10': color === 'secondary' && !transparent,
+				'md:px-3 md:py-0.5': !transparent
 			}
 		]"
 	><slot /></span>

@@ -1,3 +1,4 @@
+import path from 'node:path'
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
@@ -12,6 +13,11 @@ export default defineConfig({
 		image(),
 		prefetch(),
 	],
+	markdown: {
+		shikiConfig: {
+			theme: 'vitesse-dark',
+		},
+	},
 	vite: {
 		plugins: [
 			icons({
@@ -22,5 +28,10 @@ export default defineConfig({
 				},
 			}),
 		],
+		resolve: {
+			alias: {
+				$: path.resolve(__dirname, './src'),
+			},
+		},
 	},
 })

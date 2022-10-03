@@ -1,0 +1,63 @@
+---
+import '@fontsource/karla/variable.css'
+import Header from '../components/header.astro'
+import background from '$/assets/background.webp'
+
+export type Props = {
+	'full-title'?: string
+	title?: string
+}
+
+const title = Astro.props['full-title'] ?? `${Astro.props.title} - Enzo Innocenzi`
+---
+
+<!DOCTYPE html>
+<html class="h-full antialiased dark" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<title>{title}</title>
+	</head>
+	<body class="flex h-full flex-col bg-zinc-100 dark:bg-black text-zinc-600 dark:text-zinc-400">
+		<div class="fixed inset-0 flex justify-center bg-cover">
+			<div class="flex w-full max-w-7xl">
+				<div
+					class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 bg-local"
+					style={`background-image:url(${background.src})`}>
+				</div>
+			</div>
+		</div>
+		<div class="relative">
+			<main class="container max-w-6xl mx-auto px-6 sm:px-12">
+				<Header />
+				<section class="mt-8 md:mt-32">
+					<slot />
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+:root {
+	tab-size: 4;
+	@apply selection:bg-pink-200/10 selection:text-pink-200/90;
+}
+
+a.link {
+	border-bottom-width: 0;
+	background-image: linear-gradient(transparent, transparent), linear-gradient(theme('colors.pink.200'), theme('colors.pink.200'));
+	background-size: 0 1px;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size .3s ease-in-out;
+}
+
+a.link:hover {
+	background-size: 100% 1px;
+}
+</style>

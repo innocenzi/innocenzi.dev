@@ -1,6 +1,6 @@
 [
-	{ "href": "/about", "name": "About" },
-	{ "href": "/articles", "name": "Articles" },
-	{ "href": "/projects", "name": "Projects" },
-	{ "href": "/uses", "name": "Uses" }
+	{ "hidden": false, "href": "/", "name": "About" },
+	{ "hidden": false, "href": "/articles", "name": "Articles" },
+	{ "hidden": true, "href": "/projects", "name": "Projects" },
+	{ "hidden": true, "href": "/uses", "name": "Uses" }
 ]

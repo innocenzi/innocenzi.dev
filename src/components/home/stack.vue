@@ -5,7 +5,7 @@ import StackItem from './stack-item.vue'
 </script>
 
 <template>
-	<Showcase title="Stack" description="Some tools make me specifically productive." align="left">
+	<Showcase title="Stack" description="Some tools make me specifically productive." align="right">
 		<div class="mx-auto mt-12 grid w-10/12 grid-cols-1 justify-center gap-12 md:mt-28 md:w-full md:gap-20 lg:grid-cols-2">
 			<StackItem
 				v-for="tool in stack"

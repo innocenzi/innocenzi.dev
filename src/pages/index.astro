@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/layout.astro'
+import Layout from '../layouts/main.astro'
 import Badge from '../components/badge.vue'
 import Icon from '../components/icon.vue'
 import Stack from '../components/home/stack.vue'
@@ -35,6 +35,12 @@ import socials from '../data/socials.json'
 		</div>
 	</div>
 
-	<Stack class="mt-8 md:mt-24" />
+	<Stack class="mt-8 md:mt-0" />
 	<Tools />
+
+	<div class="my-12 flex flex-col items-center justify-center group">
+		<span class="text-sm inline-flex items-center">Made with <Icon icon="heart" class="mx-2 w-5 h-5 translate-y-[1px] group-hover:text-red-300 transition duration-300 text-pink-200/90" />
+		by &nbsp;
+		<a class="link" href="https://twitter.com/enzoinnocenzi">Enzo Innocenzi</a></span>
+	</div>
 </Layout>
