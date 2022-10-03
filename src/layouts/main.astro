@@ -1,5 +1,6 @@
 ---
 import '@fontsource/karla/variable.css'
+import Icon from '../components/icon.vue'
 import Header from '../components/header.astro'
 import background from '$/assets/background.webp'
 
@@ -32,12 +33,18 @@ const title = Astro.props['full-title'] ?? `${Astro.props.title} - Enzo Innocenz
 				</div>
 			</div>
 		</div>
-		<div class="relative">
-			<main class="container max-w-6xl mx-auto px-6 sm:px-12">
+		<div class="relative flex flex-col flex-1">
+			<main class="container flex flex-col flex-1 max-w-6xl mx-auto px-6 sm:px-12">
 				<Header />
-				<section class="mt-8 md:mt-32">
+				<section class="mt-8 md:mt-32 flex flex-col flex-1">
 					<slot />
 				</section>
+
+				<div class="my-12 flex flex-col items-center justify-center group">
+					<span class="text-sm inline-flex items-center">Made with <Icon icon="heart" class="mx-2 w-5 h-5 translate-y-[1px] group-hover:text-red-300 transition duration-300 text-pink-200/90" />
+					by &nbsp;
+					<a class="link" href="https://twitter.com/enzoinnocenzi">Enzo Innocenzi</a></span>
+				</div>
 			</main>
 		</div>
 	</body>
