@@ -12,7 +12,7 @@ const title = Astro.props['full-title'] ?? `${Astro.props.title} - Enzo Innocenz
 ---
 
 <!DOCTYPE html>
-<html class="h-full antialiased dark" lang="en">
+<html class="h-full antialiased dark !visible !opacity-100" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -21,6 +21,7 @@ const title = Astro.props['full-title'] ?? `${Astro.props.title} - Enzo Innocenz
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<title>{title}</title>
+	<style is:inline>html { visibility: hidden; opacity: 0; }</style>
 	</head>
 	<body class="flex h-full flex-col bg-zinc-100 dark:bg-black text-zinc-600 dark:text-zinc-400">
 		<div class="fixed inset-0 flex justify-center bg-cover">
