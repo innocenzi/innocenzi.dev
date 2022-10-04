@@ -13,6 +13,7 @@ import backend from '~icons/bxs/terminal'
 import frontend from '~icons/mdi/palette-swatch-variant'
 import other from '~icons/mdi/briefcase-variant'
 import heart from '~icons/heroicons/heart-20-solid'
+import chevronDown from '~icons/heroicons-solid/chevron-down'
 
 const icons = {
 	github,
@@ -29,11 +30,12 @@ const icons = {
 	frontend,
 	other,
 	heart,
+	chevronDown,
 }
 
 defineProps<{
 	icon: keyof typeof icons
-	class?: string
+	class?: string | object
 }>()
 </script>
 

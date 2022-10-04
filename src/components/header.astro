@@ -6,9 +6,9 @@ import avatar from '../assets/avatar.jpg'
 
 <header class="flex w-full justify-between mt-8 md:mt-20">
 	<div
-		class="h-11 w-11 shrink-0 rounded-full p-0.5 shadow-lg shadow-zinc-800/5 ring-1 backdrop-blur bg-zinc-800/90 ring-white/10"
+		class="h-11 w-11 shrink-0 rounded-full p-0.5 shadow-lg focus-within:ring focus-within:ring-pink-300 shadow-zinc-800/5 ring-1 backdrop-blur bg-zinc-800/90 ring-white/10"
 	>
-		<a href="/" class="pointer-events-auto" aria-label="Home" rel="prefetch">
+		<a href="/" class="pointer-events-auto focus:outline-none" aria-label="Home" rel="prefetch">
 			<Image
 				src={avatar}
 				width={44}
@@ -19,5 +19,5 @@ import avatar from '../assets/avatar.jpg'
 			/>
 		</a>
 	</div>
-	<Navigation url={Astro.url} />
+	<Navigation url={Astro.url} client:load />
 </header>

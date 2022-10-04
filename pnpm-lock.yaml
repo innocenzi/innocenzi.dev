@@ -6,6 +6,7 @@ specifiers:
   '@astrojs/tailwind': ^1.0.0
   '@astrojs/vue': ^1.0.1
   '@fontsource/karla': ^4.5.9
+  '@headlessui/vue': ^1.7.3
   '@iconify-json/bxs': ^1.1.4
   '@iconify-json/heroicons': ^1.1.4
   '@iconify-json/heroicons-solid': ^1.1.2
@@ -35,6 +36,7 @@ dependencies:
   '@astrojs/prefetch': 0.0.7
   '@astrojs/tailwind': 1.0.0
   '@astrojs/vue': 1.0.1_vue@3.2.39
+  '@headlessui/vue': 1.7.3_vue@3.2.39
   astro: 1.2.1
   vue: 3.2.39
 
@@ -497,6 +499,15 @@ packages:
   /@fontsource/karla/4.5.9:
     resolution: {integrity: sha512-rCyVzuYl31SEdxshWfDHr+jXRmMK5pzV/Ran79XiOQU8TpcD4j4ggOyO47if/waeIudHiNZhHI6G+9GYHM1ZfA==}
     dev: true
+
+  /@headlessui/vue/1.7.3_vue@3.2.39:
+    resolution: {integrity: sha512-Is4iakKts9u9E0+jEZNzoJpBjwq2SamwEIoEl2RlyYSu6Zco536GsPXaQEfg/o7Eyc1GUUlcL+dJd4Rt7qyf7A==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.39
+    dev: false
 
   /@humanwhocodes/config-array/0.10.4:
     resolution: {integrity: sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==}
