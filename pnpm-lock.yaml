@@ -20,7 +20,6 @@ specifiers:
   '@swup/preload-plugin': ^1.0.5
   '@swup/scripts-plugin': ^1.1.0
   '@swup/scroll-plugin': ^1.3.1
-  '@swup/slide-theme': ^1.0.5
   '@tailwindcss/typography': ^0.5.7
   '@types/node': ^18.7.17
   astro: ^1.2.1
@@ -55,7 +54,6 @@ devDependencies:
   '@swup/preload-plugin': 1.0.5
   '@swup/scripts-plugin': 1.1.0
   '@swup/scroll-plugin': 1.3.1
-  '@swup/slide-theme': 1.0.5
   '@tailwindcss/typography': 0.5.7
   '@types/node': 18.7.17
   eslint: 8.23.1
@@ -749,12 +747,6 @@ packages:
       '@swup/plugin': 1.0.1
       scrl: 1.0.0
       swup: 2.0.19
-    dev: true
-
-  /@swup/slide-theme/1.0.5:
-    resolution: {integrity: sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==}
-    dependencies:
-      '@swup/theme': 1.0.7
     dev: true
 
   /@swup/theme/1.0.7:
