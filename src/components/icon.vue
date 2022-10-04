@@ -42,5 +42,5 @@ defineProps<{
 </script>
 
 <template>
-	<component :is="icons[icon]" :class="$props.class" aria-hidden="true" width="auto" height="auto" />
+	<component :is="icons[icon]" :class="$props.class" aria-hidden="true" width="0px" height="0px" />
 </template>

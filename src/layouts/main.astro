@@ -19,7 +19,6 @@ const description = Astro.props.description ?? 'I am Enzo Innocenzi. Full-stack 
 <script>
 // @ts-nocheck swup is in js
 import Swup from 'swup'
-import SwupScriptsPlugin from '@swup/scripts-plugin'
 import SwupHeadPlugin from '@swup/head-plugin'
 import SwupScrollPlugin from '@swup/scroll-plugin'
 import SwupPreloadPlugin from '@swup/preload-plugin'
@@ -27,7 +26,6 @@ import SwupBodyClassPlugin from '@swup/body-class-plugin'
 
 new Swup({
 	plugins: [
-		new SwupScriptsPlugin(), 
 		new SwupHeadPlugin({
 			persistTags: 'title',
 		}), 
@@ -74,7 +72,7 @@ new Swup({
 					style={`background-image:url(${background.src})`}>
 				</div>
 			</div>
-			<main id="swup" class="swup-transition-slide container flex flex-col flex-1 max-w-6xl mx-auto px-6 sm:px-12">
+			<main id="swup" class="transition-slide container flex flex-col flex-1 max-w-6xl mx-auto px-6 sm:px-12">
 				<Header />
 				<section class="mt-8 md:mt-32 flex flex-col flex-1">
 					<slot />
@@ -125,20 +123,19 @@ a.link:hover {
 |--------------------------------------------------------------------------
 */
 
-.swup-transition-slide {
+.transition-slide {
 	opacity: 1;
 	transition: opacity 0.3s, transform 0.4s;
-	transform: translate3d(0, 0, 0);
+	transform: translate3d(0px, 0px, 0px);
 }
 
-html.is-animating .swup-transition-slide {
+html.is-animating .transition-slide {
 	opacity: 0;
-	transform: translate3d(-5px, 0, 0);
+	transform: translate3d(-5px, 0px, 0px);
 }
 
-html.is-animating.is-leaving .swup-transition-slide {
+html.is-animating.is-leaving .transition-slide {
 	opacity: 0;
-	transform: translate3d(5px, 0, 0);
+	transform: translate3d(5px, 0px, 0px);
 }
-
 </style>
