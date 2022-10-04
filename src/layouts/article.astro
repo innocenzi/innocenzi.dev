@@ -30,9 +30,10 @@ import { formatDate, getReadingTime } from '$/utils/article'
 									</time>
 								</header>
 								<div class:list={[
-									'mt-8 prose prose-invert mb-16 transition-all',
-									'prose-a:text-pink-300 prose-a:font-medium prose-a:underline-offset-4 prose-a:decoration-pink-300/50',
-									'hover:prose-a:decoration-pink-300',
+									'mt-8 prose prose-invert mb-16 prose-a:transition-all text-zinc-300/90',
+									'prose-a:text-white prose-a:font-medium prose-a:underline-offset-[6px] prose-a:decoration-zinc-300/50',
+									'prose-code:font-semibold prose-code:text-zinc-200',
+									'hover:prose-a:decoration-zinc-300',
 								]}>
 									<slot />
 								</div>

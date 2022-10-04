@@ -18,6 +18,7 @@
     "vue": "^3.2.39"
   },
   "devDependencies": {
+    "@fontsource/inter": "^4.5.13",
     "@fontsource/karla": "^4.5.9",
     "@iconify-json/bxs": "^1.1.4",
     "@iconify-json/heroicons": "^1.1.4",

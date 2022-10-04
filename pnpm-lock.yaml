@@ -5,6 +5,7 @@ specifiers:
   '@astrojs/prefetch': ^0.0.7
   '@astrojs/tailwind': ^1.0.0
   '@astrojs/vue': ^1.0.1
+  '@fontsource/inter': ^4.5.13
   '@fontsource/karla': ^4.5.9
   '@headlessui/vue': ^1.7.3
   '@iconify-json/bxs': ^1.1.4
@@ -40,6 +41,7 @@ dependencies:
   vue: 3.2.39
 
 devDependencies:
+  '@fontsource/inter': 4.5.13
   '@fontsource/karla': 4.5.9
   '@iconify-json/bxs': 1.1.4
   '@iconify-json/heroicons': 1.1.4
@@ -492,6 +494,10 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@fontsource/inter/4.5.13:
+    resolution: {integrity: sha512-nABtF6jNZZHrotLRiGBByhG7NKJGJHgMbX5W8v6C/7nSdyiWtMRfZX7AMIECDLYGUOEArZDeVO/SbkgwKLrLJw==}
     dev: true
 
   /@fontsource/karla/4.5.9:
