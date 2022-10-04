@@ -1,5 +1,5 @@
 [
-	{ "hidden": false, "href": "/", "name": "About" },
+	{ "hidden": false, "href": "/", "name": "About", "icon": "home" },
 	{ "hidden": false, "href": "/articles", "name": "Articles" },
 	{ "hidden": true, "href": "/projects", "name": "Projects" },
 	{ "hidden": true, "href": "/uses", "name": "Uses" }

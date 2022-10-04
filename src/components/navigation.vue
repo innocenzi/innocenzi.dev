@@ -30,13 +30,14 @@ function isCurrent(href: string) {
 						:class="[
 							'relative block px-4 py-3 transition group',
 							isCurrent(route.href)
-								? 'text-pink-300'
+								? 'text-pink-200'
 								: 'hover:text-pink-200/90'
 						]"
 						:href="route.href"
 						rel="prefetch"
 					>
-						{{ route.name }}
+						<span v-if="!route.icon">{{ route.name }}</span>
+						<Icon v-else :icon="(route.icon as any)" class="h-5 w-5" />
 						<span
 							class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-300/0 via-pink-300/40 to-pink-300/0 transition"
 							:class="[

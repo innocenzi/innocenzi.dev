@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import home from '~icons/mdi/home'
 import github from '~icons/mdi/github'
 import twitter from '~icons/mdi/twitter'
 import linkedin from '~icons/mdi/linkedin'
@@ -16,6 +17,7 @@ import heart from '~icons/heroicons/heart-20-solid'
 import chevronDown from '~icons/heroicons-solid/chevron-down'
 
 const icons = {
+	home,
 	github,
 	twitter,
 	linkedin,
