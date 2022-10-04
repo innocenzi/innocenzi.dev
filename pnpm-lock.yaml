@@ -16,7 +16,6 @@ specifiers:
   '@innocenzi/eslint-config': ^0.12.0
   '@swup/body-class-plugin': ^1.0.2
   '@swup/fade-theme': ^1.0.5
-  '@swup/head-plugin': ^1.2.1
   '@swup/preload-plugin': ^1.0.5
   '@swup/scroll-plugin': ^1.3.1
   '@tailwindcss/typography': ^0.5.7
@@ -49,7 +48,6 @@ devDependencies:
   '@innocenzi/eslint-config': 0.12.0_irgkl5vooow2ydyo6aokmferha
   '@swup/body-class-plugin': 1.0.2
   '@swup/fade-theme': 1.0.5
-  '@swup/head-plugin': 1.2.1
   '@swup/preload-plugin': 1.0.5
   '@swup/scroll-plugin': 1.3.1
   '@tailwindcss/typography': 0.5.7
@@ -713,12 +711,6 @@ packages:
     resolution: {integrity: sha512-9PwC7UmW0RZ5eda+JtWz0z0H3kWWW4Ir3fnEnQOLwdS5p+nrvrLGQM3WjUR/kFIuAsU6K40Ty99gtoW6spWYSA==}
     dependencies:
       '@swup/theme': 1.0.7
-    dev: true
-
-  /@swup/head-plugin/1.2.1:
-    resolution: {integrity: sha512-crTX9KXkj7isGKyyRKaN+HZ293MYe92QhYWGuc2isSB3tb3EthX3IyPBIjqdhBYMFG6U2XMLWuEge/M9wXAfOw==}
-    dependencies:
-      '@swup/plugin': 1.0.1
     dev: true
 
   /@swup/plugin/1.0.1:
