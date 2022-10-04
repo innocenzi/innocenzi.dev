@@ -9,9 +9,11 @@ import '../slide.css'
 export type Props = {
 	'full-title'?: string
 	title?: string
+	description?: string
 }
 
 const title = Astro.props['full-title'] ?? `${Astro.props.title} - Enzo Innocenzi`
+const description = Astro.props.description ?? 'I am Enzo Innocenzi. Full-stack web developer, from France.'
 ---
 
 <script>
@@ -28,7 +30,7 @@ new Swup({
 	plugins: [
 		new SwupScriptsPlugin(), 
 		new SwupHeadPlugin({
-			persistTags: 'title'
+			persistTags: 'title',
 		}), 
 		new SwupSlideTheme(),
 		new SwupScrollPlugin(), 
@@ -48,6 +50,18 @@ new Swup({
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<title>{title}</title>
+
+		<meta name="twitter:site" content="@enzoinnocenzi" />
+		<meta name="twitter:creator" content="@enzoinnocenzi" />
+		<meta property="og:url" content={Astro.url.href}>
+		<meta property="og:site_name" content="Enzo Innocenzi" />
+
+		<slot name="head">
+			<meta property="og:type" content="website">
+			<meta property="og:title" content={title}>
+			<meta property="og:description" content={description}>
+			<meta property="og:image" content="">
+		</slot>
 	</head>
 	<body class="flex flex-col bg-[#040404] text-zinc-400 !visible !opacity-100 transition duration-75" style="visibility: hidden; opacity: 0;">
 		<div class="relative flex flex-col flex-1">

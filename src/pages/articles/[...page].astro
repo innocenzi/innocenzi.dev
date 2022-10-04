@@ -5,7 +5,7 @@ import ArticleList from '../../components/articles/list.vue'
 
 export async function getStaticPaths({ paginate }: any) {
   const allPosts = await Astro.glob('./*.md');
-  const sortedPosts = allPosts.sort((a: any, b: any) => +new Date(b.date) - +new Date(a.date))
+  const sortedPosts = allPosts.sort((a: any, b: any) => +new Date(b.created_at) - +new Date(a.created_at))
 
 	return paginate(sortedPosts, {
 		pageSize: 8
@@ -15,7 +15,7 @@ export async function getStaticPaths({ paginate }: any) {
 const { page } = Astro.props
 ---
 
-<Layout title="Articles">
+<Layout title="Articles" description="I am writing on PHP, TypeScript, Inertia, and web development in general.">
 	<header class="max-w-2xl">
 		<h1 class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl sm:leading-tight">
 			Writing on PHP, TypeScript, Inertia, and web development in general.

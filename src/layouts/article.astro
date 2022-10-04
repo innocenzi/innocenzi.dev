@@ -5,6 +5,14 @@ import { formatDate, getReadingTime } from '$/utils/article'
 ---
 
 <Layout title={Astro.props.content.title}>
+	<meta slot="head" property="og:type" content="article">
+	<meta slot="head" property="og:title" content={Astro.props.content.title}>
+	<meta slot="head" property="og:description" content={Astro.props.content.description}>
+	<meta slot="head" property="article:author" content="https://twitter.com/enzoinnocenzi" />
+	<meta slot="head" property="article:publisher" content="https://twitter.com/enzoinnocenzi" />
+	<meta slot="head" property="article:published_time" content={Astro.props.content.created_at}>
+	{Astro.props.content.updated_at && <meta slot="head" property="article:modified_time" content={Astro.props.content.updated_at}>}
+
 	<div class="sm:px-8 lg:mb-12">
 		<div class="mx-auto max-w-7xl lg:px-8">
 			<div class="relative px-4 sm:px-8 lg:px-10">
@@ -23,8 +31,8 @@ import { formatDate, getReadingTime } from '$/utils/article'
 									<h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
 										{Astro.props.content.title}
 									</h1>
-									<time datetime={Astro.props.frontmatter.date} class="order-first flex flex-col md:flex-row md:items-center text-base text-zinc-500">
-										<span>{formatDate(Astro.props.frontmatter.date)}</span>
+									<time datetime={Astro.props.frontmatter.created_at} class="order-first flex flex-col md:flex-row md:items-center text-base text-zinc-500">
+										<span>{formatDate(Astro.props.frontmatter.created_at)}</span>
 										<span class="hidden md:inline ml-4">•</span>
 										<span class="md:ml-4 text-sm md:text-base">{getReadingTime(Astro.props.compiledContent())}</span>
 									</time>

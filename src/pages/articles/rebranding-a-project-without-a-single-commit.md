@@ -2,7 +2,7 @@
 layout: $/layouts/article.astro
 title: Rebranding a project without a single commit
 description: I've been working on a project called [name], but I couldn't find a name until long after the project was started. I wanted to rebrand the project, but I didn't want to have a big search-and-replace commit that would stain the commit history.
-date: 2022-09-20
+created_at: 2022-09-20
 ---
 
 I've been working on a project called [[name]](https://github.com/monolikit), but I couldn't find a name until long after the project was started. The project's codename was Monolikit. 

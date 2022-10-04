@@ -8,7 +8,8 @@ defineProps<{
 		compiledContent: Function
 		frontmatter: {
 			title: string
-			date: string
+			created_at: string
+			updated_at?: string
 			image?: string
 			category: string
 			tags: string[]
@@ -33,7 +34,7 @@ defineProps<{
 						</h2>
 						<time
 							class="relative z-10 order-first mb-3 flex flex-col pl-3.5 text-sm leading-none text-zinc-500 md:hidden"
-							:datetime="article.frontmatter.date"
+							:datetime="article.frontmatter.created_at"
 						>
 							<span
 								class="absolute inset-y-0 left-0 flex items-center"
@@ -41,7 +42,7 @@ defineProps<{
 							>
 								<span class="h-10 w-0.5 rounded-full bg-zinc-500" />
 							</span>
-							<span v-text="formatDate(article.frontmatter.date)" />
+							<span v-text="formatDate(article.frontmatter.created_at)" />
 							<span class="mt-1 text-xs" v-text="getReadingTime(article.compiledContent())" />
 						</time>
 						<p class="relative z-10 mt-2 text-sm text-zinc-400" v-text="article.frontmatter.description" />
@@ -57,8 +58,8 @@ defineProps<{
 						class="relative z-10 order-first mt-1 mb-3 hidden flex-col justify-center text-sm text-zinc-500 md:flex"
 					>
 						<time
-							:datetime="article.frontmatter.date"
-							v-text="formatDate(article.frontmatter.date)"
+							:datetime="article.frontmatter.created_at"
+							v-text="formatDate(article.frontmatter.created_at)"
 						/>
 						<span class="mt-1 text-xs" v-text="getReadingTime(article.compiledContent())" />
 					</div>
