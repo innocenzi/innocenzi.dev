@@ -19,16 +19,12 @@ const description = Astro.props.description ?? 'I am Enzo Innocenzi. Full-stack 
 <script>
 // @ts-nocheck swup is in js
 import Swup from 'swup'
-import SwupHeadPlugin from '@swup/head-plugin'
 import SwupScrollPlugin from '@swup/scroll-plugin'
 import SwupPreloadPlugin from '@swup/preload-plugin'
 import SwupBodyClassPlugin from '@swup/body-class-plugin'
 
 new Swup({
 	plugins: [
-		new SwupHeadPlugin({
-			persistTags: 'title',
-		}), 
 		new SwupScrollPlugin(), 
 		new SwupPreloadPlugin(), 
 		new SwupBodyClassPlugin(), 
@@ -41,6 +37,7 @@ new Swup({
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="/slide.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -115,27 +112,5 @@ a.link {
 
 a.link:hover {
 	background-size: 100% 1px;
-}
-
-/*
-|--------------------------------------------------------------------------
-| Slide animation
-|--------------------------------------------------------------------------
-*/
-
-.transition-slide {
-	opacity: 1;
-	transition: opacity 0.3s, transform 0.4s;
-	transform: translate3d(0px, 0px, 0px);
-}
-
-html.is-animating .transition-slide {
-	opacity: 0;
-	transform: translate3d(-5px, 0px, 0px);
-}
-
-html.is-animating.is-leaving .transition-slide {
-	opacity: 0;
-	transform: translate3d(5px, 0px, 0px);
 }
 </style>

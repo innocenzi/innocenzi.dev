@@ -1,0 +1,15 @@
+.transition-slide {
+	opacity: 1;
+	transition: opacity 0.3s, transform 0.4s;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+html.is-animating .transition-slide {
+	opacity: 0;
+	transform: translate3d(-5px, 0px, 0px);
+}
+
+html.is-animating.is-leaving .transition-slide {
+	opacity: 0;
+	transform: translate3d(5px, 0px, 0px);
+}
