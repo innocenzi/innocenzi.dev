@@ -17,7 +17,7 @@ defineProps<{
 	<div class="flex flex-col items-center md:items-start">
 		<span class="font-karla mb-2 flex items-center text-xl font-medium uppercase tracking-wider transition">
 			<Icon :icon="(icon as any)" class="mr-4 h-8 w-8" />
-			<span class="text-primary dark:text-pink-200/90" v-text="name" />
+			<span class="text-pink-200/90" v-text="name" />
 		</span>
 
 		<div class="flex flex-wrap justify-center gap-y-2 md:justify-start">
