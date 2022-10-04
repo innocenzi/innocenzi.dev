@@ -18,7 +18,6 @@ specifiers:
   '@swup/fade-theme': ^1.0.5
   '@swup/head-plugin': ^1.2.1
   '@swup/preload-plugin': ^1.0.5
-  '@swup/scripts-plugin': ^1.1.0
   '@swup/scroll-plugin': ^1.3.1
   '@tailwindcss/typography': ^0.5.7
   '@types/node': ^18.7.17
@@ -52,7 +51,6 @@ devDependencies:
   '@swup/fade-theme': 1.0.5
   '@swup/head-plugin': 1.2.1
   '@swup/preload-plugin': 1.0.5
-  '@swup/scripts-plugin': 1.1.0
   '@swup/scroll-plugin': 1.3.1
   '@tailwindcss/typography': 0.5.7
   '@types/node': 18.7.17
@@ -733,12 +731,6 @@ packages:
       '@swup/plugin': 1.0.1
       delegate-it: 3.0.1
       swup: 2.0.19
-    dev: true
-
-  /@swup/scripts-plugin/1.1.0:
-    resolution: {integrity: sha512-/2V5cUrmzxxZH91bBk0WjsWMJhjKhb32wZ41Sw/HXAUf2gLvqebvW6Lw98HJsagNXxVqqjmzTDIfdbHGwVsG/w==}
-    dependencies:
-      '@swup/plugin': 1.0.1
     dev: true
 
   /@swup/scroll-plugin/1.3.1:
