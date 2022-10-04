@@ -27,7 +27,7 @@ function isCurrent(href: string) {
 						'relative block px-4 py-3 transition group',
 						isCurrent(route.href)
 							? 'text-pink-300'
-							: 'hover:text-pink-300'
+							: 'hover:text-pink-200/90'
 					]"
 					:href="route.href"
 					rel="prefetch"
@@ -38,7 +38,7 @@ function isCurrent(href: string) {
 						:class="[
 							isCurrent(route.href)
 								? 'opacity-100'
-								: 'opacity-0 group-hover:opacity-40'
+								: 'opacity-0 group-hover:opacity-50'
 						]"
 					/>
 				</a>
