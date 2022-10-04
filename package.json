@@ -13,9 +13,9 @@
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vue": "^1.0.1",
+    "@headlessui/vue": "^1.7.3",
     "astro": "^1.2.1",
-    "vue": "^3.2.39",
-    "@headlessui/vue": "^1.7.3"
+    "vue": "^3.2.39"
   },
   "devDependencies": {
     "@fontsource/karla": "^4.5.9",
@@ -26,7 +26,6 @@
     "@iconify-json/mdi": "^1.1.29",
     "@innocenzi/eslint-config": "^0.12.0",
     "@swup/body-class-plugin": "^1.0.2",
-    "@swup/debug-plugin": "^2.0.0",
     "@swup/fade-theme": "^1.0.5",
     "@swup/head-plugin": "^1.2.1",
     "@swup/preload-plugin": "^1.0.5",

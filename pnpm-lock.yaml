@@ -14,7 +14,6 @@ specifiers:
   '@iconify-json/mdi': ^1.1.29
   '@innocenzi/eslint-config': ^0.12.0
   '@swup/body-class-plugin': ^1.0.2
-  '@swup/debug-plugin': ^2.0.0
   '@swup/fade-theme': ^1.0.5
   '@swup/head-plugin': ^1.2.1
   '@swup/preload-plugin': ^1.0.5
@@ -49,7 +48,6 @@ devDependencies:
   '@iconify-json/mdi': 1.1.29
   '@innocenzi/eslint-config': 0.12.0_irgkl5vooow2ydyo6aokmferha
   '@swup/body-class-plugin': 1.0.2
-  '@swup/debug-plugin': 2.0.0
   '@swup/fade-theme': 1.0.5
   '@swup/head-plugin': 1.2.1
   '@swup/preload-plugin': 1.0.5
@@ -705,12 +703,6 @@ packages:
 
   /@swup/body-class-plugin/1.0.2:
     resolution: {integrity: sha512-fzK/sY1QeDJje0mNgPuETRmdLOrdJZzoG96GTcTEjBATXAjDbcGvodCCRDE8eNYQMWayHD2Lks4avV9e5cvQ7A==}
-    dependencies:
-      '@swup/plugin': 1.0.1
-    dev: true
-
-  /@swup/debug-plugin/2.0.0:
-    resolution: {integrity: sha512-e+hp2lEhKa8lB6vQSNhs5NdNv6D6dUZgRJFeSa7ZMx2gV4WZVgEMRSKfEvO80AGfWPJlcY+rRUAHhA1oe8d+ZA==}
     dependencies:
       '@swup/plugin': 1.0.1
     dev: true
