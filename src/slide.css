@@ -1,0 +1,20 @@
+.swup-transition-main {
+	opacity: 1;
+	transition: opacity 0.3s, transform 0.4s;
+	transform: translate3d(0, 0, 0);
+}
+
+html.is-animating .swup-transition-main {
+	opacity: 0;
+	transform: translate3d(-5px, 0, 0);
+}
+
+html.is-animating.is-leaving .swup-transition-main {
+	opacity: 0;
+	transform: translate3d(5px, 0, 0);
+}
+
+html.is-animating.is-leaving .swup-transition-main {
+	opacity: 0;
+	transform: translate3d(-5px, 0, 0);
+}
