@@ -43,7 +43,7 @@ new Swup({
 </script>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background: black;">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -52,10 +52,8 @@ new Swup({
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<title>{title}</title>
-		<style>html { @apply h-full overflow-y-scroll; }</style>
-		<style>body { @apply invisible opacity-0 bg-black; }</style>
 	</head>
-	<body class="flex h-full flex-col bg-black text-zinc-400 !visible !opacity-100">
+	<body class="flex h-full flex-col bg-black text-zinc-400 !visible !opacity-100 transition duration-75" style="visibility: hidden; opacity: 0;">
 		<div class="fixed inset-0 flex justify-center bg-cover">
 			<div class="flex w-full max-w-7xl">
 				<div
@@ -85,6 +83,11 @@ new Swup({
 :root {
 	tab-size: 4;
 	@apply selection:bg-pink-200/10 selection:text-pink-200/90;
+}
+
+html {
+	overflow-y: scroll;
+	height: 100%;
 }
 
 a.link {
