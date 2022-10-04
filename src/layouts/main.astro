@@ -4,6 +4,7 @@ import '@fontsource/inter/variable.css'
 import Icon from '../components/icon.vue'
 import Header from '../components/header.astro'
 import background from '$/assets/background.webp'
+import og from '$/assets/og.jpg'
 import '../slide.css'
 
 export type Props = {
@@ -55,12 +56,14 @@ new Swup({
 		<meta name="twitter:creator" content="@enzoinnocenzi" />
 		<meta property="og:url" content={Astro.url.href}>
 		<meta property="og:site_name" content="Enzo Innocenzi" />
+		<meta property="og:image" content={og.src}>
+		<meta property="og:image:width" content={og.width.toString()}>
+		<meta property="og:image:height" content={og.height.toString()}>
 
 		<slot name="head">
 			<meta property="og:type" content="website">
 			<meta property="og:title" content={title}>
 			<meta property="og:description" content={description}>
-			<meta property="og:image" content="">
 		</slot>
 	</head>
 	<body class="flex flex-col bg-[#040404] text-zinc-400 !visible !opacity-100 transition duration-75" style="visibility: hidden; opacity: 0;">
