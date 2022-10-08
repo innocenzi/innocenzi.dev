@@ -15,7 +15,7 @@ After installing it with `brew install git-filter-repo`, this simple one-liner s
 
 ```shell
 git filter-repo --blob-callback
-  \ 'blob.data = blob.data.replace(b"monolikit", b"[name]").replace(b"Monolikit", b"[name]")'
+  \ 'blob.data = blob.data.replace(b"monolikit", b"[name]").replace(b"Monolikit", b"[name]").replace(b"MONOLIKIT", b"[name]")'
   \ --force
 ```
 
