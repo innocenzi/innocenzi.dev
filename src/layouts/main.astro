@@ -20,6 +20,7 @@ const description = Astro.props.description ?? 'I am Enzo Innocenzi. Full-stack 
 // @ts-nocheck swup is in js
 import Swup from 'swup'
 import SwupScrollPlugin from '@swup/scroll-plugin'
+import SwupA11yPlugin from '@swup/a11y-plugin'
 import SwupPreloadPlugin from '@swup/preload-plugin'
 import SwupBodyClassPlugin from '@swup/body-class-plugin'
 
@@ -28,6 +29,7 @@ new Swup({
 		new SwupScrollPlugin(), 
 		new SwupPreloadPlugin(), 
 		new SwupBodyClassPlugin(), 
+		new SwupA11yPlugin(),
 	],
 })
 </script>

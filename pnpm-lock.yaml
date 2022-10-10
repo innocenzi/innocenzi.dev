@@ -15,6 +15,7 @@ specifiers:
   '@iconify-json/ic': ^1.1.7
   '@iconify-json/mdi': ^1.1.29
   '@innocenzi/eslint-config': ^0.12.0
+  '@swup/a11y-plugin': ^2.1.0
   '@swup/body-class-plugin': ^1.0.2
   '@swup/fade-theme': ^1.0.5
   '@swup/preload-plugin': ^1.0.5
@@ -48,6 +49,7 @@ devDependencies:
   '@iconify-json/ic': 1.1.7
   '@iconify-json/mdi': 1.1.29
   '@innocenzi/eslint-config': 0.12.0_irgkl5vooow2ydyo6aokmferha
+  '@swup/a11y-plugin': 2.1.0
   '@swup/body-class-plugin': 1.0.2
   '@swup/fade-theme': 1.0.5
   '@swup/preload-plugin': 1.0.5
@@ -709,6 +711,14 @@ packages:
       '@proload/core': 0.3.3
       tsm: 2.2.2
     dev: false
+
+  /@swup/a11y-plugin/2.1.0:
+    resolution: {integrity: sha512-cAuwB6zwVzHVuIHXByyvrAPXIBI2rt1JSJnBKI41k8xLAc/7tSJflSirWbZQXqYAu9D2Rn5p/hu9Kobf34buug==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+      focus-options-polyfill: 1.6.0
+      on-demand-live-region: 0.1.3
+    dev: true
 
   /@swup/body-class-plugin/1.0.2:
     resolution: {integrity: sha512-fzK/sY1QeDJje0mNgPuETRmdLOrdJZzoG96GTcTEjBATXAjDbcGvodCCRDE8eNYQMWayHD2Lks4avV9e5cvQ7A==}
@@ -2699,6 +2709,10 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
+  /focus-options-polyfill/1.6.0:
+    resolution: {integrity: sha512-uyrAmLZrPnUItQY5wTdg31TO9GGZRGsh/jmohUg9oLmLi/sw5y7LlTV/mwyd6rvbxIOGwmRiv6LcTS8w7Bk9NQ==}
+    dev: true
+
   /formdata-polyfill/4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
     engines: {node: '>=12.20.0'}
@@ -4084,6 +4098,10 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.1.4
       es-abstract: 1.20.2
+    dev: true
+
+  /on-demand-live-region/0.1.3:
+    resolution: {integrity: sha512-5IYdl43bMtB9Sz4B+Tvg3tkCZzsIEcgJ9xrH2Ge+4Z+t6uK+uAHHygopoyVxWFZd2N839jqOzd+kZLRr9bwOCg==}
     dev: true
 
   /once/1.4.0:
