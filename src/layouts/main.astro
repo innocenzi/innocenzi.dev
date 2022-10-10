@@ -16,26 +16,7 @@ const title = Astro.props['full-title'] ?? `${Astro.props.title} - Enzo Innocenz
 const description = Astro.props.description ?? 'I am Enzo Innocenzi. Full-stack web developer, from France.'
 ---
 
-<script>
-// @ts-nocheck swup is in js
-import Swup from 'swup'
-import SwupScrollPlugin from '@swup/scroll-plugin'
-import SwupA11yPlugin from '@swup/a11y-plugin'
-import SwupPreloadPlugin from '@swup/preload-plugin'
-import SwupBodyClassPlugin from '@swup/body-class-plugin'
-
-new Swup({
-	plugins: [
-		new SwupScrollPlugin(), 
-		new SwupPreloadPlugin(), 
-		new SwupBodyClassPlugin(), 
-		new SwupA11yPlugin(),
-	],
-})
-</script>
-
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="visibility: hidden; opacity: 0; background-color: #040404;" class="!visible !opacity-100 transition duration-75">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -61,10 +42,7 @@ new Swup({
 			<meta property="og:description" content={description}>
 		</slot>
 	</head>
-	<body
-		class="flex flex-col text-zinc-400 !visible !opacity-100 transition duration-75"
-		style="visibility: hidden; opacity: 0; background-color: #040404;"
-	>
+	<body class="flex flex-col text-zinc-400">
 		<div class="relative flex flex-col flex-1">
 			<div class="absolute inset-0 flex justify-center bg-cover bg-center">
 				<div
@@ -117,3 +95,21 @@ a.link:hover {
 	background-size: 100% 1px;
 }
 </style>
+
+<script>
+// @ts-nocheck swup is in js
+import Swup from 'swup'
+import SwupScrollPlugin from '@swup/scroll-plugin'
+import SwupA11yPlugin from '@swup/a11y-plugin'
+import SwupPreloadPlugin from '@swup/preload-plugin'
+import SwupBodyClassPlugin from '@swup/body-class-plugin'
+
+new Swup({
+	plugins: [
+		new SwupScrollPlugin(), 
+		new SwupPreloadPlugin(), 
+		new SwupBodyClassPlugin(), 
+		new SwupA11yPlugin(),
+	],
+})
+</script>
