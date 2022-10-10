@@ -14,9 +14,10 @@ The first thing I tried was a `git rebase -i` on the first commit - but that pro
 After installing it with `brew install git-filter-repo`, this simple one-liner solved all my problems:
 
 ```shell
-git filter-repo --blob-callback
-  \ 'blob.data = blob.data.replace(b"monolikit", b"hybridly").replace(b"Monolikit", b"Hybridly").replace(b"MONOLIKIT", b"HYBRIDLY")'
-  \ --force
+git filter-repo \
+  --blob-callback 'blob.data = blob.data.replace(b"monolikit", b"hybridly").replace(b"Monolikit", b"Hybridly").replace(b"MONOLIKIT", b"HYBRIDLY")' \
+  --filename-callback 'return filename.replace(b"monolikit", b"hybridly").replace(b"Monolikit", b"Hybridly").replace(b"MONOLIKIT", b"HYBRIDLY")' \
+  --force
 ```
 
 Basically, it goes over all the commits, and replace both `Monolikit` and `monolikit` with the new name.
