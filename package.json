@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/image": "^0.7.0",
     "@astrojs/prefetch": "^0.0.7",
+    "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vue": "^1.0.1",
     "@headlessui/vue": "^1.7.3",
