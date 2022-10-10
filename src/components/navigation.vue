@@ -34,6 +34,7 @@ function isCurrent(href: string) {
 								: 'hover:text-pink-200/90'
 						]"
 						:href="route.href"
+						:aria-label="route.name"
 						rel="prefetch"
 					>
 						<span v-if="!route.icon">{{ route.name }}</span>
