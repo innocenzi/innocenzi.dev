@@ -1,11 +1,11 @@
 ---
 layout: $/layouts/article.astro
 title: Rebranding a project without a single commit
-description: I've been working on a project called [name], but I couldn't find a name until long after the project was started. I wanted to rebrand the project, but I didn't want to have a big search-and-replace commit that would stain the commit history.
+description: I've been working on a project called Hybridly, but I couldn't find a name until long after the project was started. I wanted to rebrand the project, but I didn't want to have a big search-and-replace commit that would stain the commit history.
 created_at: 2022-09-20
 ---
 
-I've been working on a project called [[name]](https://github.com/monolikit), but I couldn't find a name until long after the project was started. The project's codename was Monolikit. 
+I've been working on a project called [Hybridly](https://github.com/hybridly), but I couldn't find a name until long after the project was started. The project's codename was Monolikit. 
 
 I wanted to rebrand the project, but I didn't like the idea of having one big commit with a big search-and-replace. That would disrupt the history and cause trouble when using `git blame`.
 
@@ -15,7 +15,7 @@ After installing it with `brew install git-filter-repo`, this simple one-liner s
 
 ```shell
 git filter-repo --blob-callback
-  \ 'blob.data = blob.data.replace(b"monolikit", b"[name]").replace(b"Monolikit", b"[name]").replace(b"MONOLIKIT", b"[name]")'
+  \ 'blob.data = blob.data.replace(b"monolikit", b"hybridly").replace(b"Monolikit", b"Hybridly").replace(b"MONOLIKIT", b"HYBRIDLY")'
   \ --force
 ```
 
