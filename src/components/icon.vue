@@ -15,6 +15,7 @@ import frontend from '~icons/mdi/palette-swatch-variant'
 import other from '~icons/mdi/briefcase-variant'
 import heart from '~icons/heroicons/heart-20-solid'
 import chevronDown from '~icons/heroicons-solid/chevron-down'
+import mastodon from '~icons/mdi/mastodon'
 
 const icons = {
 	home,
@@ -33,6 +34,7 @@ const icons = {
 	other,
 	heart,
 	chevronDown,
+	mastodon,
 }
 
 defineProps<{

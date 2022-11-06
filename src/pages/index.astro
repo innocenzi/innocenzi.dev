@@ -28,7 +28,7 @@ import socials from '../data/socials.json'
 		
 		<div class="mt-8 flex gap-6">
 			{Object.values(socials).map(social => (
-				<a href={social.url} title={social.title} class="text-zinc-500 hover:text-zinc-200 transition" rel="nofollow noopener" target="_blank">
+				<a href={social.url} title={social.title} rel="me" class="text-zinc-500 hover:text-zinc-200 transition" rel="nofollow noopener" target="_blank">
 					<Icon icon={social.icon as any} class="w-6 h-6" />
 				</a>
 			))}

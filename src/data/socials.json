@@ -1,15 +1,21 @@
 {
+	"github": {
+		"title": "Github",
+		"icon": "github",
+		"url": "https://github.com/innocenzi",
+		"username": "innocenzi"
+	},
 	"twitter": {
 		"title": "Twitter",
 		"icon": "twitter",
 		"url": "https://twitter.com/enzoinnocenzi",
 		"username": "@enzoinnocenzi"
 	},
-	"github": {
-		"title": "Github",
-		"icon": "github",
-		"url": "https://github.com/innocenzi",
-		"username": "innocenzi"
+	"mastodon": {
+		"title": "Mastodon",
+		"icon": "mastodon",
+		"url": "https://fosstodon.org/@innocenzi",
+		"username": "@innocenzi@fosstodon.org"
 	},
 	"linkedin": {
 		"title": "LinkedIn",
