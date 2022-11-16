@@ -21,7 +21,7 @@ function isCurrent(href: string) {
 		<nav v-if="routes.length" class="pointer-events-auto hidden md:block">
 			<ul class="flex rounded-full bg-zinc-900 px-3 text-sm font-medium text-zinc-200 shadow-lg shadow-zinc-800/5 ring-1 ring-white/10 backdrop-blur">
 				<li v-for="route in routes" :key="route.name">
-					<a
+					<nuxt-link
 						:class="[
 							'relative block px-4 py-3 transition group',
 							isCurrent(route.href)
@@ -30,6 +30,7 @@ function isCurrent(href: string) {
 						]"
 						:href="route.href"
 						:aria-label="route.name"
+						:external="route.external"
 						rel="prefetch"
 					>
 						<span v-text="route.name" />
@@ -41,7 +42,7 @@ function isCurrent(href: string) {
 									: 'opacity-0 group-hover:opacity-50'
 							]"
 						/>
-					</a>
+					</nuxt-link>
 				</li>
 			</ul>
 		</nav>
@@ -73,12 +74,13 @@ function isCurrent(href: string) {
 						<ul class="-my-2 divide-y divide-zinc-100/5 text-base text-zinc-300">
 							<template v-for="route in routes" :key="route.name">
 								<li v-if="!route.hidden">
-									<a
+									<nuxt-link
 										class="block py-2"
 										:href="route.href"
 										:class="{
 											'text-pink-200': isCurrent(route.href)
 										}"
+										:external="route.external"
 										v-text="route.name"
 									/>
 								</li>

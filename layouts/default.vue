@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import background from 'assets/background.webp'
+
 useHead({
 	htmlAttrs: { class: 'bg-[#040404]' },
 	bodyAttrs: { class: 'flex flex-col text-zinc-400' },
@@ -10,7 +12,7 @@ useHead({
 		<div class="pointer-events-none absolute inset-0 flex justify-center bg-cover bg-center">
 			<div
 				class="w-full bg-cover bg-no-repeat opacity-40"
-				style="background-image: url(@/assets/background.webp)"
+				:style="`background-image: url(${background})`"
 			/>
 		</div>
 		<main class="container mx-auto flex max-w-6xl flex-1 flex-col px-6 sm:px-12">
@@ -44,6 +46,10 @@ body {
 	min-height: 100%;
 	overflow-y: scroll;
 	@apply flex-1;
+}
+
+#__nuxt {
+	@apply flex flex-col flex-1;
 }
 
 a.link {
