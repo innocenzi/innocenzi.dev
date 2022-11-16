@@ -2,25 +2,28 @@ import { SitemapStream, streamToPromise } from 'sitemap'
 import { serverQueryContent } from '#content/server'
 
 export default defineEventHandler(async(event) => {
+	const config = useRuntimeConfig()
 	const docs = await serverQueryContent(event).find()
 	const sitemap = new SitemapStream({
-		hostname: 'https://innocenzi.dev',
+		hostname: config.domain,
 	})
 
-	sitemap.write({
-		url: '/',
-		changefreq: 'monthly',
-	})
+	const routes = [
+		{ path: '/', meta: { changefreq: 'monthly' } },
+		{ path: '/articles', meta: { changefreq: 'daily' } },
+	]
 
-	sitemap.write({
-		url: '/articles',
-		changefreq: 'daily',
-	})
+	for (const route of routes) {
+		sitemap.write({
+			url: route.path,
+			changefreq: route.meta.changefreq ?? 'monthly',
+		})
+	}
 
 	for (const doc of docs) {
 		sitemap.write({
 			url: doc._path,
-			changefreq: 'monthly',
+			changefreq: doc.changefreq,
 			lastmod: doc.updated_at ?? doc.created_at,
 		})
 	}

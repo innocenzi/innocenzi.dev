@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import socials from '@/data/socials.json'
+
+useHead({
+	title: 'Enzo Innocenzi',
+	titleTemplate: '%s - Software developer',
+})
+
+definePageMeta({
+	changefreq: 'monthly',
+})
 </script>
 
 <template>

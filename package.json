@@ -14,6 +14,7 @@
     "@innocenzi/eslint-config": "^0.14.0",
     "@nuxt/content": "^2.2.2",
     "@nuxt/image-edge": "1.0.0-27809804.194d2d6",
+    "@nuxt/kit": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.1.3",
     "@tailwindcss/typography": "^0.5.8",
     "eslint": "^8.27.0",

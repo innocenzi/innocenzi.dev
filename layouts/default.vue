@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import background from 'assets/background.webp'
+// @ts-ignore
+import background from '@/assets/background.webp'
+
+const route = useRoute()
+const config = useRuntimeConfig()
 
 useHead({
 	htmlAttrs: { class: 'bg-[#040404]' },
 	bodyAttrs: { class: 'flex flex-col text-zinc-400' },
+	link: [
+		{ rel: 'canonical', href: config.domain + route.fullPath },
+	],
 })
 </script>
 

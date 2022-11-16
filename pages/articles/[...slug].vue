@@ -1,6 +1,19 @@
 <script setup lang="ts">
 const { path } = useRoute()
 const data = await queryContent('articles').where({ _path: path }).findOne()
+
+useHead({
+	meta: [
+		{ property: 'og:type', content: 'article' },
+		{ property: 'article:published_time', content: data.updated_at ?? data.created_at },
+		{ property: 'article:author', content: 'Enzo Innocenzi' },
+		{ property: 'article:published', content: 'https://twitter.com/enzoinnocenzi' },
+	],
+})
+
+definePageMeta({
+	changefreq: 'monthly',
+})
 </script>
 
 <template>

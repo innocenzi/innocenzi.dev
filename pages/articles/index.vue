@@ -2,6 +2,17 @@
 const articles = await queryContent('articles')
 	.sort({ created_at: 1 })
 	.find()
+
+useHead({
+	title: 'Articles',
+	meta: [
+		{ name: 'description', content: 'Writing on PHP, TypeScript, Inertia, and web development in general.' },
+	],
+})
+
+definePageMeta({
+	changefreq: 'daily',
+})
 </script>
 
 <template>
