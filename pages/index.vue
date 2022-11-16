@@ -4,6 +4,9 @@ import socials from '@/data/socials.json'
 useHead({
 	title: 'Enzo Innocenzi',
 	titleTemplate: '%s - Software developer',
+	meta: [
+		{ name: 'description', content: 'Hey, I am Enzo Innocenzi. Full-stack web developer, from France.' },
+	],
 })
 
 definePageMeta({
