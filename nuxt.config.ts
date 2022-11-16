@@ -25,6 +25,10 @@ export default defineNuxtConfig({
 		shim: false,
 	},
 	content: {
+		highlight: {
+			theme: 'vitesse-dark',
+			preload: ['php', 'ts', 'bash', 'md', 'yaml', 'html', 'vue'],
+		},
 		markdown: {
 			remarkPlugins: ['remark-reading-time'],
 		},
