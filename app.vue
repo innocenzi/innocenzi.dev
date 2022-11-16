@@ -13,7 +13,7 @@ import '@fontsource/inter/variable.css'
 .page-enter-active,
 .page-leave-active {
 	opacity: 1;
-	transition: opacity 0.3s, transform 0.4s;
+	transition: opacity 0.2s, transform 0.2s;
 	transform: translate3d(0px, 0px, 0px);
 }
 
