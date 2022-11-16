@@ -1,0 +1,4 @@
+[
+	{ "hidden": false, "href": "/", "name": "About" },
+	{ "hidden": false, "href": "/articles", "name": "Articles" }
+]
