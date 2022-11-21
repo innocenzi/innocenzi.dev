@@ -34,14 +34,8 @@ definePageMeta({
 				</badge>.
 			</p>
 			<p class="mt-6 text-xl">
-				<badge color="primary" class="md:-ml-3">
-					I am a perfectionist
-				</badge>.
-				I pay attention to details, because I love when things look <badge color="primary" transparent>
-					good
-				</badge> and <badge color="primary" transparent>
-					professionnal
-				</badge>.
+				<badge color="primary" class="md:-ml-3" text="I am a perfectionist" />.
+				I pay attention to details, because I love when things look <badge color="primary" transparent text="good" /> and <badge color="primary" transparent text="professionnal" />.
 				I am also self-taught, and <a href="https://www.youtube.com/watch?v=Cv1RJTHf5fk&t=11s"><badge color="primary" transparent>I never stop learning</badge></a>.
 			</p>
 			<div class="mt-8 flex gap-6">
