@@ -11,6 +11,7 @@ export default defineEventHandler(async(event) => {
 	const routes = [
 		{ path: '/', meta: { changefreq: 'monthly' } },
 		{ path: '/articles', meta: { changefreq: 'daily' } },
+		{ path: '/projects', meta: { changefreq: 'monthly' } },
 	]
 
 	for (const route of routes) {

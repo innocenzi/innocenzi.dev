@@ -25,7 +25,7 @@ useHead({
 		<main class="container mx-auto flex max-w-6xl flex-1 flex-col px-6 sm:px-12">
 			<layout-header />
 
-			<section class="mt-8 flex flex-1 flex-col md:mt-32">
+			<section class="mt-8 mb-16 flex flex-1 flex-col md:mt-32">
 				<slot />
 			</section>
 
