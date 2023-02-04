@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const articles = await queryContent('articles')
-	.sort({ created_at: 1 })
+	.sort({ created_at: -1 })
 	.find()
 
 useHead({
