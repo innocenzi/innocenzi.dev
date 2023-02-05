@@ -25,19 +25,12 @@ export default defineNuxtConfig({
 		shim: false,
 	},
 	content: {
+		highlight: {
+			theme: 'vitesse-dark',
+			preload: ['php', 'ts', 'bash', 'md', 'yaml', 'html', 'vue'],
+		},
 		markdown: {
-			remarkPlugins: {
-				'remark-reading-time': {},
-				'remark-torchlight': {
-					config: {
-						token: process.env.TORCHLIGHT_TOKEN,
-						theme: 'material-theme-darker',
-						options: {
-							lineNumbers: false,
-						},
-					},
-				},
-			},
+			remarkPlugins: ['remark-reading-time'],
 		},
 	},
 	nitro: {
