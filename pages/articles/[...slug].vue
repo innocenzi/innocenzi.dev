@@ -60,6 +60,32 @@ definePageMeta({
 
 <style>
 .prose :where(pre):not(:where([class~="not-prose"] *)) {
-	@apply border border-zinc-700/50 rounded-2xl p-8 overflow-x-auto;
+	--bg-color: rgba(0,0,0,0.5);
+  --scrollbar-width: 10px;
+  --scrollbar-background-color: #030405;
+  --scrollbar-thumb-color: #313131;
+  --scrollbar-radius: 10px;
+	@apply border border-zinc-700/50 rounded-2xl p-8 overflow-x-auto !bg-[var(--bg-color)];
+}
+
+pre::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  background-color: var(--scrollbar-background-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+pre::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-background-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+pre {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-background-color);
 }
 </style>
