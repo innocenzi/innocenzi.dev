@@ -82,6 +82,6 @@ const hovered = ref(false)
 }
 
 .prose-code .line {
-	@apply block leading-relaxed;
+	@apply block leading-relaxed min-h-[1rem];
 }
 </style>
