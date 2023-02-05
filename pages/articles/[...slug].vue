@@ -57,3 +57,9 @@ definePageMeta({
 		</div>
 	</main>
 </template>
+
+<style>
+.prose p > img {
+	@apply rounded-2xl overflow-hidden shadow-lg;
+}
+</style>
