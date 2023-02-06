@@ -14,6 +14,14 @@ useHead({
 definePageMeta({
 	changefreq: 'monthly',
 })
+
+defineOgImageStatic({
+	component: 'OpengraphImage',
+	title: data.ogTitle,
+	readingTime: data?.readingTime?.text,
+	creationDate: formatDate(data?.created_at),
+	provider: 'browser',
+})
 </script>
 
 <template>

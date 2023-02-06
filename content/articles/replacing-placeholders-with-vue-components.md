@@ -1,5 +1,6 @@
 ---
 title: Replacing parts of a string with Vue components
+ogTitle: ['Replacing parts of a string', 'with Vue components']
 description: One cannot simply replace parts a string by some HTML that contains Vue code, so this article describes how to achieve this in a simple way.
 created_at: 2023-02-04
 ---

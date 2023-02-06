@@ -1,5 +1,6 @@
 ---
 title: Rebranding a project without a single commit
+ogTitle: ['Rebranding a project', 'without a single commit']
 description: I've been working on a project called Hybridly, but I couldn't find a name until long after the project was started. I wanted to rebrand the project, but I didn't want to have a big search-and-replace commit that would stain the commit history.
 created_at: 2022-09-20
 ---

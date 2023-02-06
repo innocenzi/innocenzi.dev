@@ -18,8 +18,17 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+	ogImage: {
+		forcePrerender: true,
+	},
+	experimental: {
+		componentIslands: true,
+	},
 	runtimeConfig: {
 		domain: 'https://innocenzi.dev',
+		public: {
+			siteUrl: 'https://innocenzi.dev',
+		},
 	},
 	typescript: {
 		shim: false,
@@ -38,5 +47,5 @@ export default defineNuxtConfig({
 			routes: ['/sitemap.xml'],
 		},
 	},
-	modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image-edge', 'nuxt-icon'],
+	modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image-edge', 'nuxt-icon', 'nuxt-og-image'],
 })
