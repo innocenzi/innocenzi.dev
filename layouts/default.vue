@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// @ts-ignore
 import background from '@/assets/background.webp'
+import pattern from '@/assets/pattern.svg'
 
 const route = useRoute()
 const config = useRuntimeConfig()
@@ -16,9 +16,12 @@ useHead({
 
 <template>
 	<div class="relative flex flex-1 flex-col">
-		<div class="pointer-events-none absolute inset-0 flex justify-center bg-cover bg-center">
+		<div
+			class="pointer-events-none absolute inset-0 flex justify-center bg-repeat"
+			:style="`background-image: url(${pattern})`"
+		>
 			<div
-				class="w-full bg-cover bg-no-repeat opacity-40"
+				class="w-full bg-cover bg-no-repeat opacity-10"
 				:style="`background-image: url(${background})`"
 			/>
 		</div>
