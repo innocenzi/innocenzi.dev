@@ -21,10 +21,10 @@
 		"icon": "mdi:vuejs"
 	},
 	{
-		"name": "Inertia",
-		"url": "https://inertiajs.com",
+		"name": "Hybridly",
+		"url": "https://hybridly.dev",
 		"categories": ["back-end", "front-end"],
-		"description": "A library for making server-driven single page applications, architectured as monoliths.",
-		"icon": "ic:baseline-double-arrow"
+		"description": "A library for making server-driven single-page applications, architectured as monoliths.",
+		"icon": "Hybridly"
 	}
 ]
