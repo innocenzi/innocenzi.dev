@@ -10,24 +10,29 @@
   "devDependencies": {
     "@fontsource/inter": "^4.5.15",
     "@fontsource/karla": "^4.5.11",
-    "@headlessui/vue": "^1.7.9",
-    "@innocenzi/eslint-config": "^0.14.1",
-    "@nuxt/content": "^2.4.3",
-    "@nuxt/image-edge": "1.0.0-27919678.2f5b64b",
-    "@nuxt/kit": "^3.1.2",
-    "@nuxtjs/tailwindcss": "^6.3.1",
+    "@headlessui/vue": "^1.7.12",
+    "@innocenzi/eslint-config": "^0.16.2",
+    "@nuxt/content": "^2.5.0",
+    "@nuxt/image-edge": "1.0.0-27968280.9739e4d",
+    "@nuxt/kit": "^3.2.3",
+    "@nuxtjs/tailwindcss": "^6.4.1",
     "@tailwindcss/typography": "^0.5.9",
-    "eslint": "^8.33.0",
-    "nuxt": "3.1.2",
-    "nuxt-icon": "^0.2.10",
-    "nuxt-og-image": "^1.4.9",
+    "eslint": "^8.35.0",
+    "nuxt": "3.2.3",
+    "nuxt-icon": "^0.3.2",
+    "nuxt-og-image": "^1.5.2",
     "remark-reading-time": "^2.0.1",
     "sitemap": "^7.1.1",
-    "tailwindcss": "^3.2.4",
+    "tailwindcss": "^3.2.7",
     "typescript": "^4.9.5",
     "vue": "^3.2.47"
   },
   "dependencies": {
-    "@vueuse/core": "^9.12.0"
+    "@vueuse/core": "^9.13.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["webpack"]
+    }
   }
 }
