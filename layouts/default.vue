@@ -21,7 +21,7 @@ useHead({
 			:style="`background-image: url(${pattern})`"
 		>
 			<div
-				class="w-full bg-cover bg-no-repeat opacity-10"
+				class="w-full bg-cover bg-no-repeat opacity-40"
 				:style="`background-image: url(${background})`"
 			/>
 		</div>
