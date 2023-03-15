@@ -2,6 +2,9 @@ export default defineNuxtConfig({
 	app: {
 		pageTransition: { name: 'page', mode: 'out-in' },
 		head: {
+			htmlAttrs: {
+				lang: 'en-US'
+			},
 			titleTemplate: '%s - Enzo Innocenzi',
 			link: [
 				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
@@ -25,7 +28,6 @@ export default defineNuxtConfig({
 		componentIslands: true,
 	},
 	runtimeConfig: {
-		domain: 'https://innocenzi.dev',
 		public: {
 			siteUrl: 'https://innocenzi.dev',
 		},

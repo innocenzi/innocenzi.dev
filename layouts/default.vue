@@ -9,7 +9,7 @@ useHead({
 	htmlAttrs: { class: 'bg-[#040404]' },
 	bodyAttrs: { class: 'flex flex-col text-zinc-400' },
 	link: [
-		{ rel: 'canonical', href: config.domain + route.fullPath },
+		{ rel: 'canonical', href: config.public.siteUrl + route.fullPath },
 	],
 })
 </script>
