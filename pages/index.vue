@@ -16,6 +16,7 @@ definePageMeta({
 
 <template>
 	<main>
+		<!-- eslint-disable vue/singleline-html-element-content-newline -->
 		<header class="max-w-2xl">
 			<p class="text-4xl font-bold tracking-tight text-zinc-200 sm:text-5xl sm:leading-tight">
 				Hey, I am Enzo Innocenzi. <br />
@@ -29,9 +30,7 @@ definePageMeta({
 				</badge>,
 				<badge color="secondary" transparent>
 					modern technologies
-				</badge> and <badge color="secondary" transparent>
-					good developer experience
-				</badge>.
+				</badge> and <badge color="secondary" transparent>good developer experience</badge>.
 			</p>
 			<p class="mt-6 text-xl">
 				<badge color="primary" class="md:-ml-3" text="I am a perfectionist" />.
