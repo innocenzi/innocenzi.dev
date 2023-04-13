@@ -70,4 +70,8 @@ defineOgImageStatic({
 .prose p > img {
 	@apply rounded-2xl overflow-hidden shadow-lg;
 }
+
+.prose :is(h1, h2, h3, h4, h5) > a {
+	@apply !no-underline;
+}
 </style>
