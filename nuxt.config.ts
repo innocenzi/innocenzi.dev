@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 		pageTransition: { name: 'page', mode: 'out-in' },
 		head: {
 			htmlAttrs: {
-				lang: 'en-US'
+				lang: 'en-US',
 			},
 			titleTemplate: '%s - Enzo Innocenzi',
 			link: [

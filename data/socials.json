@@ -1,31 +1,37 @@
 {
-	"github": {
-		"title": "Github",
-		"icon": "mdi:github",
-		"url": "https://github.com/innocenzi",
-		"username": "innocenzi"
-	},
-	"twitter": {
-		"title": "Twitter",
-		"icon": "mdi:twitter",
-		"url": "https://twitter.com/enzoinnocenzi",
-		"username": "@enzoinnocenzi"
-	},
-	"mastodon": {
-		"title": "Mastodon",
-		"icon": "mdi:mastodon",
-		"url": "https://fosstodon.org/@innocenzi",
-		"username": "@innocenzi@fosstodon.org"
-	},
-	"linkedin": {
-		"title": "LinkedIn",
-		"icon": "mdi:linkedin",
-		"url": "https://linkedin.com/in/enzo-innocenzi",
-		"username": "enzo-innocenzi"
-	},
-	"email": {
-		"title": "email",
-		"icon": "mdi:email",
-		"url": "mailto:enzo@innocenzi.dev"
-	}
+    "github": {
+        "title": "Github",
+        "icon": "mdi:github",
+        "url": "https://github.com/innocenzi",
+        "username": "innocenzi"
+    },
+    "twitter": {
+        "title": "Twitter",
+        "icon": "mdi:twitter",
+        "url": "https://twitter.com/enzoinnocenzi",
+        "username": "@enzoinnocenzi"
+    },
+    "bluesky": {
+        "title": "Bluesky",
+        "icon": "mdi:at",
+        "url": "https://staging.bsky.app/profile/innocenzi.dev",
+        "username": "innocenzi.dev"
+    },
+    "mastodon": {
+        "title": "Mastodon",
+        "icon": "mdi:mastodon",
+        "url": "https://fosstodon.org/@innocenzi",
+        "username": "@innocenzi@fosstodon.org"
+    },
+    "linkedin": {
+        "title": "LinkedIn",
+        "icon": "mdi:linkedin",
+        "url": "https://linkedin.com/in/enzo-innocenzi",
+        "username": "enzo-innocenzi"
+    },
+    "email": {
+        "title": "email",
+        "icon": "mdi:email",
+        "url": "mailto:enzo@innocenzi.dev"
+    }
 }
