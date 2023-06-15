@@ -55,7 +55,7 @@ defineOgImageStatic({
 										'hover:prose-a:decoration-zinc-300',
 									]"
 								>
-									<ContentDoc />
+									<content-doc />
 								</div>
 							</article>
 						</div>

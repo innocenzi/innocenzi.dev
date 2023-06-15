@@ -49,5 +49,5 @@ export default defineNuxtConfig({
 			routes: ['/sitemap.xml'],
 		},
 	},
-	modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image-edge', 'nuxt-icon', 'nuxt-og-image'],
+	modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image', 'nuxt-icon', 'nuxt-og-image'],
 })

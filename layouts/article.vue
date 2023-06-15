@@ -4,7 +4,7 @@ const data = await queryContent('articles').where({ _path: path }).findOne()
 </script>
 
 <template>
-	<NuxtLayout name="default">
+	<nuxt-layout name="default">
 		<main class="sm:px-8 lg:mb-12">
 			<div class="mx-auto max-w-7xl lg:px-8">
 				<div class="relative px-4 sm:px-8 lg:px-10">
@@ -44,7 +44,7 @@ const data = await queryContent('articles').where({ _path: path }).findOne()
 				</div>
 			</div>
 		</main>
-	</NuxtLayout>
+	</nuxt-layout>
 </template>
 
 <style>

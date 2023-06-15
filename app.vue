@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import '@fontsource/karla/variable.css'
-import '@fontsource/inter/variable.css'
+import '@fontsource-variable/karla'
+import '@fontsource-variable/inter'
 </script>
 
 <template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
+	<nuxt-layout>
+		<nuxt-page />
+	</nuxt-layout>
 </template>
 
 <style>
