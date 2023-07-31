@@ -5,7 +5,7 @@ export default defineEventHandler(async(event) => {
 	const config = useRuntimeConfig()
 	const docs = await serverQueryContent(event).find()
 	const sitemap = new SitemapStream({
-		hostname: config.domain,
+		hostname: config.public.siteUrl,
 	})
 
 	const routes = [
