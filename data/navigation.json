@@ -1,5 +1,5 @@
 [
-	{ "hidden": false, "href": "/", "name": "About", "external": false },
-	{ "hidden": false, "href": "/articles", "name": "Articles", "external": false },
-	{ "hidden": false, "href": "/projects", "name": "Projects", "external": false }
+    { "hidden": false, "href": "/", "name": "About", "external": false },
+    { "hidden": false, "href": "/articles", "name": "Articles", "external": false },
+    { "hidden": false, "href": "/projects", "name": "Projects", "external": false }
 ]

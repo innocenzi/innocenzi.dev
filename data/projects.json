@@ -1,26 +1,26 @@
 [
-	{
-		"icon_url": "https://raw.githubusercontent.com/preset/preset/main/.github/assets/logo-no-bg.svg",
-		"repository_url": "https://github.com/preset/preset",
-		"documentation_url": "https://preset.dev",
-		"title": "Preset",
-		"description": "Elegant, ecosystem-agnostic preset mechanism. Define changes and apply them in your new projects in just one command.",
-		"created_at": "2022-01-20"
-	},
-	{
-		"icon_url": "https://raw.githubusercontent.com/innocenzi/laravel-vite/main/.github/assets/logo.svg",
-		"repository_url": "https://github.com/innocenzi/laravel-vite",
-		"documentation_url": "https://laravel-vite.dev",
-		"title": "Laravel Vite",
-		"description": "Vite integration for Laravel. Was the de-facto solution before Laravel released their official integration.",
-		"created_at": "2021-02-09"
-	},
-	{
-		"icon_url": "https://raw.githubusercontent.com/hybridly/hybridly/0.x/.github/assets/logo.svg",
-		"repository_url": "https://github.com/hybridly/hybridly",
-		"documentation_url": "https://hybridly.dev",
-		"title": "Hybridly",
-		"description": "Solution to develop server-driven, client-rendered applications. An alternative to Inertia, written with TypeScript in mind.",
-		"created_at": "2022-02-22"
-	}
+    {
+        "icon_url": "https://raw.githubusercontent.com/preset/preset/main/.github/assets/logo-no-bg.svg",
+        "repository_url": "https://github.com/preset/preset",
+        "documentation_url": "https://preset.dev",
+        "title": "Preset",
+        "description": "Elegant, ecosystem-agnostic preset mechanism. Define changes and apply them in your new projects in just one command.",
+        "created_at": "2022-01-20"
+    },
+    {
+        "icon_url": "https://raw.githubusercontent.com/innocenzi/laravel-vite/main/.github/assets/logo.svg",
+        "repository_url": "https://github.com/innocenzi/laravel-vite",
+        "documentation_url": "https://laravel-vite.dev",
+        "title": "Laravel Vite",
+        "description": "Vite integration for Laravel. Was the de-facto solution before Laravel released their official integration.",
+        "created_at": "2021-02-09"
+    },
+    {
+        "icon_url": "https://raw.githubusercontent.com/hybridly/hybridly/0.x/.github/assets/logo.svg",
+        "repository_url": "https://github.com/hybridly/hybridly",
+        "documentation_url": "https://hybridly.dev",
+        "title": "Hybridly",
+        "description": "Solution to develop server-driven, client-rendered applications. An alternative to Inertia, written with TypeScript in mind.",
+        "created_at": "2022-02-22"
+    }
 ]
