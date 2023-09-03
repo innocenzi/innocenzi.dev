@@ -94,7 +94,7 @@ The reason for that is that most of the time, we no longer use the default disk,
 
 - We use `FILESYSTEM_DISK` as the underlying disk in our scoped disks
 
-Since `default` no longer use it, we can use the `FILESYSTEM_DISK` environment variable to configure the base disk for all our scoped disks. For instance, you can set it to `local` in development and `s3` in production and the disks will use it.
+Since `default` no longer uses it, we can use the `FILESYSTEM_DISK` environment variable to configure the base disk for all our scoped disks. For instance, you can set it to `local` in development and `s3` in production and the disks will use it.
 
 - We use a `Disk` class to reference the disks' names
 
@@ -143,7 +143,7 @@ If your application relies on S3 and deals with temporary URLs, you may have stu
 This driver does not support creating temporary URLs.
 ```
 
-This happens if you're using the `local` disk locally, or more frequently in tests. While it's usually a good practice to use the same tools in tests and in production, it may not be prefereable to use S3 when running thousands of tests.
+This happens if you're using the `local` disk locally, or more frequently in tests. While it's usually a good practice to use the same tools in tests and in production, it may not be preferable to use S3 when running thousands of tests.
 
 We may fix the problem using `Storage::buildTemporaryUrlsUsing`. Unfortunately, our approach to disks requires us to call this method for each disk we created:
 
