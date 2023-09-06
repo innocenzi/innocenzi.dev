@@ -44,8 +44,8 @@
     {
         "main": false,
         "repository_url": "https://github.com/innocenzi/rename",
-        "title": "rename",
-        "description": "Batch-rename files from your preferred editor.",
+        "title": "Rename",
+        "description": "Command-line interface to batch-rename files from your preferred editor.",
         "created_at": "2021-09-06"
     },
     {
@@ -78,7 +78,7 @@
         "deprecated": true,
         "repository_url": "https://github.com/innocenzi/laravel-encore",
         "title": "Encore for Laravel",
-        "description": "Integrates Webpack Encore with Laravel.",
+        "description": "Webpack Encore integration for Laravel.",
         "created_at": "2020-06-12"
     },
     {
