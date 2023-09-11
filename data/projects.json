@@ -88,5 +88,12 @@
         "title": "Tailwind CSS scroll-snap",
         "description": "Adds scroll-snap utilities to Tailwind CSS. This plugin has been incorporated in core.",
         "created_at": "2020-01-07"
+    },
+    {
+        "main": false,
+        "repository_url": "https://github.com/innocenzi/deployer-recipe-forge",
+        "title": "Forge recipe for Deployer",
+        "description": "Recipe that helps implementing zero-downtime deployments on Laravel Forge.",
+        "created_at": "2023-09-09"
     }
 ]

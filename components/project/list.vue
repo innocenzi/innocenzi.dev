@@ -22,6 +22,11 @@ const projects = computed(() => {
 		.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
 		.filter((project) => project.main === $props.main)
 })
+
+function isProjectRecent(project: Project) {
+	const days = 30
+	return new Date(project.created_at).getTime() > new Date().getTime() - (1000 * 60 * 60 * 24 * days)
+}
 </script>
 
 <template>
@@ -43,13 +48,8 @@ const projects = computed(() => {
 				<!-- Project name -->
 				<div class="flex items-center justify-between">
 					<h2 class="text-base font-semibold text-zinc-200 group-hover:text-zinc-100 transition" v-text="project.title" />
-					<span
-						v-if="project.deprecated"
-						class="inline-flex opacity-70 items-center rounded-md bg-orange-400/10 px-2 py-1 text-xs font-medium text-orange-200 ring-1 ring-inset ring-orange-400/20"
-						title="This project is no longer maintained or relevant"
-					>
-						deprecated
-					</span>
+					<project-badge v-if="project.deprecated" type="warning" text="deprecated" />
+					<project-badge v-if="isProjectRecent(project)" type="success" text="new" />
 				</div>
 				<!-- Description -->
 				<p class="relative z-10 mt-2 text-sm text-zinc-400 group-hover:text-zinc-200 transition-colors" v-text="project.description" />
