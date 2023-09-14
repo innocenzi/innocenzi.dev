@@ -95,5 +95,12 @@
         "title": "Forge recipe for Deployer",
         "description": "Recipe that helps implementing zero-downtime deployments on Laravel Forge.",
         "created_at": "2023-09-09"
+    },
+    {
+        "main": false,
+        "repository_url": "https://github.com/laravel-presets/slices",
+        "title": "Vertical Slices preset for Laravel",
+        "description": "Preset that configures a vertical slice architecture on a fresh Laravel project.",
+        "created_at": "2023-09-14"
     }
 ]
