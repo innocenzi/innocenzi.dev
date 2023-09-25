@@ -17,12 +17,6 @@
         "url": "https://staging.bsky.app/profile/innocenzi.dev",
         "username": "innocenzi.dev"
     },
-    "mastodon": {
-        "title": "Mastodon",
-        "icon": "mdi:mastodon",
-        "url": "https://fosstodon.org/@innocenzi",
-        "username": "@innocenzi@fosstodon.org"
-    },
     "linkedin": {
         "title": "LinkedIn",
         "icon": "mdi:linkedin",
