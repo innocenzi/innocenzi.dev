@@ -17,11 +17,12 @@
     { "name": "Tailwind CSS", "url": "https://tailwindcss.com", "categories": ["css", "front-end"] },
     { "name": "Post CSS", "url": "https://postcss.org", "categories": ["css", "front-end"] },
 
+    { "name": "Radix", "url": "https://radix-vue.com/", "categories": ["tool", "front-end"] },
+    { "name": "Headless UI", "url": "https://headlessui.com/", "categories": ["tool", "front-end"] },
+    { "name": "Vue Use", "url": "https://vueuse.org/", "categories": ["tool", "front-end"] },
+
     { "name": "Vue", "url": "https://vuejs.com", "categories": ["framework", "front-end"] },
     { "name": "Alpine.js", "url": "https://alpinejs.dev/", "categories": ["framework", "front-end"] },
-
-    { "name": "Laravel Mix", "url": "https://laravel-mix.com", "categories": ["front-end"] },
-    { "name": "Webpack Encore", "url": "https://symfony.com/doc/current/frontend.html", "categories": ["front-end"] },
 
     { "name": "GraphQL", "url": "https://graphql.org/", "categories": [] },
     { "name": "Preset", "url": "https://preset.dev", "categories": [] },
@@ -31,6 +32,7 @@
     { "name": "TablePlus", "url": "https://tableplus.com/", "categories": ["tool"] },
     { "name": "Insomnia", "url": "https://insomnia.rest/", "categories": ["tool"] },
 
+    { "name": "Bun", "url": "https://bun.sh", "favorite": "true", "categories": ["front-end", "package-manager"] },
     { "name": "pnpm", "url": "https://pnpm.io", "favorite": "true", "categories": ["front-end", "package-manager"] },
     { "name": "Yarn", "url": "https://yarnpkg.com", "categories": ["front-end", "package-manager"] },
     { "name": "Composer", "url": "https://getcomposer.org", "categories": ["back-end", "package-manager"] }
