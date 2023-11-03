@@ -39,11 +39,11 @@ function isCurrent(href: string) {
 			</ul>
 		</nav>
 
-		<Popover v-slot="{ open }" class="pointer-events-auto relative md:hidden">
-			<PopoverButton class="group flex items-center px-5 py-2 text-sm font-medium text-zinc-300 focus:outline-none">
+		<popover v-slot="{ open }" class="pointer-events-auto relative md:hidden">
+			<popover-button class="group flex items-center px-5 py-2 text-sm font-medium text-zinc-300 focus:outline-none">
 				Menu
 				<icon name="heroicons-solid:chevron-down" class="ml-2 h-4 w-4 text-zinc-500 transition duration-300" :class="{ 'rotate-180': open }" />
-			</PopoverButton>
+			</popover-button>
 
 			<transition
 				enter-active-class="transition duration-150 ease-out"
@@ -53,7 +53,7 @@ function isCurrent(href: string) {
 				leave-from-class="opacity-100"
 				leave-to-class="opacity-0"
 			>
-				<PopoverOverlay class="fixed inset-0 z-40 bg-black/40 backdrop-blur" />
+				<popover-overlay class="fixed inset-0 z-40 bg-black/40 backdrop-blur" />
 			</transition>
 
 			<transition
@@ -64,7 +64,7 @@ function isCurrent(href: string) {
 				leave-from-class="scale-100 opacity-100"
 				leave-to-class="scale-95 opacity-0"
 			>
-				<PopoverPanel v-slot="{ close }" class="fixed inset-x-4 top-20 z-50 rounded-xl bg-zinc-900 p-4 ring-1 ring-zinc-800">
+				<popover-panel v-slot="{ close }" class="fixed inset-x-4 top-20 z-50 rounded-xl bg-zinc-900 p-4 ring-1 ring-zinc-800">
 					<div class="flex flex-row-reverse items-center justify-between">
 						<button aria-label="Close menu" type="button" @click="close">
 							<icon name="heroicons-solid:x" />
@@ -91,8 +91,8 @@ function isCurrent(href: string) {
 							</template>
 						</ul>
 					</nav>
-				</PopoverPanel>
+				</popover-panel>
 			</transition>
-		</Popover>
+		</popover>
 	</div>
 </template>

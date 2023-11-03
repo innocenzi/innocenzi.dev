@@ -22,4 +22,8 @@ import '@fontsource-variable/inter'
 	opacity: 0;
 	transform: translate3d(5px, 0px, 0px);
 }
+
+a:focus {
+	outline: theme('colors.pink.200') dotted 2px;
+}
 </style>

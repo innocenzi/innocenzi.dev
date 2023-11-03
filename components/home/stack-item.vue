@@ -12,7 +12,7 @@ const rotation = rotations.at(Math.floor(Math.random() * rotations.length))
 
 <template>
 	<div>
-		<a :href="url" class="group relative block" rel="nofollow noopener" target="_blank">
+		<a :href="url" class="group relative block focus:outline-none" rel="nofollow noopener" target="_blank">
 			<div :class="rotation" class="pointer-events-none absolute -inset-x-8 -inset-y-10 hidden scale-90 rounded-3xl backdrop-blur transition group-hover:scale-100 group-hover:bg-zinc-800/40 md:block" />
 			<div class="relative flex flex-col items-center md:flex-row">
 				<div class="mb-8 md:mr-8">
@@ -23,7 +23,7 @@ const rotation = rotations.at(Math.floor(Math.random() * rotations.length))
 				<div class="flex flex-col text-center md:text-left">
 					<badge transparent color="primary">
 						<span
-							class="mb-2 font-karla text-xl font-medium uppercase tracking-wider transition"
+							class="mb-2 font-karla text-xl font-medium uppercase tracking-wider transition group-focus:outline-dotted group-focus:outline-pink-200"
 							v-text="name"
 						/>
 					</badge>
