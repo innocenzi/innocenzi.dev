@@ -1,31 +1,31 @@
 {
     "github": {
         "title": "Github",
-        "icon": "mdi:github",
+        "icon": "tabler:brand-github",
         "url": "https://github.com/innocenzi",
         "username": "innocenzi"
     },
     "twitter": {
         "title": "Twitter",
-        "icon": "mdi:twitter",
+        "icon": "tabler:brand-x",
         "url": "https://twitter.com/enzoinnocenzi",
         "username": "@enzoinnocenzi"
     },
     "bluesky": {
         "title": "Bluesky",
-        "icon": "mdi:at",
-        "url": "https://staging.bsky.app/profile/innocenzi.dev",
+        "icon": "tabler:brand-bluesky",
+        "url": "https://bsky.app/profile/innocenzi.dev",
         "username": "innocenzi.dev"
     },
     "linkedin": {
         "title": "LinkedIn",
-        "icon": "mdi:linkedin",
+        "icon": "tabler:brand-linkedin",
         "url": "https://linkedin.com/in/enzo-innocenzi",
         "username": "enzo-innocenzi"
     },
     "email": {
         "title": "email",
-        "icon": "mdi:email",
+        "icon": "tabler:mail",
         "url": "mailto:enzo@innocenzi.dev"
     }
 }

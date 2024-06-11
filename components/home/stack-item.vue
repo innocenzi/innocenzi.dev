@@ -17,7 +17,7 @@ const rotation = rotations.at(Math.floor(Math.random() * rotations.length))
 			<div class="relative flex flex-col items-center md:flex-row">
 				<div class="mb-8 md:mr-8">
 					<div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-zinc-800/40 text-zinc-50 backdrop-blur transition md:group-hover:bg-zinc-900/50">
-						<icon :name="icon" class="h-9 w-9" />
+						<Icon :name="icon" class="h-9 w-9" />
 					</div>
 				</div>
 				<div class="flex flex-col text-center md:text-left">

@@ -47,7 +47,7 @@ definePageMeta({
 					rel="me nofollow noopener"
 					target="_blank"
 				>
-					<icon :name="social.icon" class="h-6 w-6" />
+					<Icon :name="social.icon" class="h-6 w-6" />
 				</a>
 			</div>
 		</div>

@@ -34,7 +34,7 @@ useHead({
 
 			<div class="group my-12 flex flex-col items-center justify-center">
 				<span class="inline-flex items-center text-sm">
-					Made with <icon name="heroicons:heart-20-solid" class="mx-2 h-5 w-5 translate-y-[1px] text-pink-200/90 transition duration-300 group-hover:text-red-300" />
+					Made with <Icon name="heroicons:heart-20-solid" class="mx-2 h-5 w-5 translate-y-[1px] text-pink-200/90 transition duration-300 group-hover:text-red-300" />
 					by &nbsp;
 					<a class="link" href="https://twitter.com/enzoinnocenzi">Enzo Innocenzi</a></span>
 			</div>

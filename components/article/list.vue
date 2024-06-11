@@ -38,7 +38,7 @@ defineProps<{
 							class="relative z-10 mt-4 flex items-center text-sm font-medium text-pink-300"
 						>
 							Read article
-							<icon name="heroicons-solid:arrow-narrow-right" class="ml-2 h-4 w-4" />
+							<Icon name="heroicons-solid:arrow-narrow-right" class="ml-2 h-4 w-4" />
 						</div>
 					</div>
 					<div

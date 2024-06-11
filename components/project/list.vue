@@ -63,15 +63,15 @@ function isProjectRecent(project: Project) {
 					}"
 				>
 					<a :href="project.repository_url" class="flex items-center text-zinc-500 transition hover:text-zinc-300" title="Repository" @click.stop>
-						<icon name="mdi:github" class="h-6 w-6" />
+						<Icon name="mdi:github" class="h-6 w-6" />
 						<span class="sm:hidden ml-1.5 text-sm">GitHub</span>
 					</a>
 					<a v-if="project.documentation_url" :href="project.documentation_url" class="flex items-center text-zinc-500 transition hover:text-zinc-300" title="Documentation" @click.stop>
-						<icon name="mdi:document" class="h-6 w-6" />
+						<Icon name="mdi:document" class="h-6 w-6" />
 						<span class="sm:hidden ml-1.5 text-sm">Documentation</span>
 					</a>
 					<a v-if="project.site_url" :href="project.site_url" class="flex items-center text-zinc-500 transition hover:text-zinc-300" title="Website" @click.stop>
-						<icon name="mdi:web" class="h-6 w-6" />
+						<Icon name="mdi:web" class="h-6 w-6" />
 						<span class="sm:hidden ml-1.5 text-sm">Website</span>
 					</a>
 				</div>

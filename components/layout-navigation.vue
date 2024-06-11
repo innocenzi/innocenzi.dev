@@ -42,7 +42,7 @@ function isCurrent(href: string) {
 		<popover v-slot="{ open }" class="pointer-events-auto relative md:hidden">
 			<popover-button class="group flex items-center px-5 py-2 text-sm font-medium text-zinc-300 focus:outline-none">
 				Menu
-				<icon name="heroicons-solid:chevron-down" class="ml-2 h-4 w-4 text-zinc-500 transition duration-300" :class="{ 'rotate-180': open }" />
+				<Icon name="heroicons-solid:chevron-down" class="ml-2 h-4 w-4 text-zinc-500 transition duration-300" :class="{ 'rotate-180': open }" />
 			</popover-button>
 
 			<transition
@@ -67,7 +67,7 @@ function isCurrent(href: string) {
 				<popover-panel v-slot="{ close }" class="fixed inset-x-4 top-20 z-50 rounded-xl bg-zinc-900 p-4 ring-1 ring-zinc-800">
 					<div class="flex flex-row-reverse items-center justify-between">
 						<button aria-label="Close menu" type="button" @click="close">
-							<icon name="heroicons-solid:x" />
+							<Icon name="heroicons-solid:x" />
 						</button>
 						<h2 class="text-sm tracking-wider text-zinc-600">
 							Navigation

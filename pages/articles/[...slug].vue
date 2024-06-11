@@ -36,7 +36,7 @@ defineOgImageStatic({
 								href="/articles"
 								class="group mb-8 flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700/50 bg-zinc-800 shadow-md shadow-zinc-800/5 ring-0 ring-white/10 transition hover:border-zinc-700 hover:ring-white/20 lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0"
 							>
-								<icon name="heroicons-solid:arrow-narrow-left" class="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-400" />
+								<Icon name="heroicons-solid:arrow-narrow-left" class="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-400" />
 							</nuxt-link>
 							<article>
 								<header class="flex flex-col">
