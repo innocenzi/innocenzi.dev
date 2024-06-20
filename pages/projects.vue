@@ -26,7 +26,7 @@ definePageMeta({
 		</header>
 		<project-list class="mt-16 sm:mt-20" :projects="projects" :main="true" />
 		<!-- Other projects -->
-		<div class="max-w-2xl mt-20 sm:mt-32">
+		<div class="mt-20 max-w-2xl sm:mt-32">
 			<h2 class="text-xl font-bold tracking-tight text-zinc-100 sm:text-5xl sm:leading-tight md:text-2xl">
 				Other notable projects
 			</h2>

@@ -1,7 +1,7 @@
 import RSS from 'rss'
 import { serverQueryContent } from '#content/server'
 
-export default defineEventHandler(async(event) => {
+export default defineEventHandler(async (event) => {
 	const config = useRuntimeConfig()
 	const feed = new RSS({
 		title: 'Enzo Innocenzi',

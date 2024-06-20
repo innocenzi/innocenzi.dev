@@ -25,33 +25,33 @@ async function copy() {
 <template>
 	<button
 		:class="[
-			{ 'show': show || isCopied },
-			'rounded opacity-0 group-hover:opacity-100 transition backdrop-blur-sm p-1'
+			{ show: show || isCopied },
+			'rounded p-1 opacity-0 backdrop-blur-sm transition group-hover:opacity-100',
 		]"
 		@click="copy"
 	>
 		<span class="sr-only">Copy to clipboard</span>
-		<div class="relative inset-0 flex h-5 w-5 items-center justify-center">
+		<div class="relative inset-0 flex size-5 items-center justify-center">
 			<Icon
 				name="ph:check"
 				size="18"
 				:class="[
-					'transition absolute inset-0',
+					'absolute inset-0 transition',
 					{
-						'opacity-100 scale-100 delay-100': isCopied,
-						'opacity-0 scale-75': !isCopied,
-					}
+						'scale-100 opacity-100 delay-100': isCopied,
+						'scale-75 opacity-0': !isCopied,
+					},
 				]"
 			/>
 			<Icon
 				name="ph:copy"
 				size="18"
 				:class="[
-					'transition absolute inset-0',
+					'absolute inset-0 transition',
 					{
-						'opacity-100 scale-100 delay-100': !isCopied,
-						'opacity-0 scale-75': isCopied,
-					}
+						'scale-100 opacity-100 delay-100': !isCopied,
+						'scale-75 opacity-0': isCopied,
+					},
 				]"
 			/>
 		</div>

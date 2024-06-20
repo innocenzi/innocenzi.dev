@@ -13,7 +13,7 @@ defineProps<{
 <template>
 	<div class="flex flex-col items-center md:items-start">
 		<span class="mb-2 flex items-center font-karla text-xl font-medium uppercase tracking-wider transition">
-			<Icon :name="icon" class="mr-4 h-8 w-8" />
+			<Icon :name="icon" class="mr-4 size-8" />
 			<span class="text-pink-200/90" v-text="name" />
 		</span>
 

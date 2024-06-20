@@ -7,9 +7,9 @@ defineProps<{
 </script>
 
 <template>
-	<div class="h-full w-full">
+	<div class="size-full">
 		<svg
-			class="absolute inset-0 z-20 h-full w-full"
+			class="absolute inset-0 z-20 size-full"
 			width="2258"
 			height="1185"
 			viewBox="0 0 2258 1185"
@@ -19,10 +19,22 @@ defineProps<{
 			<g clip-path="url(#clip0_5_3)">
 				<rect width="2258" height="1185" fill="#090909" />
 				<g filter="url(#filter0_f_5_3)">
-					<rect x="-1069" y="-131" width="2227" height="2540" fill="url(#paint0_diamond_5_3)" />
+					<rect
+						x="-1069"
+						y="-131"
+						width="2227"
+						height="2540"
+						fill="url(#paint0_diamond_5_3)"
+					/>
 				</g>
 				<g filter="url(#filter1_f_5_3)">
-					<rect x="1316" y="-644" width="1686" height="1594" fill="url(#paint1_radial_5_3)" />
+					<rect
+						x="1316"
+						y="-644"
+						width="1686"
+						height="1594"
+						fill="url(#paint1_radial_5_3)"
+					/>
 				</g>
 			</g>
 			<defs>
@@ -36,7 +48,12 @@ defineProps<{
 					color-interpolation-filters="sRGB"
 				>
 					<feFlood flood-opacity="0" result="BackgroundImageFix" />
-					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+					<feBlend
+						mode="normal"
+						in="SourceGraphic"
+						in2="BackgroundImageFix"
+						result="shape"
+					/>
 					<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_5_3" />
 				</filter>
 				<filter
@@ -49,7 +66,12 @@ defineProps<{
 					color-interpolation-filters="sRGB"
 				>
 					<feFlood flood-opacity="0" result="BackgroundImageFix" />
-					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+					<feBlend
+						mode="normal"
+						in="SourceGraphic"
+						in2="BackgroundImageFix"
+						result="shape"
+					/>
 					<feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_5_3" />
 				</filter>
 				<radialGradient
@@ -79,7 +101,7 @@ defineProps<{
 				</clipPath>
 			</defs>
 		</svg>
-		<div class="relative inset-0 z-50 flex h-full w-full items-center justify-center text-white">
+		<div class="relative inset-0 z-50 flex size-full items-center justify-center text-white">
 			<div class="flex w-[70%] flex-col">
 				<span class="mb-4 inline-flex items-center gap-x-5 text-2xl font-medium leading-none tracking-wide text-pink-200/70">
 					<span v-text="creationDate" />

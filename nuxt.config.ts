@@ -46,9 +46,9 @@ export default defineNuxtConfig({
 		},
 		experimental: {
 			search: {
-				filterQuery: { _draft: false }
-			}
-		}
+				filterQuery: { _draft: false },
+			},
+		},
 	},
 	nitro: {
 		prerender: {

@@ -1,31 +1,31 @@
 {
-    "github": {
-        "title": "Github",
-        "icon": "tabler:brand-github",
-        "url": "https://github.com/innocenzi",
-        "username": "innocenzi"
-    },
-    "twitter": {
-        "title": "Twitter",
-        "icon": "tabler:brand-x",
-        "url": "https://twitter.com/enzoinnocenzi",
-        "username": "@enzoinnocenzi"
-    },
-    "bluesky": {
-        "title": "Bluesky",
-        "icon": "tabler:brand-bluesky",
-        "url": "https://bsky.app/profile/innocenzi.dev",
-        "username": "innocenzi.dev"
-    },
-    "linkedin": {
-        "title": "LinkedIn",
-        "icon": "tabler:brand-linkedin",
-        "url": "https://linkedin.com/in/enzo-innocenzi",
-        "username": "enzo-innocenzi"
-    },
-    "email": {
-        "title": "email",
-        "icon": "tabler:mail",
-        "url": "mailto:enzo@innocenzi.dev"
-    }
+  "github": {
+    "title": "Github",
+    "icon": "tabler:brand-github",
+    "url": "https://github.com/innocenzi",
+    "username": "innocenzi"
+  },
+  "twitter": {
+    "title": "Twitter",
+    "icon": "tabler:brand-x",
+    "url": "https://twitter.com/enzoinnocenzi",
+    "username": "@enzoinnocenzi"
+  },
+  "bluesky": {
+    "title": "Bluesky",
+    "icon": "tabler:brand-bluesky",
+    "url": "https://bsky.app/profile/innocenzi.dev",
+    "username": "innocenzi.dev"
+  },
+  "linkedin": {
+    "title": "LinkedIn",
+    "icon": "tabler:brand-linkedin",
+    "url": "https://linkedin.com/in/enzo-innocenzi",
+    "username": "enzo-innocenzi"
+  },
+  "email": {
+    "title": "email",
+    "icon": "tabler:mail",
+    "url": "mailto:enzo@innocenzi.dev"
+  }
 }

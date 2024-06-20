@@ -32,7 +32,7 @@ const hovered = ref(false)
 		@mouseenter="hovered = true"
 		@mouseleave="hovered = false"
 	>
-		<span v-if="filename" class="absolute top-2 right-2 rounded-xl px-2 py-1 font-mono text-xs backdrop-blur-sm transition group-hover:opacity-0 group-hover:hover:opacity-100">
+		<span v-if="filename" class="absolute right-2 top-2 rounded-xl px-2 py-1 font-mono text-xs backdrop-blur-sm transition group-hover:opacity-0 group-hover:hover:opacity-100">
 			{{ filename }}
 		</span>
 
@@ -41,7 +41,7 @@ const hovered = ref(false)
 		<prose-code-copy-button
 			:show="hovered"
 			:content="code"
-			class="copy-button absolute right-2 bottom-2"
+			class="copy-button absolute bottom-2 right-2"
 		/>
 	</div>
 </template>

@@ -22,10 +22,12 @@ So I looked into it deeper, and found out that the correct way to do this is to 
 import { h } from 'vue'
 import Placeholder from './placeholder.vue'
 
-const render = () => [
-  'This is some text with a ',
-  h(Placeholder)
-]
+function render() {
+	return [
+		'This is some text with a ',
+		h(Placeholder)
+	]
+}
 ```
 
 This is pretty simple, but we need to find a way to split the input string by multiple separators, and replace these separators with the render function. Since I'm lazy, I asked ChatGPT to do it for me:
@@ -34,7 +36,6 @@ This is pretty simple, but we need to find a way to split the input string by mu
 
 Apparently, ChatGPT perfectly understood my gibberish prompt and gave me a fully working function. After cleaning it up a bit, the rest is a matter of mapping the result of this function to the components we want to replace:
 
-
 ```vue
 <script setup>
 import Foo from './Foo.vue'
@@ -42,29 +43,31 @@ import Bar from './Bar.vue'
 
 const input = 'This __foo__ and this __bar__ are Vue components'
 const replacements = {
-  '__foo__': () => h(Foo),
-  '__bar__': () => h(Bar),
+	__foo__: () => h(Foo),
+	__bar__: () => h(Bar),
 }
 
 function splitByArray(inputString, splitArray) {
-  return splitArray.reduce((result, splitString) => {
-    return result.reduce((newResult, str) => {
-      let parts = str.split(splitString);
-      for (let i = 0; i < parts.length - 1; i++) {
-        newResult.push(parts[i], splitString);
-      }
-      newResult.push(parts[parts.length - 1]);
-      return newResult;
-    }, []);
-  }, [inputString]);
+	return splitArray.reduce((result, splitString) => {
+		return result.reduce((newResult, str) => {
+			const parts = str.split(splitString)
+			for (let i = 0; i < parts.length - 1; i++) {
+				newResult.push(parts[i], splitString)
+			}
+			newResult.push(parts[parts.length - 1])
+			return newResult
+		}, [])
+	}, [inputString])
 }
 
-const render = () => splitByArray(input, Object.keys(replacements).map(part) => {
-  return replacement[part]?.() ?? part
-})
+function render() {
+	return splitByArray(input, Object.keys(replacements).map((part) => {
+		return replacement[part]?.() ?? part
+	}))
+}
 </script>
 
 <template>
-  <component :is="render" />
+	<component :is="render" />
 </template>
 ```

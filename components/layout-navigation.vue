@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Popover, PopoverButton, PopoverPanel, PopoverOverlay } from '@headlessui/vue'
+import { Popover, PopoverButton, PopoverOverlay, PopoverPanel } from '@headlessui/vue'
 import routes from '@/data/navigation.json'
 
 const $route = useRoute()
@@ -23,10 +23,10 @@ function isCurrent(href: string) {
 				<li v-for="route in routes" :key="route.name">
 					<nuxt-link
 						:class="[
-							'relative block px-4 py-2 transition group',
+							'group relative block px-4 py-2 transition',
 							isCurrent(route.href)
 								? 'text-zinc-300'
-								: 'hover:text-zinc-300'
+								: 'hover:text-zinc-300',
 						]"
 						:href="route.href"
 						:aria-label="route.name"
@@ -42,7 +42,7 @@ function isCurrent(href: string) {
 		<popover v-slot="{ open }" class="pointer-events-auto relative md:hidden">
 			<popover-button class="group flex items-center px-5 py-2 text-sm font-medium text-zinc-300 focus:outline-none">
 				Menu
-				<Icon name="heroicons-solid:chevron-down" class="ml-2 h-4 w-4 text-zinc-500 transition duration-300" :class="{ 'rotate-180': open }" />
+				<Icon name="heroicons-solid:chevron-down" class="ml-2 size-4 text-zinc-500 transition duration-300" :class="{ 'rotate-180': open }" />
 			</popover-button>
 
 			<transition
@@ -81,7 +81,7 @@ function isCurrent(href: string) {
 										class="block py-2"
 										:href="route.href"
 										:class="{
-											'text-zinc-200': isCurrent(route.href)
+											'text-zinc-200': isCurrent(route.href),
 										}"
 										:external="route.external"
 										@click="close"

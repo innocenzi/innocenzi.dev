@@ -14,9 +14,9 @@ const data = await queryContent('articles').where({ _path: path }).findOne()
 								<nuxt-link
 									aria-label="Go back to articles"
 									href="/articles"
-									class="group mb-8 flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700/50 bg-zinc-800 shadow-md shadow-zinc-800/5 ring-0 ring-white/10 transition hover:border-zinc-700 hover:ring-white/20 lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0"
+									class="group mb-8 flex size-10 items-center justify-center rounded-full border border-zinc-700/50 bg-zinc-800 shadow-md shadow-zinc-800/5 ring-0 ring-white/10 transition hover:border-zinc-700 hover:ring-white/20 lg:absolute lg:-left-5 lg:-mt-2 lg:mb-0 xl:-top-1.5 xl:left-0 xl:mt-0"
 								>
-									<Icon name="heroicons-solid:arrow-narrow-left" class="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-400" />
+									<Icon name="heroicons-solid:arrow-narrow-left" class="size-4 stroke-zinc-500 transition group-hover:stroke-zinc-400" />
 								</nuxt-link>
 								<article>
 									<header class="flex flex-col">
@@ -29,8 +29,8 @@ const data = await queryContent('articles').where({ _path: path }).findOne()
 									</header>
 									<div
 										:class="[
-											'mt-8 prose prose-invert mb-16 prose-a:transition-all text-zinc-300/90',
-											'prose-a:text-white prose-a:font-medium prose-a:underline-offset-[6px] prose-a:decoration-zinc-300/50',
+											'prose prose-invert mb-16 mt-8 text-zinc-300/90 prose-a:transition-all',
+											'prose-a:font-medium prose-a:text-white prose-a:decoration-zinc-300/50 prose-a:underline-offset-[6px]',
 											'prose-code:font-normal prose-code:text-zinc-200 prose-pre:p-8',
 											'hover:prose-a:decoration-zinc-300',
 										]"

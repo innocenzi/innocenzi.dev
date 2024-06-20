@@ -5,7 +5,7 @@ description: I've been working on a project called Hybridly, but I couldn't find
 created_at: 2022-09-20
 ---
 
-I've been working on a project called [Hybridly](https://github.com/hybridly), but I couldn't find a name until long after the project was started. The project's codename was Monolikit. 
+I've been working on a project called [Hybridly](https://github.com/hybridly), but I couldn't find a name until long after the project was started. The project's codename was Monolikit.
 
 I wanted to rebrand the project, but I didn't like the idea of having one big commit with a big search-and-replace. That would disrupt the history and cause trouble when using `git blame`.
 
