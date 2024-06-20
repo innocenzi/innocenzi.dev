@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import background from '@/assets/background.webp'
-import pattern from '@/assets/pattern.svg'
+import pattern from '@/assets/pattern.svg?inline'
 
 const route = useRoute()
 const config = useRuntimeConfig()
