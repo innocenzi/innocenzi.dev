@@ -21,7 +21,7 @@ const data = await queryContent('articles').where({ _path: path }).findOne()
 								<article>
 									<header class="flex flex-col">
 										<h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl" v-text="data?.title" />
-										<time datetime="{Astro.props.frontmatter.created_at}" class="order-first flex flex-col text-base text-zinc-500 md:flex-row md:items-center">
+										<time datetime="data?.created_at" class="order-first flex flex-col text-base text-zinc-500 md:flex-row md:items-center">
 											<span v-text="formatDate(data?.created_at)" />
 											<span class="ml-4 hidden md:inline">•</span>
 											<span class="text-sm md:ml-4 md:text-base" v-text="data?.readingTime?.text" />

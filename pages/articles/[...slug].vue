@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const { path } = useRoute()
-const data = await queryContent('articles').where({ _path: path }).findOne()
+const data = await queryContent('articles')
+	.where({ _draft: { $not: true }})
+	.where({ _path: path })
+	.findOne()
 
 useHead({
 	meta: [

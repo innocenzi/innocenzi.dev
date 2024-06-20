@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 			meta: [
 				{ name: 'twitter:site', content: '@enzoinnocenzi' },
 				{ name: 'twitter:creator', content: '@enzoinnocenzi' },
-				{ property: 'og:site_name', content: 'Enzo Innocenzi' },
+				{ property: 'og:site:name', content: 'Enzo Innocenzi' },
 				{ property: 'og:image', content: '/og.jpg' },
 				{ property: 'og:type', content: 'website' },
 			],
@@ -44,6 +44,11 @@ export default defineNuxtConfig({
 		markdown: {
 			remarkPlugins: ['remark-reading-time'],
 		},
+		experimental: {
+			search: {
+				filterQuery: { _draft: false }
+			}
+		}
 	},
 	nitro: {
 		prerender: {

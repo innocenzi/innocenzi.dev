@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const articles = await queryContent('articles')
+	.where({ _draft: { $not: true }})
 	.sort({ created_at: -1 })
 	.find()
 
