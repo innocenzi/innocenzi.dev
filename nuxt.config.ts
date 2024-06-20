@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
+	site: {
+		url: 'https://innocenzi.dev',
+	},
 	app: {
 		pageTransition: { name: 'page', mode: 'out-in' },
 		head: {
@@ -23,7 +26,14 @@ export default defineNuxtConfig({
 		},
 	},
 	ogImage: {
-		forcePrerender: true,
+		defaults: {
+			renderer: 'chromium',
+		},
+		compatibility: {
+			runtime: {
+				satori: false,
+			},
+	 },
 	},
 	experimental: {
 		componentIslands: true,

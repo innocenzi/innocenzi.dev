@@ -10,14 +10,14 @@ defineProps<{
 	<div class="size-full">
 		<svg
 			class="absolute inset-0 z-20 size-full"
-			width="2258"
-			height="1185"
-			viewBox="0 0 2258 1185"
+			width="2400"
+			height="1200"
+			viewBox="0 0 2400 1200"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<g clip-path="url(#clip0_5_3)">
-				<rect width="2258" height="1185" fill="#090909" />
+				<rect width="2400" height="1200" fill="#090909" />
 				<g filter="url(#filter0_f_5_3)">
 					<rect
 						x="-1069"
@@ -97,7 +97,7 @@ defineProps<{
 					<stop offset="1" stop-color="#1A202C" stop-opacity="0" />
 				</radialGradient>
 				<clipPath id="clip0_5_3">
-					<rect width="2258" height="1185" fill="white" />
+					<rect width="2400" height="1200" fill="white" />
 				</clipPath>
 			</defs>
 		</svg>

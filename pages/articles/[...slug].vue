@@ -18,8 +18,7 @@ definePageMeta({
 	changefreq: 'monthly',
 })
 
-defineOgImageStatic({
-	component: 'OpengraphImage',
+defineOgImageComponent('article', {
 	title: data.ogTitle,
 	readingTime: data?.readingTime?.text,
 	creationDate: formatDate(data?.created_at),

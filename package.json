@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt generate",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "npx playwright install && nuxt generate",
     "preview": "nuxt preview",
@@ -25,11 +25,12 @@
     "@types/rss": "^0.0.32",
     "eslint": "^9.5.0",
     "nuxt": "3.12.2",
-    "nuxt-icon": "^0.4.2",
-    "nuxt-og-image": "^1.5.9",
+    "nuxt-icon": "^0.6.10",
+    "nuxt-og-image": "^3.0.0-rc.54",
+    "playwright": "^1.44.1",
     "remark-reading-time": "^2.0.1",
     "rss": "^1.2.2",
-    "sitemap": "^7.1.2",
+    "sitemap": "^8.0.0",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5",
     "vue": "^3.4.29"
