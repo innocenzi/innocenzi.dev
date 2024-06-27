@@ -25,17 +25,13 @@ definePageMeta({
 		</header>
 		<div class="mt-12 max-w-2xl">
 			<p class="text-xl">
-				I am passionate about development — <badge color="secondary">
-					I love automating things
-				</badge>,
-				<badge color="secondary" transparent>
-					modern technologies
-				</badge> and <badge color="secondary" transparent>good developer experience</badge>.
+				I am passionate about development — <badge color="secondary" transparent text="I love automating things" />,
+				<badge color="secondary" text="modern technologies" transparent /> and <badge color="secondary" text="good developer experience" transparent />.
 			</p>
 			<p class="mt-6 text-xl">
-				<badge color="primary" class="md:-ml-3" text="I am a perfectionist" />.
+				<badge color="primary" transparent text="I am a perfectionist" />.
 				I pay attention to details, because I love when things look <badge color="primary" transparent text="good" /> and <badge color="primary" transparent text="professional" />.
-				I am also self-taught, and <a href="https://www.youtube.com/watch?v=Cv1RJTHf5fk&t=11s"><badge color="primary" transparent>I never stop learning</badge></a>.
+				I am also self-taught, and <a href="https://www.youtube.com/watch?v=Cv1RJTHf5fk&t=11s"><badge color="primary" text="I never stop learning" transparent /></a>.
 			</p>
 			<div class="mt-8 flex gap-6">
 				<a
