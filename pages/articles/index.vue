@@ -8,7 +8,7 @@ const articles = await queryContent('articles')
 useHead({
 	title: 'Articles',
 	meta: [
-		{ name: 'description', content: 'Writing on PHP, TypeScript, Inertia, and web development in general.' },
+		{ name: 'description', content: 'Writing on PHP, TypeScript, Hybridly, and web development in general.' },
 	],
 })
 
@@ -27,8 +27,6 @@ definePageMeta({
 				Whenever I feel like writing down something I've learnt, I do it here.
 			</p>
 		</header>
-		<article-list
-			:articles="articles"
-		/>
+		<article-list :articles="articles" />
 	</main>
 </template>
