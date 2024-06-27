@@ -2,7 +2,7 @@
 import { type ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 defineProps<{
-	articles: ParsedContent[]
+	articles: Omit<ParsedContent, 'body'>[]
 }>()
 </script>
 
