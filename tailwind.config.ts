@@ -7,8 +7,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['InterVariable', 'ui-sans-serif', 'system-ui', '-apple-system'],
-				karla: ['KarlaVariable', 'ui-sans-serif', 'system-ui', '-apple-system'],
+				sans: ['Inter Variable', 'ui-sans-serif', 'system-ui', '-apple-system'],
+				karla: ['Karla Variable', 'ui-sans-serif', 'system-ui', '-apple-system'],
 			},
 		},
 	},
