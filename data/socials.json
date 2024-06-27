@@ -1,6 +1,6 @@
 {
   "github": {
-    "title": "Github",
+    "title": "GitHub",
     "icon": "tabler:brand-github",
     "url": "https://github.com/innocenzi",
     "username": "innocenzi"
@@ -24,7 +24,7 @@
     "username": "enzo-innocenzi"
   },
   "email": {
-    "title": "email",
+    "title": "Mail",
     "icon": "tabler:mail",
     "url": "mailto:enzo@innocenzi.dev"
   }
