@@ -17,7 +17,7 @@ useHead({
 <template>
 	<div class="relative flex flex-1 flex-col">
 		<div
-			class="pointer-events-none absolute inset-0 flex justify-center bg-repeat"
+			class="pointer-events-none absolute inset-0 z-[1] flex justify-center bg-repeat"
 			:style="`background-image: url(${pattern})`"
 		>
 			<div

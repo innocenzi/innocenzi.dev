@@ -13,7 +13,6 @@ defineProps<{
 			'bg-green-400/10 text-green-200 ring-green-400/20': type === 'success',
 			'bg-gray-400/10 text-gray-200 ring-gray-400/20': type === 'secondary',
 		}"
-		title="This project is no longer maintained or relevant"
 	>
 		<slot>{{ text }}</slot>
 	</span>

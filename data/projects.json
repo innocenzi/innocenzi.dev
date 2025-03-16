@@ -1,6 +1,16 @@
 [
   {
     "main": true,
+    "icon_url": "https://raw.githubusercontent.com/tempestphp/.github/refs/heads/main/.github/tempest-logo.svg",
+    "repository_url": "https://github.com/tempestphp/tempest-framework",
+    "documentation_url": "https://tempestphp.com",
+    "title": "Tempest",
+    "maintainer": true,
+    "description": "Innovative, elegant PHP framework that gets out of your way.",
+    "created_at": "2023-10-07"
+  },
+  {
+    "main": true,
     "icon_url": "https://raw.githubusercontent.com/preset/preset/main/.github/assets/logo-no-bg.svg",
     "repository_url": "https://github.com/preset/preset",
     "documentation_url": "https://preset.dev",

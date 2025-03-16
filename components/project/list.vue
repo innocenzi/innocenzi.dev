@@ -2,6 +2,7 @@
 interface Project {
 	main: boolean
 	deprecated?: boolean
+	maintainer?: boolean
 	icon_url?: string
 	repository_url: string
 	documentation_url?: string
@@ -48,8 +49,24 @@ function isProjectRecent(project: Project) {
 				<!-- Project name -->
 				<div class="flex items-center justify-between">
 					<h2 class="text-base font-semibold text-zinc-200 transition group-hover:text-zinc-100" v-text="project.title" />
-					<project-badge v-if="project.deprecated" type="warning" text="deprecated" />
-					<project-badge v-if="isProjectRecent(project)" type="success" text="new" />
+					<project-badge
+						v-if="project.deprecated"
+						type="warning"
+						text="deprecated"
+						title="This project is no longer maintained or relevant"
+					/>
+					<project-badge
+						v-if="project.maintainer"
+						type="secondary"
+						text="core maintainer"
+						title="I am a core maintainer of this project, not its owner"
+					/>
+					<project-badge
+						v-if="isProjectRecent(project)"
+						type="success"
+						text="new"
+						title="This project is new, take a look!"
+					/>
 				</div>
 				<!-- Description -->
 				<p class="relative z-10 mt-2 text-sm text-zinc-400 transition-colors group-hover:text-zinc-200" v-text="project.description" />
