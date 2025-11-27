@@ -1,0 +1,26 @@
+{
+	"name": "innocenzi-dev",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@nuxt/content": "3.8.2",
+		"@nuxt/hints": "1.0.0-alpha.2",
+		"@nuxt/image": "2.0.0",
+		"@nuxt/ui": "4.2.1",
+		"better-sqlite3": "^12.4.6",
+		"nuxt": "^4.2.1",
+		"typescript": "^5.6.3",
+		"vue": "^3.5.25",
+		"vue-router": "^4.6.3"
+	},
+	"devDependencies": {
+		"dprint": "^0.50.2"
+	}
+}
