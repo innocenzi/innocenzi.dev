@@ -24,10 +24,10 @@
 		"typescript": "^5.9.3",
 		"vue": "^3.5.26",
 		"vue-router": "^4.6.4",
-		"zod": "^4.3.5"
+		"zod": "^4.3.5",
+		"@iconify-json/tabler": "^1.2.26"
 	},
 	"devDependencies": {
-		"@iconify-json/tabler": "^1.2.26",
 		"dprint": "^0.51.1"
 	}
 }
