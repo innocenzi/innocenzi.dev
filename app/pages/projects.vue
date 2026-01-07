@@ -35,7 +35,7 @@ useSeoMeta({
 				<li v-for="project in featured" :key="project.label" class="flex md:flex-row flex-col gap-x-3 gap-y-3">
 					<!-- icon -->
 					<div class="bg-elevated/50 p-1 border border-default rounded-full size-10 md:size-7 translate-y-px shrink-0">
-						<NuxtImg :src="project.iconUrl" v-if="project.iconUrl" class="size-full" />
+						<img :src="project.iconUrl" v-if="project.iconUrl" class="size-full" />
 						<UIcon :name="project.icon" v-else-if="project.icon" class="size-full" />
 					</div>
 					<!-- content -->
