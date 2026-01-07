@@ -1,0 +1,145 @@
+import Bluesky from '~/components/bluesky.vue'
+
+export const projects = [
+	{
+		label: 'Tempest',
+		site: 'https://tempestphp.com',
+		repository: 'https://github.com/tempestphp/tempest-framework',
+		description:
+			'Innovative, modern and elegant PHP framework. With zero configuration and zero boilerplate, it gives the architectural freedom to focus entirely on business logic.',
+		icon: 'brand:tempest',
+		iconUrl: 'https://raw.githubusercontent.com/tempestphp/.github/refs/heads/main/logo_2024/tempest-logo.svg',
+		role: 'core-maintainer' as const,
+		featured: true,
+	},
+	{
+		label: 'Hybridly',
+		site: 'https://hybridly.dev',
+		repository: 'https://github.com/hybridly/hybridly',
+		description:
+			'Solution to develop server-driven, client-rendered applications on top of Laravel and Vue. An alternative to Inertia, written with TypeScript and developer experience in mind.',
+		icon: 'brand:hybridly',
+		iconUrl: 'https://raw.githubusercontent.com/hybridly/hybridly/0.x/.github/assets/logo.svg',
+		featured: true,
+	},
+	{
+		label: 'Preset',
+		site: 'https://preset.dev',
+		repository: 'https://github.com/preset/preset',
+		description: 'Elegant, ecosystem-agnostic preset mechanism. Define changes and apply them in your new projects in just one command.',
+		iconUrl: 'https://raw.githubusercontent.com/preset/preset/main/.github/assets/logo-no-bg.svg',
+		featured: true,
+	},
+	{
+		label: 'Vite for Laravel',
+		site: 'https://laravel-vite.innocenzi.dev/',
+		repository: 'https://github.com/innocenzi/laravel-vite',
+		description: 'Vite integration for Laravel. Was the de-facto solution before Laravel released their official integration.',
+		icon: 'brand:vite-for-laravel',
+		deprecated: true,
+		createdAt: '2021-02-09',
+	},
+	{
+		label: 'Awesome Tailwind CSS',
+		description: 'A curated list of awesome Tailwind CSS resources.',
+		repository: 'https://github.com/aniftyco/awesome-tailwindcss',
+		created_at: '2020-08-31',
+		role: 'co-maintainer' as const,
+	},
+	{
+		label: 'Encore for Laravel',
+		repository: 'https://github.com/innocenzi/laravel-encore',
+		description: 'Webpack Encore integration for Laravel.',
+		deprecated: true,
+		created_at: '2020-06-12',
+	},
+	{
+		label: 'Rename',
+		description: 'Command-line interface to batch-rename files from your preferred editor.',
+		repository: 'https://github.com/innocenzi/rename',
+		created_at: '2021-09-06',
+	},
+	{
+		label: 'vite-plugin-run',
+		description: 'Run commands when Vite starts, builds, or when a file changes.',
+		repository: 'https://github.com/innocenzi/vite-plugin-run',
+		created_at: '2022-07-08',
+	},
+	{
+		label: 'vite-plugin-mjml',
+		description: 'Compiles MJML templates during development and when Vite builds.',
+		repository: 'https://github.com/innocenzi/vite-plugin-mjml',
+		created_at: '2022-04-13',
+	},
+	{
+		label: 'Forge recipe for Deployer',
+		description: 'Recipe that helps implementing zero-downtime deployments on Laravel Forge.',
+		repository: 'https://github.com/innocenzi/deployer-recipe-forge',
+		created_at: '2023-09-09',
+		deprecated: true,
+	},
+	{
+		label: 'Tailwind CSS theming',
+		description: 'CSS-variables-based swappable themes for Tailwind CSS.',
+		repository: 'https://github.com/innocenzi/tailwindcss-theming',
+		created_at: '2019-10-04',
+		deprecated: true,
+	},
+	{
+		label: 'Awesome Inertia',
+		description: 'A curated list of awesome Inertia.js resources.',
+		repository: 'https://github.com/innocenzi/awesome-inertiajs',
+		created_at: '2020-08-31',
+	},
+	{
+		repository: 'https://github.com/innocenzi/avatar',
+		site: 'https://avatar.innocenzi.dev',
+		label: 'Avatar',
+		description: 'Simple online tool for cropping images from an URL, your clipboard, or your disk.',
+		created_at: '2021-03-27',
+	},
+	{
+		label: 'vite-plugin-run',
+		description: 'Run commands when Vite starts, builds, or when a file changes.',
+		repository: 'https://github.com/innocenzi/vite-plugin-run',
+		created_at: '2022-07-08',
+	},
+	{
+		label: 'Tailwind CSS scroll-snap',
+		description: "Adds scroll-snap utilities to Tailwind CSS. This plugin has been incorporated in Tailwind's core.",
+		repository: 'https://github.com/innocenzi/tailwindcss-scroll-snap',
+		created_at: '2020-01-07',
+		deprecated: true,
+	},
+	{
+		label: 'Vertical slices preset for Laravel',
+		description: 'Preset that configures a vertical slice architecture on a fresh Laravel project.',
+		repository: 'https://github.com/laravel-presets/slices',
+		created_at: '2023-09-14',
+	},
+]
+
+export const stack = [
+	{ label: 'Tempest', icon: 'brand:tempest', url: 'https://tempestphp.com' },
+	{ label: 'Vue', icon: 'tabler:brand-vue', url: 'https://vuejs.org' },
+	{ label: 'Inertia', icon: 'tabler:brand-inertia', url: 'https://inertiajs.com' },
+	{ label: 'Laravel', icon: 'tabler:brand-laravel', url: 'https://laravel.com' },
+	{ label: 'Tailwind CSS', icon: 'tabler:brand-tailwind', url: 'https://tailwindcss.com' },
+	{ label: 'TypeScript', icon: 'tabler:brand-typescript', url: 'https://www.typescriptlang.org' },
+	{ label: 'PHP', icon: 'tabler:brand-php', url: 'https://www.php.net' },
+	{ label: 'Bun', icon: 'brand:bun', url: 'https://bun.sh' },
+	{ label: 'Nuxt', icon: 'tabler:brand-nuxt', url: 'https://nuxt.com' },
+	{ label: 'Motion', icon: 'brand:motion', url: 'https://motion.dev' },
+	{ label: 'Git', icon: 'tabler:brand-git', url: 'https://git-scm.com' },
+	{ label: 'Postgres', icon: 'carbon:database-postgresql', url: 'https://postgresql.com' },
+	{ label: 'Figma', icon: 'tabler:brand-figma', url: 'https://figma.com' },
+	{ label: 'Reka UI', icon: 'brand:reka-ui', url: 'https://reka-ui.com' },
+	{ label: 'Redis', icon: 'simple-icons:redis', url: 'https://redis.com' },
+]
+
+export const socials = [
+	{ label: 'GitHub', url: 'https://github.com/innocenzi', handle: '@innocenzi', icon: 'tabler:brand-github' },
+	{ label: 'Bluesky', url: 'https://bsky.app/profile/innocenzi.dev', handle: 'innocenzi.dev', icon: Bluesky },
+	{ label: 'Twitter', url: 'https://twitter.com/enzoinnocenzi', handle: '@enzoinnocenzi', icon: 'tabler:brand-twitter' },
+	{ label: 'Email', url: 'mailto:hi@innocenzi.dev', handle: 'hi@innocenzi.dev', icon: 'tabler:mail' },
+]
