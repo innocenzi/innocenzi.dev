@@ -105,7 +105,9 @@ useSeoMeta({
 					<div class="flex flex-col justify-between gap-y-4 p-3 border border-default border-dashed rounded-md h-full">
 						<!-- title and description -->
 						<div class="flex flex-col gap-y-1">
-							<span class="text-highlighted text-base" v-text="project.label" />
+							<ULink :href="project.repository" class="text-highlighted text-base">
+								<span v-text="project.label" />
+							</ULink>
 							<UTooltip :text="project.description">
 								<span class="line-clamp-3" v-text="project.description" />
 							</UTooltip>
