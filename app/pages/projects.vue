@@ -23,7 +23,7 @@ useSeoMeta({
 		<!-- projects -->
 		<section class="flex flex-col gap-y-8 mt-8 lg:mt-20">
 			<!-- header -->
-			<div class="flex flex-col gap-y-4">
+			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Current</span>
 				<p>
 					I’m quite involved in <ProseLink external href="https://github.com/innocenzi" text="open-source" icon="tabler:brand-github" />. Below are the projects
@@ -73,7 +73,7 @@ useSeoMeta({
 		<!-- other projects -->
 		<section class="flex flex-col gap-y-8 mt-20 max-w-full md:max-w-[unset]">
 			<!-- header -->
-			<div class="flex flex-col gap-y-4">
+			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Projects</span>
 				<p>
 					Here are some projects I have worked on. They aren't projects I'm particularly proud of—just some things I happened to create or contribute to along

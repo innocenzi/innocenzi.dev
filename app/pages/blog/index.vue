@@ -15,7 +15,7 @@ useSeoMeta({
 	<UContainer class="flex flex-col items-center h-full grow">
 		<section class="flex flex-col gap-y-12 mt-8 lg:mt-20">
 			<!-- header -->
-			<div class="flex flex-col gap-y-4">
+			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Blog</span>
 				<p>
 					Thoughts and writings on software development, open-source, and other things I find interesting.

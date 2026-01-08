@@ -18,6 +18,11 @@ const items = computed<NavigationMenuItem[]>(() => [
 		to: '/projects',
 		active: route.path.startsWith('/projects'),
 	},
+	{
+		label: 'Uses',
+		to: '/uses',
+		active: route.path.startsWith('/uses'),
+	},
 ])
 
 useSeoMeta({
