@@ -7,9 +7,9 @@ import { socials } from '~~/content/about'
 		<div class="flex flex-col justify-center gap-10 w-full grow">
 			<!-- header -->
 			<div class="flex flex-col">
-				<span class="text-muted">Hi, I'm</span>
-				<span class="text-highlighted text-3xl">Enzo Innocenzi<span class="text-muted">,</span></span>
-				<span class="text-muted">A <span class="text-toned">software engineer</span> and <span class="text-toned">open-source contributor</span>.</span>
+				<span class="text-muted text-sm">Hi, I'm</span>
+				<span class="text-highlighted text-3xl -translate-x-px">Enzo Innocenzi<span class="text-muted -translate-x-1 translate-y-0.5 inline-block">,</span></span>
+				<span class="text-muted mt-1">A <span class="text-toned">software engineer</span> and <span class="text-toned">open-source contributor</span>.</span>
 			</div>
 			<!-- about me -->
 			<div class="flex flex-col gap-y-5">

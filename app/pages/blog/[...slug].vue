@@ -20,7 +20,7 @@ useSeoMeta({
 		<article class="flex flex-col mt-8 lg:mt-20 w-full max-w-prose" v-if="post">
 			<!-- Breadcrumbs -->
 			<nav class="flex items-center gap-x-1.5 mb-6 font-medium text-muted text-sm">
-				<UIcon name="tabler:news" class="mr-1 size-5 translate-y-px" />
+				<UIcon name="tabler:news" class="mr-1 size-5" />
 				<ULink to="/blog" class="hover:text-default transition">Blog</ULink>
 				<span>/</span>
 				<span class="text-primary" v-text="post.title" />

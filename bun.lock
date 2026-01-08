@@ -4,6 +4,7 @@
     "": {
       "name": "innocenzi-dev",
       "dependencies": {
+        "@iconify-json/tabler": "^1.2.26",
         "@nuxt/content": "3.8.2",
         "@nuxt/hints": "1.0.0-alpha.2",
         "@nuxt/image": "2.0.0",
@@ -21,7 +22,6 @@
         "zod": "^4.3.5",
       },
       "devDependencies": {
-        "@iconify-json/tabler": "^1.2.26",
         "dprint": "^0.51.1",
       },
     },
