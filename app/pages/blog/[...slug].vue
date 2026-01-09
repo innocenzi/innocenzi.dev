@@ -2,16 +2,9 @@
 const route = useRoute()
 const { data: post } = await useAsyncData(`blog-post-${route.path}`, () => queryCollection('blog').path(route.path).first())
 
-if (!post.value) {
-	throw createError({
-		statusCode: 404,
-		statusMessage: 'Post not found',
-	})
-}
-
 useSeoMeta({
-	title: post.value.title,
-	description: post.value.description,
+	title: post.value?.title,
+	description: post.value?.description,
 })
 </script>
 
@@ -44,5 +37,22 @@ useSeoMeta({
 				<ContentRenderer :value="post" />
 			</div>
 		</article>
+		<UEmpty
+			v-else
+			class="grow"
+			variant="naked"
+			icon="tabler:news-off"
+			title="Not found"
+			description="The blog article you are looking for does not exist."
+			:actions="[
+				{
+					icon: 'tabler:news',
+					label: 'Browse blog posts',
+					color: 'neutral',
+					variant: 'ghost',
+					href: '/blog',
+				},
+			]"
+		/>
 	</UContainer>
 </template>

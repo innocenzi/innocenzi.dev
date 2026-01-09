@@ -2,16 +2,9 @@
 const route = useRoute()
 const { data: snippet } = await useAsyncData(`snippet-${route.path}`, () => queryCollection('snippets').path(route.path).first())
 
-if (!snippet.value) {
-	throw createError({
-		statusCode: 404,
-		statusMessage: 'Snippet not found',
-	})
-}
-
 useSeoMeta({
-	title: snippet.value.name,
-	description: snippet.value.description,
+	title: snippet.value?.name,
+	description: snippet.value?.description,
 })
 </script>
 
@@ -35,5 +28,22 @@ useSeoMeta({
 				<ContentRenderer :value="snippet" />
 			</div>
 		</article>
+		<UEmpty
+			v-else
+			class="grow"
+			variant="naked"
+			icon="tabler:code-off"
+			title="Not found"
+			description="The code snippet you are looking for does not exist."
+			:actions="[
+				{
+					icon: 'tabler:code',
+					label: 'Browse snippets',
+					color: 'neutral',
+					variant: 'ghost',
+					href: '/snippets',
+				},
+			]"
+		/>
 	</UContainer>
 </template>
