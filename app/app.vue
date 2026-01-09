@@ -41,7 +41,9 @@ useSeoMeta({
 			</template>
 			<template #right>
 				<div class="flex gap-x-5 lowercase">
-					<ULink v-for="link in items" :key="link.label" :href="link.to" class="text-sm" prefetch :class="link.active ? 'text-primary' : ''">{{ link.label }}</ULink>
+					<ULink v-for="link in items" :key="link.label" :href="link.to" class="text-sm" prefetch :class="link.active ? 'text-primary' : ''">{{
+						link.label
+					}}</ULink>
 				</div>
 			</template>
 		</UHeader>
@@ -50,6 +52,5 @@ useSeoMeta({
 				<NuxtPage />
 			</NuxtLayout>
 		</UMain>
-		<UFooter />
 	</UApp>
 </template>

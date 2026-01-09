@@ -16,8 +16,8 @@ useSeoMeta({
 </script>
 
 <template>
-	<UContainer class="flex flex-col items-center h-full grow">
-		<article class="flex flex-col mt-8 lg:mt-20 w-full max-w-prose" v-if="post">
+	<UContainer class="flex flex-col items-center gap-y-10 lg:gap-y-20 my-6 lg:my-18 h-full grow">
+		<article class="flex flex-col w-full max-w-prose" v-if="post">
 			<!-- Breadcrumbs -->
 			<nav class="flex items-center gap-x-1.5 mb-6 font-medium text-muted text-sm">
 				<UIcon name="tabler:news" class="mr-1 size-5" />

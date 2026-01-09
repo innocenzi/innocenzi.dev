@@ -8,9 +8,9 @@ useSeoMeta({
 </script>
 
 <template>
-	<UContainer class="flex flex-col h-full grow">
+	<UContainer class="flex flex-col items-center gap-y-10 lg:gap-y-20 my-6 lg:my-18 h-full grow">
 		<!-- hardware -->
-		<section class="flex flex-col gap-y-8 mt-8 lg:mt-20">
+		<section class="flex flex-col gap-y-8">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Hardware</span>
@@ -33,9 +33,8 @@ useSeoMeta({
 				</li>
 			</ul>
 		</section>
-
 		<!-- software -->
-		<section class="flex flex-col gap-y-8 mt-20 mb-20">
+		<section class="flex flex-col gap-y-8">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Software</span>

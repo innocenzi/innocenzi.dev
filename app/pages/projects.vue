@@ -19,9 +19,9 @@ useSeoMeta({
 </script>
 
 <template>
-	<UContainer class="flex flex-col items-center h-full grow">
+	<UContainer class="flex flex-col items-center gap-y-10 lg:gap-y-20 my-6 lg:my-18 h-full grow">
 		<!-- projects -->
-		<section class="flex flex-col gap-y-8 mt-8 lg:mt-20">
+		<section class="flex flex-col gap-y-8">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Current</span>
@@ -71,7 +71,7 @@ useSeoMeta({
 			</ul>
 		</section>
 		<!-- other projects -->
-		<section class="flex flex-col gap-y-8 mt-20 max-w-full md:max-w-[unset]">
+		<section class="flex flex-col gap-y-8 max-w-full md:max-w-[unset]">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Projects</span>
@@ -79,25 +79,6 @@ useSeoMeta({
 					Here are some projects I have worked on. They aren't projects I'm particularly proud of—just some things I happened to create or contribute to along
 					the way.
 				</p>
-			</div>
-			<!-- contribution graph -->
-			<div class="flex flex-col items-center md:overflow-visible overflow-x-scroll" v-if="pending || github">
-				<ClientOnly>
-					<div v-if="pending">
-						<UIcon name="tabler:loader-2" class="animate-spin" />
-					</div>
-					<ContributionGraph v-else-if="github" :data="github.contributions" :block-size="10" :block-margin="3.4" :block-radius="3" :font-size="12">
-						<ContributionGraphCalendar>
-							<template #default="{ activity, dayIndex, weekIndex }">
-								<UTooltip :text="`${activity.count} contributions on ${activity.date}`">
-									<g>
-										<ContributionGraphBlock :activity :day-index="dayIndex" :week-index="weekIndex" />
-									</g>
-								</UTooltip>
-							</template>
-						</ContributionGraphCalendar>
-					</ContributionGraph>
-				</ClientOnly>
 			</div>
 			<!-- other projects -->
 			<ul class="gap-4 grid grid-cols-1 md:grid-cols-2">
@@ -152,6 +133,25 @@ useSeoMeta({
 					</div>
 				</li>
 			</ul>
+			<!-- contribution graph -->
+			<div class="flex flex-col items-center md:my-8 md:overflow-visible overflow-x-scroll" v-if="pending || github">
+				<ClientOnly>
+					<div v-if="pending">
+						<UIcon name="tabler:loader-2" class="animate-spin" />
+					</div>
+					<ContributionGraph v-else-if="github" :data="github.contributions" :block-size="10" :block-margin="3.4" :block-radius="3" :font-size="12">
+						<ContributionGraphCalendar>
+							<template #default="{ activity, dayIndex, weekIndex }">
+								<UTooltip :text="`${activity.count} contributions on ${activity.date}`">
+									<g>
+										<ContributionGraphBlock :activity :day-index="dayIndex" :week-index="weekIndex" />
+									</g>
+								</UTooltip>
+							</template>
+						</ContributionGraphCalendar>
+					</ContributionGraph>
+				</ClientOnly>
+			</div>
 		</section>
 	</UContainer>
 </template>
