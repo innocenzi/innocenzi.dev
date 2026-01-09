@@ -4,7 +4,6 @@ export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	devtools: { enabled: true },
 	css: ['./app/style.css'],
-	ssr: false,
 	app: {
 		head: {
 			link: [
@@ -32,6 +31,7 @@ export default defineNuxtConfig({
 		storageKey: 'theme',
 	},
 	content: {
+		experimental: { sqliteConnector: 'native' },
 		build: {
 			markdown: {
 				highlight: {
