@@ -6,7 +6,7 @@ interface GitHubContributionsResponse {
 	contributions: Activity[]
 }
 
-const { data: github, pending } = await useFetch<GitHubContributionsResponse>('https://github-contributions-api.jogruber.de/v4/innocenzi?y=last')
+const { data: github, pending } = useFetch<GitHubContributionsResponse>('https://github-contributions-api.jogruber.de/v4/innocenzi?y=last')
 const featured = projects.filter((project) => project.featured === true)
 const others = projects
 	.filter((project) => !project.featured)
