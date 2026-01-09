@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 						default: 'github-light',
 						dark: 'github-dark',
 					},
-					langs: ['php', 'typescript', 'sh'],
+					langs: ['php', 'typescript', 'sh', 'sql'],
 				},
 			},
 		},

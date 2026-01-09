@@ -32,7 +32,7 @@ const { copy, copied } = useClipboard()
 </script>
 
 <template>
-	<div class="group/code relative p-0.5 border border-default rounded-lg overflow-hidden text-sm">
+	<section class="group/code code-block relative p-0.5 border border-default rounded-lg overflow-hidden text-sm">
 		<div v-if="filename" class="px-2 pt-1 pb-1.5 text-toned" v-text="filename" />
 		<pre class="bg-accented/30 p-4 border border-default rounded-md overflow-x-auto" :class="$props.class"><slot /></pre>
 		<UButton
@@ -44,11 +44,17 @@ const { copy, copied } = useClipboard()
 			variant="subtle"
 			:icon="copied ? 'tabler:copy-check' : 'tabler:copy'"
 		/>
-	</div>
+	</section>
 </template>
 
-<style>
+<style scoped>
+@reference "../../style.css";
+
 pre code .line {
 	display: block;
+}
+
+.code-block ~ .code-block {
+	@apply mt-4;
 }
 </style>
