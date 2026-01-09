@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: post } = await useAsyncData(`blog-post-${route.path}`, () => queryCollection('blog').path(route.path).first())
+const { data: post, pending } = await useAsyncData(`blog-post-${route.path}`, () => queryCollection('blog').path(route.path.replace(/\/$/, '')).first())
 
 useSeoMeta({
 	title: post.value?.title,
@@ -37,6 +37,9 @@ useSeoMeta({
 				<ContentRenderer :value="post" />
 			</div>
 		</article>
+		<div v-else-if="pending" class="flex justify-center items-center grow">
+			<UIcon name="tabler:loader-2" class="text-muted animate-spin" />
+		</div>
 		<UEmpty
 			v-else
 			class="grow"

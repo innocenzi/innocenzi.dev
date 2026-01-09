@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: snippet } = await useAsyncData(`snippet-${route.path}`, () => queryCollection('snippets').path(route.path).first())
+const { data: snippet, pending } = await useAsyncData(`snippet-${route.path}`, () => queryCollection('snippets').path(route.path.replace(/\/$/, '')).first())
 
 useSeoMeta({
 	title: snippet.value?.name,
@@ -28,6 +28,9 @@ useSeoMeta({
 				<ContentRenderer :value="snippet" />
 			</div>
 		</article>
+		<div v-else-if="pending" class="flex justify-center items-center grow">
+			<UIcon name="tabler:loader-2" class="text-muted animate-spin" />
+		</div>
 		<UEmpty
 			v-else
 			class="grow"
