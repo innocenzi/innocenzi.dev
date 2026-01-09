@@ -8,15 +8,18 @@ import { socials } from '~~/content/about'
 			<!-- header -->
 			<div class="flex flex-col">
 				<span class="text-muted text-sm">Hi, I'm</span>
-				<span class="text-highlighted text-3xl -translate-x-px">Enzo Innocenzi<span class="text-muted -translate-x-1 translate-y-0.5 inline-block">,</span></span>
-				<span class="text-muted mt-1">A <span class="text-toned">software engineer</span> and <span class="text-toned">open-source contributor</span>.</span>
+				<span class="text-highlighted text-3xl -translate-x-px">
+					<span>Enzo Innocenzi</span>
+					<span class="inline-block text-muted -translate-x-1 translate-y-0.5">,</span>
+				</span>
+				<span class="mt-1 text-muted">A <span class="text-toned">software engineer</span> and <span class="text-toned">open-source contributor</span>.</span>
 			</div>
 			<!-- about me -->
 			<div class="flex flex-col gap-y-5">
 				<p>
 					I got into programming when I was about 12, and I’ve been doing it professionally since I was 18. Today, I work as a <span class="text-highlighted"
 					>lead software developer</span> at <ProseLink external href="https://jetfly.com" text="Jetfly" icon="brand:jetfly" />, mostly focused on internal
-					tooling, general back-end work, and architecture.
+					tooling and general back-end work.
 				</p>
 				<p>
 					My main stack is <span class="text-highlighted">PHP</span> and <span class="text-highlighted">TypeScript</span>, usually with <ProseLink

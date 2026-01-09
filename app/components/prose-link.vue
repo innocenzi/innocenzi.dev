@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-	<ULink class="group inline-flex items-center gap-x-1 text-highlighted" :href>
+	<ULink class="group inline-flex items-center gap-x-1.25 text-highlighted" :href>
 		<slot>{{ text }}</slot>
 		<div v-if="icon && external" class="relative size-4.5">
 			<UIcon :name="icon" class="absolute group-hover:opacity-0 size-full group-hover:scale-80 transition delay-75 group-hover:delay-0" />
