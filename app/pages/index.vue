@@ -4,7 +4,7 @@ import { socials } from '~~/content/about'
 
 <template>
 	<UContainer class="group/page flex flex-col items-center h-full grow">
-		<div class="flex flex-col justify-center gap-10 w-full grow">
+		<div class="flex flex-col justify-center gap-10 w-full grow slide-enter-content">
 			<!-- header -->
 			<div class="flex flex-col">
 				<span class="text-muted text-sm">Hi, I'm</span>
@@ -15,7 +15,7 @@ import { socials } from '~~/content/about'
 				<span class="mt-1 text-muted">A <span class="text-toned">software engineer</span> and <span class="text-toned">open-source contributor</span>.</span>
 			</div>
 			<!-- about me -->
-			<div class="flex flex-col gap-y-5">
+			<div class="flex flex-col gap-y-5 slide-enter-content">
 				<p>
 					I got into programming when I was about 12, and I’ve been doing it professionally since I was 18. Today, I work as a <span class="text-highlighted"
 					>lead software developer</span> at <ProseLink external href="https://jetfly.com" text="Jetfly" icon="brand:jetfly" />, mostly focused on internal

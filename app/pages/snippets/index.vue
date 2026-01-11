@@ -13,7 +13,7 @@ useSeoMeta({
 
 <template>
 	<UContainer class="flex flex-col items-center gap-y-10 lg:gap-y-20 my-6 lg:my-18 h-full grow">
-		<section class="flex flex-col gap-y-12">
+		<section class="flex flex-col gap-y-12 slide-enter-content">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Snippets</span>
@@ -22,7 +22,7 @@ useSeoMeta({
 				</p>
 			</div>
 			<!-- snippets -->
-			<div v-if="snippets && snippets.length > 0" class="flex flex-col gap-y-6">
+			<div v-if="snippets && snippets.length > 0" class="flex flex-col gap-y-6 slide-enter-content">
 				<article v-for="snippet in snippets" :key="snippet.path" class="flex flex-col gap-y-2">
 					<!-- snippet name -->
 					<ULink :href="snippet.path" class="font-mono text-highlighted">

@@ -10,7 +10,7 @@ useSeoMeta({
 <template>
 	<UContainer class="flex flex-col items-center gap-y-10 lg:gap-y-20 my-6 lg:my-18 h-full grow">
 		<!-- hardware -->
-		<section class="flex flex-col gap-y-8">
+		<section class="flex flex-col gap-y-8 slide-enter-content">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Hardware</span>
@@ -19,7 +19,7 @@ useSeoMeta({
 				</p>
 			</div>
 			<!-- hardware list -->
-			<ul class="flex flex-col gap-y-6">
+			<ul class="flex flex-col gap-y-6 slide-enter-content">
 				<li v-for="item in hardware" :key="item.label" class="flex flex-col gap-y-1 text-toned">
 					<span class="flex items-center gap-x-2.5">
 						<UIcon :name="item.icon" class="size-5.5 text-dimmed" />
@@ -34,7 +34,7 @@ useSeoMeta({
 			</ul>
 		</section>
 		<!-- software -->
-		<section class="flex flex-col gap-y-8">
+		<section class="flex flex-col gap-y-8 slide-enter-content">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Software</span>
@@ -43,7 +43,7 @@ useSeoMeta({
 				</p>
 			</div>
 			<!-- software list -->
-			<ul class="flex flex-col gap-y-6">
+			<ul class="flex flex-col gap-y-6 slide-enter-content">
 				<li v-for="item in software" :key="item.label" class="flex flex-col gap-y-1">
 					<span class="flex items-center gap-x-2.5">
 						<UIcon :name="item.icon" class="size-5.5 text-dimmed" />

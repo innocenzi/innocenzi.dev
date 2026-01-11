@@ -34,7 +34,7 @@ useSeoMeta({
 			</div>
 			<!-- Content -->
 			<div class="space-y-12 dark:prose-invert mt-8 pb-24 w-full prose">
-				<ContentRenderer :value="post" />
+				<ContentRenderer :value="post" class="slide-enter-content" />
 			</div>
 		</article>
 		<div v-else-if="pending" class="flex justify-center items-center grow">

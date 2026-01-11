@@ -25,7 +25,7 @@ useSeoMeta({
 			</div>
 			<!-- Content -->
 			<div class="space-y-12 dark:prose-invert mt-8 pb-24 w-full prose">
-				<ContentRenderer :value="snippet" />
+				<ContentRenderer :value="snippet" class="slide-enter-content" />
 			</div>
 		</article>
 		<div v-else-if="pending" class="flex justify-center items-center grow">

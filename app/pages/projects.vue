@@ -21,7 +21,7 @@ useSeoMeta({
 <template>
 	<UContainer class="flex flex-col items-center gap-y-10 lg:gap-y-20 my-6 lg:my-18 h-full grow">
 		<!-- projects -->
-		<section class="flex flex-col gap-y-8">
+		<section class="flex flex-col gap-y-8 slide-enter-content">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Current</span>
@@ -31,7 +31,7 @@ useSeoMeta({
 				</p>
 			</div>
 			<!-- featured projects -->
-			<ul class="flex flex-col gap-y-8">
+			<ul class="flex flex-col gap-y-8 slide-enter-content">
 				<li v-for="project in featured" :key="project.label" class="flex md:flex-row flex-col gap-x-3 gap-y-3">
 					<!-- icon -->
 					<div class="bg-elevated/50 p-1 border border-default rounded-full size-10 md:size-7 translate-y-px shrink-0">
@@ -71,7 +71,7 @@ useSeoMeta({
 			</ul>
 		</section>
 		<!-- other projects -->
-		<section class="flex flex-col gap-y-8 max-w-full md:max-w-[unset]">
+		<section class="flex flex-col gap-y-8 max-w-full md:max-w-[unset] slide-enter-content">
 			<!-- header -->
 			<div class="flex flex-col gap-y-3">
 				<span class="font-mono text-highlighted text-3xl">Projects</span>
@@ -81,7 +81,7 @@ useSeoMeta({
 				</p>
 			</div>
 			<!-- other projects -->
-			<ul class="gap-4 grid grid-cols-1 md:grid-cols-2">
+			<ul class="gap-4 grid grid-cols-1 md:grid-cols-2 slide-enter-content">
 				<li v-for="project in others" :key="project.label" class="bg-elevated/30 p-0.5 border border-default/50 rounded-md text-sm">
 					<div class="flex flex-col justify-between gap-y-4 p-3 border border-default border-dashed rounded-md h-full">
 						<!-- title and description -->
