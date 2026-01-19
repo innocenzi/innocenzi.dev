@@ -32,12 +32,12 @@ const { copy, copied } = useClipboard()
 </script>
 
 <template>
-	<section class="group/code code-block relative p-0.5 border border-default rounded-lg overflow-hidden text-sm">
-		<div v-if="filename" class="px-2 pt-1 pb-1.5 text-toned" v-text="filename" />
+	<section class="group/code-block code-block relative not-group-[.group\/code-group]:p-0.5 not-group-[.group\/code-group]:border not-group-[.group\/code-group]:border-default not-group-[.group\/code-group]:rounded-lg overflow-hidden text-sm">
+		<div v-if="filename" class="group-[.group\/code-group]:hidden px-2 pt-1 pb-1.5 text-toned" v-text="filename" />
 		<pre class="bg-accented/30 p-4 border border-default rounded-md overflow-x-auto" :class="$props.class"><slot /></pre>
 		<UButton
 			@click="copy(code)"
-			class="right-2 absolute opacity-0 group-hover/code:opacity-100 scale-80 group-hover/code:scale-100 transition"
+			class="right-2 absolute opacity-0 group-hover/code-block:opacity-100 scale-80 group-hover/code-block:scale-100 transition"
 			:class="filename ? 'top-10' : 'top-2'"
 			size="sm"
 			:color="copied ? 'success' : 'neutral'"

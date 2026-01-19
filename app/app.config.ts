@@ -37,5 +37,16 @@ export default defineAppConfig({
 				root: 'bg-transparent',
 			},
 		},
+		prose: {
+			codeGroup: {
+				slots: {
+					root: 'border border-default rounded-lg p-0.5 group/code-group code-group',
+					list: 'pt-0.75 pb-1 px-0.75 bg-transparent border-none',
+					indicator: 'bottom-1 top-0.75',
+					trigger: 'text-sm py-1 cursor-pointer text-toned data-[state=active]:text-default',
+					triggerIcon: 'hidden',
+				},
+			},
+		},
 	},
 })
