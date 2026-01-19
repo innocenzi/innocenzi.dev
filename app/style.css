@@ -5,6 +5,7 @@
 @theme {
 	--font-sans: "iA Writer Quattro";
 	--font-mono: "JetBrains Mono", monospace;
+	--max-width-prose: 70ch;
 
 	--color-pink-50: oklch(0.983 0.009 0.36);
 	--color-pink-100: oklch(0.976 0.012 4.91);
@@ -62,12 +63,16 @@
 
 /*
 |--------------------------------------------------------------------------
-| Code highlighting
+| Prose
 |--------------------------------------------------------------------------
 */
 
 .prose pre {
 	@apply whitespace-pre;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) {
+	@apply font-mono font-normal;
 }
 
 /*

@@ -20,7 +20,7 @@ useSeoMeta({
 			</nav>
 			<!-- Header -->
 			<div class="flex flex-col pb-6 w-full">
-				<h1 class="max-w-[65ch] font-mono font-bold text-highlighted text-3xl sm:text-4xl tracking-tight" v-text="post.title" />
+				<h1 class="max-w-prose font-mono font-bold text-highlighted text-3xl sm:text-4xl tracking-tight" v-text="post.title" />
 				<p class="mt-4 text-lg" v-text="post.description" />
 			</div>
 			<div class="pb-2 border-default border-b">
