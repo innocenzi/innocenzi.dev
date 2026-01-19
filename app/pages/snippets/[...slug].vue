@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: snippet, pending } = await useAsyncData(`snippet-${route.path}`, () => queryCollection('snippets').path(route.path.replace(/\/$/, '')).first())
+const { data: snippet, pending } = await useAsyncData(route.path, () => queryCollection('snippets').path(route.path.replace(/\/$/, '')).first())
 
 useSeoMeta({
 	title: snippet.value?.name,

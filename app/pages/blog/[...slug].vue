@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: post, pending } = await useAsyncData(`blog-post-${route.path}`, () => queryCollection('blog').path(route.path.replace(/\/$/, '')).first())
+const { data: post, pending } = await useAsyncData(route.path, () => queryCollection('blog').path(route.path.replace(/\/$/, '')).first())
 
 useSeoMeta({
 	title: post.value?.title,
