@@ -31,13 +31,19 @@ export const projects = [
 		featured: true,
 	},
 	{
+		label: 'Discovery for Laravel',
+		repository: 'https://github.com/innocenzi/discovery-for-laravel',
+		description: 'Code discovery in your Laravel codebase without relying on path conventions.',
+		created_at: '2026-04-01',
+	},
+	{
 		label: 'Vite for Laravel',
 		site: 'https://laravel-vite.innocenzi.dev/',
 		repository: 'https://github.com/innocenzi/laravel-vite',
 		description: 'Vite integration for Laravel. It was the de-facto solution before Laravel released their official integration.',
 		icon: 'brand:vite-for-laravel',
 		deprecated: true,
-		createdAt: '2021-02-09',
+		created_at: '2021-02-09',
 	},
 	{
 		label: 'Awesome Tailwind CSS',
