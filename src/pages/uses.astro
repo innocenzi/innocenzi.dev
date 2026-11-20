@@ -1,0 +1,46 @@
+---
+import LabelledSection from '../components/labelled_section.astro';
+import PageHeading from '../components/page_heading.astro';
+import { hardware, software } from '../data/uses';
+import { documentTitle, t } from '../i18n';
+import PageLayout from '../layouts/page_layout.astro';
+
+const sections = [
+	{
+		id: 'hardware',
+		...t.uses.hardware,
+		items: hardware.map(({ name, url, specifications, comment }) => ({ name, url, details: [specifications, comment].filter(Boolean).join(' — ') })),
+		columns: false,
+	},
+	{
+		id: 'software',
+		...t.uses.software,
+		items: software.map(({ name, url, description }) => ({ name, url, details: description })),
+		columns: true,
+	},
+];
+---
+
+<PageLayout title={documentTitle(t.uses.title)} description={t.uses.description} path="uses/">
+	<!-- header -->
+	<PageHeading title={t.uses.title} intro={t.uses.description} />
+
+	<!-- hardware and software -->
+	<div class="mt-16">
+		{sections.map(({ id, title, intro, items, columns }, index) => (
+			<LabelledSection id={id} label={title} rise={index + 2}>
+				<!-- intro -->
+				<p class="-mt-0.5 mb-8 text-lg/relaxed text-pretty text-muted">{intro}</p>
+				<!-- items -->
+				<dl class:list={['grid gap-x-8 gap-y-6', { 'sm:grid-cols-2': columns }]}>
+					{items.map(({ name, url, details }) => (
+						<div class="flex flex-col gap-1">
+							<dt class="text-lg/snug"><a href={url} class="link">{name}</a></dt>
+							{details && <dd class:list={['text-pretty text-muted', columns ? 'text-base sm:text-note' : 'text-base']}>{details}</dd>}
+						</div>
+					))}
+				</dl>
+			</LabelledSection>
+		))}
+	</div>
+</PageLayout>

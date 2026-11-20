@@ -1,0 +1,208 @@
+/* Styles for rendered Markdown: posts and snippets. Code blocks and code groups are built by the plugins in src/markdown/. */
+@layer components {
+	.prose {
+		@apply text-prose text-pretty text-body;
+
+		& > * + * {
+			@apply mt-6;
+		}
+
+		& > :first-child {
+			@apply mt-0;
+		}
+
+		& :is(h2, h3, h4) {
+			@apply mt-14 scroll-mt-6 font-bold text-balance break-after-avoid text-ink;
+		}
+
+		& h2 {
+			@apply text-heading;
+		}
+
+		& :is(h3, h4) {
+			@apply mt-12 text-item;
+		}
+
+		/* The `#` is decorative: the empty alternative text keeps it out of the heading's accessible name. */
+		& .heading-anchor {
+			&::after {
+				content: "#" / "";
+				@apply ml-2 font-normal text-faint opacity-0 transition-opacity;
+			}
+
+			&:is(:hover, :focus-visible)::after {
+				@apply opacity-100;
+			}
+		}
+
+		& a:not(.heading-anchor) {
+			@apply link text-ink;
+		}
+
+		& strong {
+			@apply font-bold text-ink;
+		}
+
+		& :not(pre) > code {
+			@apply rounded-sm bg-well px-1.5 py-px font-mono text-inline-code text-ink;
+			box-decoration-break: clone;
+		}
+
+		/* Links already underline their code. */
+		& a > code {
+			@apply bg-transparent p-0;
+		}
+
+		/* Placed after the inline code rule, which has the same specificity. */
+		& :is(h2, h3, h4) code {
+			font-size: inherit;
+			line-height: inherit;
+		}
+
+		& :is(ul, ol) {
+			@apply pl-5;
+		}
+
+		& ul {
+			@apply list-disc;
+		}
+
+		& ol {
+			@apply list-decimal;
+		}
+
+		& li {
+			@apply pl-1;
+
+			& + li,
+			& > :is(ul, ol) {
+				@apply mt-2;
+			}
+
+			&::marker {
+				@apply text-faint;
+			}
+		}
+
+		& blockquote {
+			@apply border-l border-rule pl-5 text-muted;
+		}
+
+		& hr {
+			@apply my-14 border-line;
+		}
+
+		& img {
+			@apply rounded-lg;
+		}
+
+		& table {
+			@apply block w-full overflow-x-auto text-base;
+		}
+
+		& :is(th, td) {
+			@apply border-b border-line py-2 pr-4 text-left align-top;
+		}
+
+		& th {
+			@apply font-bold text-ink;
+		}
+
+		& :is(.code-block, .code-group) {
+			@apply my-10;
+		}
+
+		& .code-block {
+			@apply flex flex-wrap items-center gap-x-4 gap-y-2.5;
+		}
+
+		& .code-block-caption {
+			@apply min-w-0 flex-1 truncate text-left font-mono text-caption text-faint;
+		}
+
+		& .code-block-copy {
+			@apply flex shrink-0 cursor-pointer items-center gap-1.5 rounded-sm font-mono text-caption text-faint transition-colors hover:text-ink;
+			@apply focus-visible:text-ink focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-faint;
+
+			& svg {
+				@apply size-3.5;
+			}
+		}
+
+		& pre {
+			@apply basis-full overflow-x-auto rounded-code bg-well px-6 py-5.5 font-mono text-code text-ink;
+			tab-size: 4;
+
+			&:focus-visible {
+				@apply outline-1 outline-offset-2 outline-faint;
+			}
+		}
+
+		& .code-group {
+			@apply relative;
+		}
+
+		& .code-group > .code-block {
+			@apply my-0;
+		}
+
+		/* Without JavaScript, the tab list stays hidden and every block shows with its own caption. */
+		& .code-group-tabs[hidden] ~ .code-block + .code-block {
+			@apply mt-6;
+		}
+
+		/* Tabs are for the screen only: a printout shows every file with its own caption. */
+		@media screen {
+			/* The selected block's copy button sits at the end of the tab list. */
+			& .code-group-tabs:not([hidden]) ~ .code-block {
+				& > .code-block-copy {
+					@apply absolute top-0 right-0;
+				}
+
+				& > .code-block-caption {
+					@apply hidden;
+				}
+
+				&:not([data-selected]) {
+					@apply hidden;
+				}
+			}
+		}
+
+		/* The tabs wrap rather than scroll, so their focus outline isn't clipped. */
+		& .code-group-tabs {
+			@apply mb-2.5 flex flex-wrap gap-x-4.5 gap-y-1 pr-20;
+		}
+
+		& [role="tab"] {
+			@apply cursor-pointer font-mono text-caption whitespace-nowrap text-faint transition-colors hover:text-muted;
+
+			&[aria-selected="true"] {
+				@apply text-ink;
+			}
+
+			&:focus-visible {
+				@apply rounded-sm outline-1 outline-offset-2 outline-faint;
+			}
+		}
+	}
+
+	@media print {
+		.prose :is(.code-block, .code-group) {
+			@apply break-inside-avoid;
+		}
+
+		.prose :is(.code-block-copy, .code-group-tabs) {
+			@apply hidden;
+		}
+
+		/* Paper doesn't scroll. */
+		.prose pre {
+			@apply whitespace-pre-wrap wrap-anywhere;
+		}
+
+		.prose .code-group > .code-block + .code-block {
+			@apply mt-6;
+		}
+	}
+}

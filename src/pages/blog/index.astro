@@ -1,0 +1,39 @@
+---
+import EntryLink from '../../components/entry_link.astro';
+import LabelledSection from '../../components/labelled_section.astro';
+import PageHeading from '../../components/page_heading.astro';
+import { getPosts } from '../../data/entries';
+import { documentTitle, formatDate, isoDate, t } from '../../i18n';
+import PageLayout from '../../layouts/page_layout.astro';
+
+const posts = await getPosts();
+
+const years = Map.groupBy(posts, (post) => post.data.date.getUTCFullYear());
+
+// Without posts, the heading is all the page shows.
+const empty = posts.length === 0;
+---
+
+<PageLayout title={documentTitle(t.blog.title)} description={t.blog.description} path="blog/" centered={empty}>
+	<!-- header -->
+	<PageHeading title={t.blog.title} intro={t.blog.description} centered={empty} />
+
+	<!-- posts -->
+	{!empty && (
+		<div class="mt-16">
+			{[...years].map(([year, entries], index) => (
+				<LabelledSection id={`year-${year}`} label={String(year)} rise={Math.min(index + 2, 7)}>
+					<ul class="flex flex-col gap-7">
+						{entries.map((post) => (
+							<li>
+								<EntryLink href={`/blog/${post.id}/`} title={post.data.title} description={post.data.description}>
+									<time datetime={isoDate(post.data.date)}>{formatDate(post.data.date, 'day')}</time>
+								</EntryLink>
+							</li>
+						))}
+					</ul>
+				</LabelledSection>
+			))}
+		</div>
+	)}
+</PageLayout>

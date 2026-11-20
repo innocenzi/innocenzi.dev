@@ -1,0 +1,59 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { render } from 'astro:content';
+
+import EntryHeader from '../../components/entry_header.astro';
+import LabelledSection from '../../components/labelled_section.astro';
+import Prose from '../../components/prose.astro';
+import { getPosts } from '../../data/entries';
+import { documentTitle, formatDate, isoDate, t } from '../../i18n';
+import PageLayout from '../../layouts/page_layout.astro';
+
+export const getStaticPaths = (async () => {
+	const posts = await getPosts();
+
+	// Posts are newest first, so the previous post is the next one in the list.
+	return posts.map((post, index) => ({ params: { slug: post.id }, props: { post, previous: posts[index + 1] } }));
+}) satisfies GetStaticPaths;
+
+const { post, previous } = Astro.props;
+
+const { Content } = await render(post);
+---
+
+<PageLayout
+	title={documentTitle(post.data.title)}
+	description={post.data.description}
+	path={`blog/${post.id}/`}
+	type="article"
+	published={post.data.date}
+>
+	<article>
+		<!-- header -->
+		<EntryHeader parent={{ href: '/blog/', text: t.navigation.blog }} title={post.data.title} description={post.data.description}>
+			<time datetime={isoDate(post.data.date)}>{formatDate(post.data.date, 'short')}</time>
+		</EntryHeader>
+
+		<!-- content -->
+		<div class="animate-rise mt-14" style="--rise: 3">
+			<Prose><Content /></Prose>
+		</div>
+	</article>
+
+	<!-- previous post -->
+	{previous && (
+		<div class="mt-18 print:hidden">
+			<LabelledSection id="previously" label={t.blog.previously} rise={4} compact>
+				<a href={`/blog/${previous.id}/`} class="group flex items-baseline justify-between gap-6 text-lg/snug">
+					<span class="link-title min-w-0 text-pretty">{previous.data.title}</span>
+					<time
+						datetime={isoDate(previous.data.date)}
+						class="shrink-0 font-mono text-xs whitespace-nowrap text-faint tabular-nums"
+					>
+						{formatDate(previous.data.date, 'short')}
+					</time>
+				</a>
+			</LabelledSection>
+		</div>
+	)}
+</PageLayout>

@@ -1,0 +1,33 @@
+---
+import { documentTitle, t } from '../i18n';
+import PageLayout from '../layouts/page_layout.astro';
+---
+
+<PageLayout title={documentTitle(t.not_found.title)} description={t.not_found.description} path="" noindex centered>
+	<!-- request -->
+	<p class="animate-rise flex flex-wrap justify-center gap-x-3.5 gap-y-1 font-mono text-nav text-muted">
+		<span class="text-faint">{t.not_found.method}</span>
+		<span data-requested-path class="break-all text-ink"></span>
+		<span class="text-accent">{t.not_found.status}</span>
+	</p>
+	<!-- heading -->
+	<h1 class="animate-rise mt-6 text-center font-serif text-headline text-balance" style="--rise: 1">{t.not_found.heading}</h1>
+</PageLayout>
+
+<script>
+	// The same page answers every missing address, so the address is only known in the browser.
+	document.addEventListener('astro:page-load', () => {
+		const path = document.querySelector('[data-requested-path]');
+
+		if (!path) {
+			return;
+		}
+
+		// A malformed address stays encoded.
+		try {
+			path.textContent = decodeURI(location.pathname);
+		} catch {
+			path.textContent = location.pathname;
+		}
+	});
+</script>

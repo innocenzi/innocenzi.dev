@@ -1,0 +1,27 @@
+---
+import { t } from '../i18n';
+
+interface Props {
+	parent: { href: string; text: string };
+	title: string;
+	description: string;
+}
+
+const { parent, title, description } = Astro.props;
+---
+
+<header>
+	<!-- details -->
+	<!-- Only the link is a breadcrumb: the date or group beside it is metadata. -->
+	<div class="animate-rise flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-faint">
+		<nav aria-label={t.breadcrumb_label}>
+			<a href={parent.href} class="link text-muted">{parent.text}</a>
+		</nav>
+		<span aria-hidden="true">/</span>
+		<slot />
+	</div>
+	<!-- title -->
+	<h1 class="animate-rise mt-5 font-serif text-title text-balance" style="--rise: 1">{title}</h1>
+	<!-- description -->
+	<p class="animate-rise mt-4 text-lede text-pretty text-muted" style="--rise: 2">{description}</p>
+</header>

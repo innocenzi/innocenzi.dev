@@ -1,0 +1,83 @@
+---
+import LabelledSection from '../components/labelled_section.astro';
+import RichText from '../components/rich_text.astro';
+import { getPosts } from '../data/entries';
+import { me } from '../data/me';
+import { formatDate, isoDate, t } from '../i18n';
+import PageLayout from '../layouts/page_layout.astro';
+
+const links = Object.fromEntries(Object.entries(t.home.links).map(([key, text]) => [key, { href: me.links[key as keyof typeof me.links], text }]));
+
+const posts = (await getPosts()).slice(0, 3);
+
+const elsewhere = [
+	...me.socials.map(({ network, handle, url }) => ({ network: network.toLowerCase(), handle, href: url })),
+	{ network: t.elsewhere.email, handle: me.email, href: `mailto:${me.email}` },
+];
+---
+
+<PageLayout path="" centered footer={false}>
+	<!-- introduction -->
+	<header>
+		<!-- name -->
+		<h1 class="animate-rise font-serif text-name">{me.name}</h1>
+		<!-- tagline -->
+		<p class="animate-rise mt-1.5 text-tagline text-balance text-muted" style="--rise: 1">{t.home.tagline}</p>
+	</header>
+
+	<div class="mt-10">
+		<!-- about -->
+		<LabelledSection id="about" label={t.home.sections.about} rise={2} compact>
+			<div class="-mt-0.5 flex flex-col gap-3.5 text-lg/relaxed text-pretty text-muted">
+				{t.home.about.map((paragraph) => <p><RichText template={paragraph} links={links} /></p>)}
+			</div>
+		</LabelledSection>
+
+		<!-- now -->
+		<LabelledSection id="now" label={t.home.sections.now} rise={3} compact>
+			<ul class="flex flex-col gap-2.5 text-lg/snug">
+				{t.home.now.map(({ text, note }) => (
+					<li class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+						<span class="text-muted"><RichText template={text} links={links} /></span>
+						<span class="font-mono text-xs text-faint">{note}</span>
+					</li>
+				))}
+			</ul>
+		</LabelledSection>
+
+		<!-- writing -->
+		{posts.length > 0 && (
+			<LabelledSection id="writing" label={t.home.sections.writing} rise={4} compact>
+				<ul class="flex flex-col gap-2.5">
+					{posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.id}/`} class="group flex items-baseline justify-between gap-6 text-lg/snug">
+								<span class="link-title min-w-0 text-pretty">{post.data.title}</span>
+								<time
+									datetime={isoDate(post.data.date)}
+									class="shrink-0 font-mono text-xs whitespace-nowrap text-faint tabular-nums"
+								>
+									{formatDate(post.data.date, 'short')}
+								</time>
+							</a>
+						</li>
+					))}
+				</ul>
+			</LabelledSection>
+		)}
+
+		<!-- elsewhere -->
+		<LabelledSection id="elsewhere" label={t.home.sections.elsewhere} rise={5} compact>
+			<ul class="grid gap-x-6 gap-y-2 font-mono text-nav/snug sm:grid-cols-3">
+				{elsewhere.map(({ network, handle, href }) => (
+					<li>
+						<a href={href} class="group flex gap-2.5">
+							<span class="w-16 shrink-0 text-faint sm:w-auto">{network}</span>
+							<span class="link-title min-w-0">{handle}</span>
+						</a>
+					</li>
+				))}
+			</ul>
+		</LabelledSection>
+	</div>
+</PageLayout>

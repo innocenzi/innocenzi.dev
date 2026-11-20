@@ -1,0 +1,75 @@
+<div class="prose">
+	<slot />
+</div>
+
+<script>
+	const keys: Record<string, (index: number, count: number) => number> = {
+		ArrowLeft: (index, count) => (index - 1 + count) % count,
+		ArrowRight: (index, count) => (index + 1) % count,
+		Home: () => 0,
+		End: (_, count) => count - 1,
+	};
+
+	document.addEventListener('astro:page-load', () => {
+		for (const block of document.querySelectorAll<HTMLElement>('.prose [data-code-block]')) {
+			const button = block.querySelector<HTMLButtonElement>('.code-block-copy')!;
+			const label = button.querySelector('span')!;
+			const status = block.querySelector('[role="status"]')!;
+			const text = label.textContent;
+			let timeout: number | undefined;
+
+			button.addEventListener('click', async () => {
+				try {
+					await navigator.clipboard.writeText(block.querySelector('pre')!.textContent ?? '');
+				} catch {
+					return;
+				}
+
+				label.textContent = status.textContent = button.dataset.copied!;
+				clearTimeout(timeout);
+
+				timeout = window.setTimeout(() => {
+					label.textContent = text;
+					status.textContent = '';
+				}, 2000);
+			});
+		}
+
+		for (const group of document.querySelectorAll<HTMLElement>('.prose [data-code-group]')) {
+			const tablist = group.querySelector<HTMLElement>('[role="tablist"]')!;
+			const tabs = [...tablist.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+			const panels = tabs.map((tab) => group.querySelector<HTMLElement>(`#${CSS.escape(tab.getAttribute('aria-controls')!)}`)!);
+
+			const select = (selected: number) => {
+				tabs.forEach((tab, index) => {
+					tab.setAttribute('aria-selected', String(index === selected));
+					tab.tabIndex = index === selected ? 0 : -1;
+					panels[index].toggleAttribute('data-selected', index === selected);
+				});
+			};
+
+			tabs.forEach((tab, index) => {
+				tab.addEventListener('click', () => select(index));
+				tab.addEventListener('keydown', (event) => {
+					if (!(event.key in keys)) {
+						return;
+					}
+
+					const next = keys[event.key](index, tabs.length);
+
+					event.preventDefault();
+					select(next);
+					tabs[next].focus();
+				});
+			});
+
+			panels.forEach((panel, index) => {
+				panel.setAttribute('role', 'tabpanel');
+				panel.setAttribute('aria-labelledby', tabs[index].id);
+			});
+
+			tablist.hidden = false;
+			select(0);
+		}
+	});
+</script>

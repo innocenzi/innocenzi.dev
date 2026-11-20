@@ -1,0 +1,118 @@
+{
+	"og_locale": "en_US",
+	"title": "Enzo Innocenzi — Software engineer",
+	"description": "Hey, I am Enzo Innocenzi. I am a software engineer and open-source contributor, currently working as a full-stack web developer.",
+	"document_title": "{page} — Enzo Innocenzi",
+	"social_card_alt": "“{title}”, by Enzo Innocenzi.",
+	"skip_to_content": "Skip to content",
+	"home_link_label": "Enzo Innocenzi, home",
+	"breadcrumb_label": "Breadcrumb",
+	"navigation": {
+		"label": "Main",
+		"about": "about",
+		"blog": "blog",
+		"projects": "projects",
+		"snippets": "snippets",
+		"uses": "uses"
+	},
+	"elsewhere": {
+		"label": "Elsewhere",
+		"email": "email",
+		"feed": "rss"
+	},
+	"home": {
+		"tagline": "A software engineer and open-source contributor.",
+		"sections": {
+			"about": "about",
+			"now": "now",
+			"writing": "writing",
+			"elsewhere": "elsewhere"
+		},
+		"about": [
+			"I got into programming when I was about 12, and I’ve been doing it professionally since I was 18. My main stack is PHP and TypeScript, usually with {laravel}, {hybridly}, {vue}, and {tailwind}.",
+			"I tend to be detail-oriented and a bit of a perfectionist. Outside of work, I usually play some video games—mostly MMOs and extraction shooters."
+		],
+		"now": [
+			{ "text": "Lead software developer at {jetfly}", "note": "work" },
+			{ "text": "Core member of {tempest}", "note": "open source" },
+			{ "text": "Creator and maintainer of {hybridly}", "note": "open source" }
+		],
+		"links": {
+			"jetfly": "Jetfly",
+			"laravel": "Laravel",
+			"hybridly": "Hybridly",
+			"vue": "Vue",
+			"tailwind": "Tailwind",
+			"tempest": "Tempest"
+		}
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "Thoughts and writings on software development, open-source, and other things I find interesting.",
+		"previously": "previously",
+		"feed_title": "Enzo Innocenzi’s blog"
+	},
+	"snippets": {
+		"title": "Snippets",
+		"description": "A collection of code snippets and quick references that I occasionally reuse. This is mostly for myself, but maybe you will find something useful.",
+		"other": "other",
+		"related": "also in {group}"
+	},
+	"projects": {
+		"title": "Projects",
+		"description": "I’m quite involved in open-source. Here are some of the projects I am currently working on and others I have worked on in the past.",
+		"intro": "I’m quite involved in {open_source}. Below are the projects I am currently working on during my free time, and some I made along the way.",
+		"open_source": "open-source",
+		"current": "current",
+		"past": "along the way",
+		"website": "website",
+		"repository": "repository",
+		"website_label": "{project}’s website",
+		"repository_label": "{project}’s repository on GitHub",
+		"roles": {
+			"creator": "creator",
+			"core_maintainer": "core maintainer",
+			"co_maintainer": "co-maintainer"
+		},
+		"deprecated": "deprecated",
+		"contributions": {
+			"title": "activity",
+			"label": "GitHub contributions over the last year",
+			"total": {
+				"one": "{count} contribution over the last year",
+				"other": "{count} contributions over the last year"
+			},
+			"day": {
+				"one": "{count} contribution on {date}",
+				"other": "{count} contributions on {date}"
+			},
+			"less": "less",
+			"more": "more"
+		}
+	},
+	"uses": {
+		"title": "Uses",
+		"description": "Hardware, software, and tools I use on a daily basis for development and productivity.",
+		"hardware": {
+			"title": "hardware",
+			"intro": "I combine a work and gaming setup using a KVM to switch between both of them. I have a standing desk, I work standing most of the time."
+		},
+		"software": {
+			"title": "software",
+			"intro": "Applications, tools, and services I use for development and productivity every day."
+		}
+	},
+	"code": {
+		"copy": "copy",
+		"copy_label": "Copy code",
+		"copied": "copied",
+		"files_label": "Files"
+	},
+	"not_found": {
+		"title": "Not found",
+		"description": "The page you are looking for does not exist.",
+		"method": "GET",
+		"status": "404",
+		"heading": "Nothing was ever written here."
+	}
+}

@@ -1,0 +1,32 @@
+---
+import { SIGNATURE, SIGNATURE_VIEW_BOX } from '../logo/logo';
+
+interface Props {
+	class?: string;
+
+	// Draws the strokes in order, as if written.
+	animate?: boolean;
+}
+
+const { class: className, animate = false } = Astro.props;
+
+// In milliseconds, one per stroke: the loop, then the dot.
+const timings = [
+	{ delay: 300, duration: 1700 },
+	{ delay: 1900, duration: 900 },
+];
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox={SIGNATURE_VIEW_BOX} class={className} aria-hidden="true">
+	{SIGNATURE.strokes.map((d, index) => (
+		<path
+			d={d}
+			pathLength="1"
+			fill="none"
+			stroke="currentColor"
+			stroke-width={SIGNATURE.strokeWidth}
+			class:list={{ 'animate-draw': animate }}
+			style={animate ? `--draw-delay: ${timings[index]?.delay}ms; --draw-duration: ${timings[index]?.duration}ms` : undefined}
+		/>
+	))}
+</svg>

@@ -1,0 +1,49 @@
+---
+import SiteFooter from '../components/site_footer.astro';
+import SiteHeader from '../components/site_header.astro';
+import { t } from '../i18n';
+import BaseLayout from './base_layout.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+	path: string;
+	type?: 'website' | 'article';
+	published?: Date;
+	noindex?: boolean;
+
+	// Centres the page's content in the window, for short pages.
+	centered?: boolean;
+
+	// The home page lists the same links in its content.
+	footer?: boolean;
+}
+
+const { centered = false, footer = true, ...props } = Astro.props;
+---
+
+<BaseLayout {...props}>
+	<div class="mx-auto flex min-h-svh w-full max-w-page flex-col px-6 py-10">
+		<!-- skip link -->
+		<a
+			href="#content"
+			class="sr-only rounded-md bg-ink px-3 py-1.5 text-sm text-ground focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-10"
+		>
+			{t.skip_to_content}
+		</a>
+
+		<!-- header -->
+		<SiteHeader />
+
+		<!-- page -->
+		<main
+			id="content"
+			class:list={['flex-1', centered ? ['flex flex-col justify-center pt-18', footer ? 'pb-18' : 'pb-6'] : 'py-24']}
+		>
+			<slot />
+		</main>
+
+		<!-- footer -->
+		{footer && <SiteFooter />}
+	</div>
+</BaseLayout>

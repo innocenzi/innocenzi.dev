@@ -1,0 +1,97 @@
+---
+import '../styles/global.css';
+
+import quattroRegular from '@fontsource/ia-writer-quattro/files/ia-writer-quattro-latin-400-normal.woff2?url';
+import quattroBold from '@fontsource/ia-writer-quattro/files/ia-writer-quattro-latin-700-normal.woff2?url';
+import monoRegular from '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2?url';
+import { ClientRouter } from 'astro:transitions';
+
+import { me } from '../data/me';
+import { format, locale, t } from '../i18n';
+import { COLOURS } from '../logo/logo';
+
+interface Props {
+	title?: string;
+	description?: string;
+
+	// The page's path without a leading slash, ending with one: `''` for home, `blog/` or `blog/some-post/`.
+	path?: string;
+	type?: 'website' | 'article';
+	published?: Date;
+	noindex?: boolean;
+}
+
+const { title = t.title, description = t.description, path = '', type = 'website', published, noindex = false } = Astro.props;
+
+const canonicalUrl = new URL(path, Astro.site);
+const socialCardUrl = new URL(`${path}og.png`, Astro.site);
+const feedUrl = new URL('blog/rss.xml', Astro.site);
+
+const fonts = [quattroRegular, quattroBold, monoRegular];
+
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{ '@type': 'WebSite', name: me.name, url: Astro.site, inLanguage: locale },
+		{
+			'@type': 'Person',
+			name: me.name,
+			url: Astro.site,
+			email: `mailto:${me.email}`,
+			sameAs: me.socials.map(({ url }) => url),
+		},
+	],
+};
+---
+
+<!doctype html>
+<html lang={locale} transition:animate="none">
+	<head>
+		<!-- document -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="author" content={me.name} />
+		<meta name="theme-color" content={COLOURS.ground} media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content={COLOURS.lightGround} media="(prefers-color-scheme: light)" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="alternate" type="application/rss+xml" title={t.blog.feed_title} href={feedUrl} />
+
+		<!-- fonts -->
+		{fonts.map((font) => <link rel="preload" href={font} as="font" type="font/woff2" crossorigin />)}
+
+		<!-- search engines -->
+		{noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonicalUrl} />}
+
+		<!-- social card -->
+		<meta property="og:type" content={type} />
+		<meta property="og:site_name" content={me.name} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		{!noindex && <meta property="og:url" content={canonicalUrl} />}
+		<meta property="og:locale" content={t.og_locale} />
+		<meta property="og:image" content={socialCardUrl} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content={format(t.social_card_alt, { title })} />
+		{published && <meta property="article:published_time" content={published.toISOString()} />}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content={me.twitter} />
+
+		<!-- structured data -->
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+		<!-- navigation -->
+		<ClientRouter />
+	</head>
+	<body class="bg-ground font-sans text-ink antialiased">
+		<!-- page -->
+		<slot />
+	</body>
+</html>

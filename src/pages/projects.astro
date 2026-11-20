@@ -1,0 +1,88 @@
+---
+import ContributionGraph from '../components/contribution_graph.astro';
+import LabelledSection from '../components/labelled_section.astro';
+import PageHeading from '../components/page_heading.astro';
+import RichText from '../components/rich_text.astro';
+import { getContributions } from '../data/contributions';
+import { me } from '../data/me';
+import { projects } from '../data/projects';
+import { documentTitle, format, t } from '../i18n';
+import PageLayout from '../layouts/page_layout.astro';
+
+const featured = projects.filter((project) => project.featured);
+const past = projects.filter((project) => !project.featured).sort((a, b) => Number(a.deprecated ?? false) - Number(b.deprecated ?? false));
+
+const contributions = await getContributions();
+---
+
+<PageLayout title={documentTitle(t.projects.title)} description={t.projects.description} path="projects/">
+	<!-- header -->
+	<PageHeading title={t.projects.title}>
+		<RichText
+			template={t.projects.intro}
+			links={{ open_source: { href: me.links.open_source, text: t.projects.open_source } }}
+			linkClass="text-muted"
+		/>
+	</PageHeading>
+
+	<div class="mt-16">
+		<!-- current projects -->
+		<LabelledSection id="current" label={t.projects.current} rise={2}>
+			<ul class="flex flex-col gap-8">
+				{featured.map((project) => (
+					<li class="flex flex-col gap-1.5">
+						<div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+							<h3 class="text-item">
+								<a href={project.site ?? project.repository} class="link underline-offset-5">{project.name}</a>
+							</h3>
+							{project.role && <span class="font-mono text-xs text-accent">{t.projects.roles[project.role]}</span>}
+						</div>
+						<p class="text-summary text-pretty text-muted">{project.description}</p>
+						<ul class="mt-1 flex gap-5 font-mono text-xs">
+							{project.site && (
+								<li>
+									<a href={project.site} aria-label={format(t.projects.website_label, { project: project.name })} class="link print-href text-muted">
+										{t.projects.website}
+									</a>
+								</li>
+							)}
+							<li>
+								<a
+									href={project.repository}
+									aria-label={format(t.projects.repository_label, { project: project.name })}
+									class="link print-href text-muted"
+								>
+									{t.projects.repository}
+								</a>
+							</li>
+						</ul>
+					</li>
+				))}
+			</ul>
+		</LabelledSection>
+
+		<!-- past projects -->
+		<LabelledSection id="past" label={t.projects.past} rise={3}>
+			<ul class="flex flex-col gap-6">
+				{past.map((project) => {
+					const note = project.deprecated ? t.projects.deprecated : project.role && t.projects.roles[project.role];
+
+					return (
+						<li class="flex flex-col gap-1">
+							<div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+								<h3 class="text-lg/snug">
+									<a href={project.repository} class:list={['link print-href', { 'text-muted': project.deprecated }]}>{project.name}</a>
+								</h3>
+								{note && <span class="font-mono text-xs text-faint">{note}</span>}
+							</div>
+							<p class="text-base text-pretty text-muted">{project.description}</p>
+						</li>
+					);
+				})}
+			</ul>
+		</LabelledSection>
+
+		<!-- activity -->
+		{contributions.length > 0 && <ContributionGraph contributions={contributions} rise={4} />}
+	</div>
+</PageLayout>

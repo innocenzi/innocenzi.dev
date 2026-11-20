@@ -1,0 +1,37 @@
+---
+import EntryLink from '../../components/entry_link.astro';
+import LabelledSection from '../../components/labelled_section.astro';
+import PageHeading from '../../components/page_heading.astro';
+import { getSnippetGroups, snippetDetails } from '../../data/entries';
+import { documentTitle, t } from '../../i18n';
+import PageLayout from '../../layouts/page_layout.astro';
+
+const groups = await getSnippetGroups();
+
+// Without snippets, the heading is all the page shows.
+const empty = groups.length === 0;
+---
+
+<PageLayout title={documentTitle(t.snippets.title)} description={t.snippets.description} path="snippets/" centered={empty}>
+	<!-- header -->
+	<PageHeading title={t.snippets.title} intro={t.snippets.description} centered={empty} />
+
+	<!-- snippets -->
+	{!empty && (
+		<div class="mt-16">
+			{groups.map(({ name, snippets }, index) => (
+				<LabelledSection id={`group-${index}`} label={name} rise={Math.min(index + 2, 7)}>
+					<ul class="flex flex-col gap-7">
+						{snippets.map((snippet) => (
+							<li>
+								<EntryLink href={`/snippets/${snippet.id}/`} title={snippet.data.name} description={snippet.data.description}>
+									{snippetDetails(snippet)}
+								</EntryLink>
+							</li>
+						))}
+					</ul>
+				</LabelledSection>
+			))}
+		</div>
+	)}
+</PageLayout>

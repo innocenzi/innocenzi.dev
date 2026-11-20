@@ -1,0 +1,57 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { render } from 'astro:content';
+
+import EntryHeader from '../../components/entry_header.astro';
+import LabelledSection from '../../components/labelled_section.astro';
+import Prose from '../../components/prose.astro';
+import { getSnippetGroups } from '../../data/entries';
+import { documentTitle, format, t } from '../../i18n';
+import PageLayout from '../../layouts/page_layout.astro';
+
+export const getStaticPaths = (async () => {
+	const groups = await getSnippetGroups();
+
+	return groups.flatMap(({ name, snippets }) =>
+		snippets.map((snippet) => ({
+			params: { slug: snippet.id },
+			props: { snippet, group: name, related: snippets.filter(({ id }) => id !== snippet.id) },
+		})),
+	);
+}) satisfies GetStaticPaths;
+
+const { snippet, group, related } = Astro.props;
+
+const { Content } = await render(snippet);
+---
+
+<PageLayout title={documentTitle(snippet.data.name)} description={snippet.data.description} path={`snippets/${snippet.id}/`}>
+	<article>
+		<!-- header -->
+		<EntryHeader parent={{ href: '/snippets/', text: t.navigation.snippets }} title={snippet.data.name} description={snippet.data.description}>
+			<span>{group}</span>
+		</EntryHeader>
+
+		<!-- content -->
+		<div class="animate-rise mt-14" style="--rise: 3">
+			<Prose><Content /></Prose>
+		</div>
+	</article>
+
+	<!-- related snippets -->
+	{related.length > 0 && (
+		<div class="mt-18 print:hidden">
+			<LabelledSection id="related" label={format(t.snippets.related, { group })} rise={4} compact>
+				<ul class="flex flex-col gap-2.5 text-lg/snug">
+					{related.map(({ id, data }) => (
+						<li>
+							<a href={`/snippets/${id}/`} class="group block">
+								<span class="link-title text-pretty">{data.name}</span>
+							</a>
+						</li>
+					))}
+				</ul>
+			</LabelledSection>
+		</div>
+	)}
+</PageLayout>

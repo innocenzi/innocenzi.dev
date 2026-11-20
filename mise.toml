@@ -1,0 +1,27 @@
+[env]
+_.path = ["./node_modules/.bin"]
+
+[tasks.install]
+description = "Install dependencies"
+run = "bun install"
+
+[tasks.dev]
+description = "Start the dev server"
+run = "astro dev"
+
+[tasks.build]
+description = "Build the site"
+run = "astro build"
+
+[tasks.check]
+description = "Type-check the site"
+run = "astro check"
+
+[tasks.preview]
+description = "Preview the built site"
+run = "astro preview"
+
+[tasks.deploy]
+description = "Build and deploy the site to Cloudflare"
+depends = ["build"]
+run = "wrangler deploy"

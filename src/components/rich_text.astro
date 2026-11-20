@@ -1,0 +1,24 @@
+---
+import { formatParts } from '../i18n';
+
+interface Props {
+	// A translation with `{key}` placeholders.
+	template: string;
+	links: Record<string, { href: string; text: string }>;
+
+	// For muted text, so its links don't stand out in the ink.
+	linkClass?: string;
+}
+
+const { template, links, linkClass = 'text-ink' } = Astro.props;
+---
+
+{formatParts(template).map((part) => {
+	if ('text' in part) {
+		return part.text;
+	}
+
+	const link = links[part.key];
+
+	return link ? <a href={link.href} class:list={['link', linkClass]}>{link.text}</a> : `{${part.key}}`;
+})}

@@ -2,32 +2,29 @@
 	"name": "innocenzi-dev",
 	"type": "module",
 	"private": true,
-	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+	"packageManager": "bun@1.4.2",
+	"engines": {
+		"node": ">=22.23.4"
 	},
 	"dependencies": {
-		"@iconify-json/tabler": "^1.2.26",
-		"@nuxt/content": "3.8.2",
-		"@nuxt/hints": "1.0.0-alpha.2",
-		"@nuxt/image": "2.0.0",
-		"@nuxt/ui": "4.2.1",
-		"@nuxtjs/color-mode": "^4.0.0",
-		"@tailwindcss/vite": "^4.1.18",
-		"@vueuse/core": "^12.8.2",
-		"better-sqlite3": "^12.5.0",
-		"date-fns": "^4.1.0",
-		"nuxt": "^4.2.2",
-		"tailwindcss": "^4.1.18",
-		"typescript": "^5.9.3",
-		"vue": "^3.5.26",
-		"vue-router": "^4.6.4",
-		"zod": "^4.3.5"
+		"@astrojs/markdown-satteri": "^0.4.10",
+		"@astrojs/rss": "^4.0.19",
+		"@astrojs/sitemap": "^3.7.6",
+		"@fontsource/ia-writer-quattro": "^5.3.0",
+		"@fontsource/instrument-serif": "^5.3.0",
+		"@fontsource/jetbrains-mono": "^5.3.0",
+		"@resvg/resvg-js": "^2.6.2",
+		"@tailwindcss/vite": "^4.3.5",
+		"astro": "^7.4.13",
+		"satori": "^0.63.2",
+		"shiki": "^4.6.0",
+		"tailwindcss": "^4.3.5"
 	},
 	"devDependencies": {
-		"dprint": "^0.51.1"
+		"@astrojs/check": "^0.9.12",
+		"@types/hast": "^3.0.5",
+		"satteri": "^0.11.7",
+		"typescript": "^6.0.3",
+		"wrangler": "^4.165.0"
 	}
 }

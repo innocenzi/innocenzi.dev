@@ -1,0 +1,20 @@
+---
+interface Props {
+	title: string;
+	intro?: string;
+
+	// Centres the heading, for a page that has nothing else to show.
+	centered?: boolean;
+}
+
+const { title, intro, centered = false } = Astro.props;
+---
+
+<header class:list={{ 'text-center': centered }}>
+	<!-- title -->
+	<h1 class="animate-rise font-serif text-title">{title}</h1>
+	<!-- intro -->
+	<p class:list={['animate-rise mt-4 max-w-xl text-lede text-pretty text-muted', { 'mx-auto': centered }]} style="--rise: 1">
+		<slot>{intro}</slot>
+	</p>
+</header>

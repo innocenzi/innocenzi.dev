@@ -1,0 +1,20 @@
+---
+interface Props {
+	href: string;
+	title: string;
+	description: string;
+}
+
+const { href, title, description } = Astro.props;
+---
+
+<a href={href} class="group flex flex-col gap-1.5">
+	<span class="flex items-baseline justify-between gap-6">
+		<!-- title -->
+		<span class="link-title min-w-0 text-item text-pretty underline-offset-5">{title}</span>
+		<!-- details -->
+		<span class="shrink-0 font-mono text-xs whitespace-nowrap text-faint tabular-nums"><slot /></span>
+	</span>
+	<!-- description -->
+	<span class="text-summary text-pretty text-muted">{description}</span>
+</a>

@@ -1,0 +1,52 @@
+---
+import { t } from '../i18n';
+import Signature from './signature.astro';
+
+const navigation = [
+	{ key: 'about', href: '/' },
+	{ key: 'blog', href: '/blog/' },
+	{ key: 'projects', href: '/projects/' },
+	{ key: 'snippets', href: '/snippets/' },
+	{ key: 'uses', href: '/uses/' },
+] as const;
+
+const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const isHome = pathname === '/';
+
+// A section's link is current on its posts or snippets too, but only its own page is the page.
+function current(href: string): 'page' | 'true' | undefined {
+	if (href === pathname) {
+		return 'page';
+	}
+
+	return href !== '/' && pathname.startsWith(href) ? 'true' : undefined;
+}
+---
+
+<header class="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
+	<!-- signature -->
+	<!-- It persists across navigations, so it is only written out on the page a visit starts on, if that is home. -->
+	<a href="/" aria-label={t.home_link_label} class="text-ink" transition:persist="signature">
+		<Signature class="h-9 w-auto" animate={isHome} />
+	</a>
+	<!-- navigation -->
+	<nav aria-label={t.navigation.label} class="print:hidden">
+		<ul class="flex flex-wrap gap-x-6 gap-y-2 font-mono text-nav">
+			{navigation.map(({ key, href }) => {
+				const state = current(href);
+
+				return (
+					<li>
+						<a
+							href={href}
+							aria-current={state}
+							class:list={['transition-colors hover:text-ink', state ? 'text-ink' : 'text-muted']}
+						>
+							{t.navigation[key]}
+						</a>
+					</li>
+				);
+			})}
+		</ul>
+	</nav>
+</header>

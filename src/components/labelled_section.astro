@@ -1,0 +1,25 @@
+---
+interface Props {
+	id: string;
+	label: string;
+
+	// Its place in the order blocks reveal in, see `animate-rise`.
+	rise: number;
+
+	// Tighter rows, for the home page and the links below posts and snippets.
+	compact?: boolean;
+}
+
+const { id, label, rise, compact = false } = Astro.props;
+---
+
+<section
+	aria-labelledby={id}
+	class:list={['animate-rise flex flex-col gap-3 last:pb-0', compact ? 'py-6' : 'py-7']}
+	style={`--rise: ${rise}`}
+>
+	<h2 id={id} class="font-mono text-xs/normal text-faint">{label}</h2>
+	<div>
+		<slot />
+	</div>
+</section>

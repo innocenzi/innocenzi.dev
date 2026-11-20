@@ -1,0 +1,70 @@
+---
+import { type Contribution, toCalendar } from '../data/contributions';
+import { format, formatDate, locale, plural, t } from '../i18n';
+
+interface Props {
+	contributions: Contribution[];
+
+	// Its place in the order blocks reveal in, see `animate-rise`.
+	rise: number;
+}
+
+const { contributions, rise } = Astro.props;
+
+const { weeks, months, total } = toCalendar(contributions);
+
+// In SVG user units. The graph scales to the column's width.
+const block = 9;
+const step = block + 3;
+const labelHeight = 19;
+const width = weeks.length * step - 3;
+const height = labelHeight + 7 * step - 3;
+
+// Level 0 to 4, as GitHub computes them.
+const levels = ['fill-level-0', 'fill-level-1', 'fill-level-2', 'fill-level-3', 'fill-level-4'];
+---
+
+<section aria-labelledby="activity" class="animate-rise flex flex-col gap-3 py-7 last:pb-0" style={`--rise: ${rise}`}>
+	<div class="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2.5">
+		<!-- title -->
+		<h2 id="activity" class="font-mono text-xs/normal text-faint">{t.projects.contributions.title}</h2>
+		<!-- total -->
+		<p class="text-summary text-pretty text-muted sm:leading-none">
+			{format(plural(t.projects.contributions.total, total), { count: new Intl.NumberFormat(locale).format(total) })}
+		</p>
+	</div>
+
+	<!-- calendar -->
+	<!-- Right to left, so narrow screens start scrolled to the latest weeks. -->
+	<div
+		dir="rtl"
+		tabindex="0"
+		role="img"
+		aria-label={t.projects.contributions.label}
+		class="overflow-x-auto rounded-sm pb-1 focus-visible:outline-1 focus-visible:outline-faint"
+	>
+		<div dir="ltr" class="min-w-2xl">
+			<svg viewBox={`0 0 ${width} ${height}`} aria-hidden="true" class="block h-auto w-full">
+				<!-- months -->
+				<g class="fill-faint font-mono" font-size="11">
+					{months.map(({ week, label }) => <text x={week * step} y="11">{label}</text>)}
+				</g>
+				<!-- days -->
+				{weeks.map((days, week) => days.map((day, weekday) => day && (
+					<rect x={week * step} y={labelHeight + weekday * step} width={block} height={block} rx="2" class={levels[day.level]}>
+						<title>{format(plural(t.projects.contributions.day, day.count), { count: day.count, date: formatDate(new Date(day.date)) })}</title>
+					</rect>
+				)))}
+			</svg>
+		</div>
+	</div>
+
+	<!-- legend -->
+	<p class="flex items-center justify-end gap-2 font-mono text-xs text-faint" aria-hidden="true">
+		{t.projects.contributions.less}
+		<svg viewBox={`0 0 ${levels.length * step - 3} ${block}`} class="h-2.5 w-auto">
+			{levels.map((level, index) => <rect x={index * step} width={block} height={block} rx="2" class={level} />)}
+		</svg>
+		{t.projects.contributions.more}
+	</p>
+</section>

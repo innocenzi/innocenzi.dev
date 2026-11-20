@@ -1,0 +1,252 @@
+@import "tailwindcss";
+@import "@fontsource/ia-writer-quattro/400.css";
+@import "@fontsource/ia-writer-quattro/400-italic.css";
+@import "@fontsource/ia-writer-quattro/700.css";
+@import "@fontsource/instrument-serif/400.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "./prose.css";
+
+/* Posts and snippets may use utility classes inline. */
+@source "../content";
+
+/* The dark palette. The light one overrides it below. Keep in sync with `COLOURS` in src/logo/logo.ts. */
+@theme {
+	--color-ground: #0b0b0d;
+	--color-ink: #edebe7;
+	--color-body: #c9c7cd;
+	--color-muted: #a3a1a8;
+	--color-faint: #868490;
+	--color-line: #1f1e23;
+	--color-rule: #4a4850;
+	--color-accent: #f0a6b6;
+
+	/* Code sits in a well: the page, dimmed, with its texture showing through. */
+	--color-well: rgb(0 0 0 / 0.32);
+
+	/* Contribution levels, from none to most. */
+	--color-level-0: #1c1b20;
+	--color-level-1: #4d3139;
+	--color-level-2: #7f4a59;
+	--color-level-3: #b86f83;
+	--color-level-4: #f0a6b6;
+
+	/* Syntax highlighting, through Shiki's CSS variables theme. */
+	--color-code-keyword: #a3a1a8;
+	--color-code-type: #ffc799;
+	--color-code-string: #99ffe4;
+	--color-code-comment: #8f8d94;
+
+	--font-sans: "iA Writer Quattro", ui-sans-serif, system-ui, sans-serif;
+	--font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+	--font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+	--text-caption: 0.75rem;
+	--text-caption--line-height: 1.7;
+	--text-nav: 0.8125rem;
+	--text-code: 0.84375rem;
+	--text-code--line-height: 1.7;
+	--text-inline-code: 0.9375rem;
+	--text-note: 0.9375rem;
+	--text-note--line-height: 1.5;
+	--text-summary: 1.0625rem;
+	--text-summary--line-height: 1.55;
+	--text-prose: 1.1875rem;
+	--text-prose--line-height: 1.7;
+	--text-lede: 1.25rem;
+	--text-lede--line-height: 1.55;
+	--text-item: 1.3125rem;
+	--text-item--line-height: 1.35;
+	--text-tagline: clamp(1.1875rem, 2vw, 1.3125rem);
+	--text-tagline--line-height: 1.5;
+	--text-heading: 1.625rem;
+	--text-heading--line-height: 1.25;
+	--text-heading--letter-spacing: -0.01em;
+	--text-headline: clamp(2.25rem, 4.6vw, 3.25rem);
+	--text-headline--line-height: 1.05;
+	--text-headline--letter-spacing: -0.01em;
+	--text-title: clamp(2.75rem, 5.4vw, 3.75rem);
+	--text-title--line-height: 1.04;
+	--text-title--letter-spacing: -0.01em;
+	--text-name: clamp(3.25rem, 6.4vw, 4.5rem);
+	--text-name--line-height: 1;
+	--text-name--letter-spacing: -0.01em;
+
+	--container-page: 46rem;
+
+	--radius-code: 0.625rem;
+}
+
+@layer base {
+	html {
+		color-scheme: dark;
+		scrollbar-color: var(--color-rule) var(--color-ground);
+		scrollbar-width: thin;
+		scrollbar-gutter: stable;
+
+		/* The texture over the ground. The light theme multiplies it instead. */
+		--grain-opacity: 0.1;
+		--grain-blend: screen;
+
+		--shiki-foreground: var(--color-ink);
+		--shiki-token-keyword: var(--color-code-keyword);
+		--shiki-token-function: var(--color-code-type);
+		--shiki-token-constant: var(--color-code-type);
+		--shiki-token-parameter: var(--color-ink);
+		--shiki-token-string: var(--color-code-string);
+		--shiki-token-string-expression: var(--color-code-string);
+		--shiki-token-link: var(--color-code-string);
+		--shiki-token-punctuation: var(--color-code-keyword);
+		--shiki-token-comment: var(--color-code-comment);
+	}
+
+	/* Printouts take the light palette too, see the print styles below. */
+	@media (prefers-color-scheme: light), print {
+		:root {
+			color-scheme: light;
+
+			--color-ground: #f5f3ef;
+			--color-ink: #1a191c;
+			--color-body: #2f2d33;
+			--color-muted: #55525a;
+			--color-faint: #6b6871;
+			--color-line: #e3e0da;
+			--color-rule: #bdb9b2;
+
+			/* The design's #c2416a is 4.45:1 on the ground; this one passes WCAG AA. */
+			--color-accent: #b8385f;
+
+			--color-well: rgb(70 50 30 / 0.055);
+
+			--color-level-0: #e6e2dc;
+			--color-level-1: #f2c9d3;
+			--color-level-2: #e391a7;
+			--color-level-3: #cc5679;
+			--color-level-4: #a8325a;
+
+			--color-code-keyword: #615e67;
+			--color-code-type: #9a4f12;
+			--color-code-string: #17725a;
+			--color-code-comment: #615e67;
+
+			--grain-opacity: 0.07;
+			--grain-blend: multiply;
+		}
+	}
+
+	::selection {
+		background: var(--color-accent);
+		color: var(--color-ground);
+	}
+
+	/* Behind the content, over the ground. The noise tiles seamlessly. */
+	body::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		opacity: var(--grain-opacity);
+		mix-blend-mode: var(--grain-blend);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+	}
+
+	/* Older Safari, which lacks `scrollbar-color`. */
+	@supports not (scrollbar-color: auto) {
+		::-webkit-scrollbar {
+			width: 0.5rem;
+			height: 0.5rem;
+		}
+
+		::-webkit-scrollbar-track {
+			background: var(--color-ground);
+		}
+
+		::-webkit-scrollbar-thumb {
+			border-radius: 9999px;
+			background: var(--color-rule);
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: var(--color-faint);
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes draw {
+		from {
+			stroke-dashoffset: 1;
+		}
+	}
+
+	@keyframes rise {
+		from {
+			opacity: 0;
+			filter: blur(0.25rem);
+			transform: translateY(0.375rem);
+		}
+	}
+}
+
+/* Strokes need `pathLength="1"`. Set `--draw-delay` and `--draw-duration` on each. */
+@utility animate-draw {
+	stroke-dasharray: 1;
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: draw var(--draw-duration, 1600ms) cubic-bezier(0.5, 0, 0.3, 1) var(--draw-delay, 0ms) both;
+	}
+}
+
+/* Set `--rise` to the block's order on the page. */
+@utility animate-rise {
+	@media (prefers-reduced-motion: no-preference) {
+		animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+		animation-delay: calc(var(--rise, 0) * 90ms);
+	}
+}
+
+@utility link {
+	text-decoration-line: underline;
+	text-decoration-color: var(--color-rule);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+	transition-property: text-decoration-color;
+	transition-duration: 150ms;
+
+	&:hover {
+		text-decoration-color: var(--color-accent);
+	}
+}
+
+/* Underlined in the accent when its `group` is hovered or focused, for links whose whole row is the target. */
+@utility link-title {
+	text-decoration-line: underline;
+	text-decoration-color: transparent;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+	transition-property: text-decoration-color;
+	transition-duration: 150ms;
+
+	:where(.group):is(:hover, :focus-visible) & {
+		text-decoration-color: var(--color-accent);
+	}
+}
+
+/* Printouts take the light palette from the base styles, on white paper and without texture. */
+@media print {
+	:root {
+		--color-ground: #ffffff;
+	}
+
+	body::before {
+		display: none;
+	}
+}
+
+@utility print-href {
+	@media print {
+		&::after {
+			content: " (" attr(href) ")";
+		}
+	}
+}
