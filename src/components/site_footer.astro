@@ -3,8 +3,7 @@ import { me } from '../data/me';
 import { t } from '../i18n';
 
 const links = [
-	...me.socials.map(({ network, url }) => ({ href: url, text: network.toLowerCase() })),
-	{ href: `mailto:${me.email}`, text: t.elsewhere.email },
+	...me.socials.map(({ network, label, url }) => ({ href: url, text: label ?? network.toLowerCase() })),
 	{ href: '/blog/rss.xml', text: t.elsewhere.feed },
 ];
 ---

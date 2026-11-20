@@ -12,7 +12,7 @@ tags: ["Debugging", "Browser"]
 	const COLOR_HUE = 190 // hue in HSL (https://hslpicker.com)
 	const MAX_ROTATION = 180 // set to 360 to rotate all the way round
 	const THICKNESS = 20 // thickness of layers
-	const DISTANCE = 10000 // ¯\\_(ツ)_/¯
+	const DISTANCE = 10000 // ¯\_(ツ)_/¯
 
 	function getRandomColor() {
 		const hue = Math.floor(Math.random() * 360)

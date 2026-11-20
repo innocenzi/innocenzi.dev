@@ -10,7 +10,7 @@
 
 - Posts live in `src/content/blog/`, snippets in `src/content/snippets/`. Their file names are their URLs, so renaming one breaks links. Collections and frontmatter are defined in `src/content.config.ts`. GitHub contributions are a collection too: its loader in `src/data/contributions.ts` fetches them when the dev server starts or the site builds, at most once an hour, and keeps the last successful fetch.
 - Code blocks take a file name in brackets, as in ```` ```php [config/filesystems.php] ````. Wrap consecutive blocks in `:::code-group` and `:::` to show them as tabs.
-- Projects, hardware and software are in `src/data/`. `src/data/me.ts` holds personal facts: name, email, social accounts and the links in the home and projects text. `src/data/entries.ts` sorts posts and groups snippets.
+- Projects, hardware and software are in `src/data/`. `src/data/me.ts` holds personal facts: name, social accounts, the links in the home and projects text, and the security contact, which appears only in `security.txt`. `src/data/entries.ts` sorts posts and groups snippets.
 
 ## Design
 

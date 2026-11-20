@@ -48,6 +48,11 @@
 			box-decoration-break: clone;
 		}
 
+		/* Path segments, see src/markdown/inline_code_paths.ts. */
+		& .code-segment {
+			@apply whitespace-nowrap;
+		}
+
 		/* Links already underline their code. */
 		& a > code {
 			@apply bg-transparent p-0;
@@ -121,8 +126,7 @@
 		}
 
 		& .code-block-copy {
-			@apply flex shrink-0 cursor-pointer items-center gap-1.5 rounded-sm font-mono text-caption text-faint transition-colors hover:text-ink;
-			@apply focus-visible:text-ink focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-faint;
+			@apply flex shrink-0 cursor-pointer items-center gap-1.5 rounded-sm font-mono text-caption text-faint transition-colors hover:text-ink focus-visible:text-ink;
 
 			& svg {
 				@apply size-3.5;
@@ -132,10 +136,6 @@
 		& pre {
 			@apply basis-full overflow-x-auto rounded-code bg-well px-6 py-5.5 font-mono text-code text-ink;
 			tab-size: 4;
-
-			&:focus-visible {
-				@apply outline-1 outline-offset-2 outline-faint;
-			}
 		}
 
 		& .code-group {
@@ -175,14 +175,10 @@
 		}
 
 		& [role="tab"] {
-			@apply cursor-pointer font-mono text-caption whitespace-nowrap text-faint transition-colors hover:text-muted;
+			@apply cursor-pointer rounded-sm font-mono text-caption whitespace-nowrap text-faint transition-colors hover:text-muted;
 
 			&[aria-selected="true"] {
 				@apply text-ink;
-			}
-
-			&:focus-visible {
-				@apply rounded-sm outline-1 outline-offset-2 outline-faint;
 			}
 		}
 	}

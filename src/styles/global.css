@@ -138,6 +138,11 @@
 		color: var(--color-ground);
 	}
 
+	:focus-visible {
+		outline: 1px solid var(--color-faint);
+		outline-offset: 2px;
+	}
+
 	/* Behind the content, over the ground. The noise tiles seamlessly. */
 	body::before {
 		content: "";

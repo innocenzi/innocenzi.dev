@@ -8,9 +8,9 @@ I've been working on a project called [Hybridly](https://github.com/hybridly), b
 
 I wanted to rebrand the project, but I didn't like the idea of having one big commit with a big search-and-replace. That would disrupt the history and cause trouble when using `git blame`.
 
-The first thing I tried was a `git rebase -i` on the first commit - but that proved very tedious and I don't like manual work. So when looking for other solutions, I stumbled upon [`git-filter-repo`](https://github.com/newren/git-filter-repo), a tool for rewriting Git history. Exactly what I needed.
+The first thing I tried was a `git rebase -i` on the first commit—but that proved very tedious and I don't like manual work. So when looking for other solutions, I stumbled upon [`git-filter-repo`](https://github.com/newren/git-filter-repo), a tool for rewriting Git history. Exactly what I needed.
 
-After installing it with `brew install git-filter-repo`, this simple one-liner solved all my problems:
+After installing it with `brew install git-filter-repo`, this single command solved all my problems:
 
 ```sh
 git filter-repo \
@@ -19,4 +19,4 @@ git filter-repo \
   --force
 ```
 
-Basically, it goes over all the commits, and replace both `Monolikit` and `monolikit` with the new name.
+Basically, it goes over all the commits and replaces `monolikit`, `Monolikit` and `MONOLIKIT` with the new name.

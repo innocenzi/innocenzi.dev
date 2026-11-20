@@ -3,6 +3,7 @@ import '../styles/global.css';
 
 import quattroRegular from '@fontsource/ia-writer-quattro/files/ia-writer-quattro-latin-400-normal.woff2?url';
 import quattroBold from '@fontsource/ia-writer-quattro/files/ia-writer-quattro-latin-700-normal.woff2?url';
+import serifRegular from '@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2?url';
 import monoRegular from '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2?url';
 import { ClientRouter } from 'astro:transitions';
 
@@ -27,7 +28,7 @@ const canonicalUrl = new URL(path, Astro.site);
 const socialCardUrl = new URL(`${path}og.png`, Astro.site);
 const feedUrl = new URL('blog/rss.xml', Astro.site);
 
-const fonts = [quattroRegular, quattroBold, monoRegular];
+const fonts = [quattroRegular, quattroBold, serifRegular, monoRegular];
 
 const structuredData = {
 	'@context': 'https://schema.org',
@@ -37,7 +38,6 @@ const structuredData = {
 			'@type': 'Person',
 			name: me.name,
 			url: Astro.site,
-			email: `mailto:${me.email}`,
 			sameAs: me.socials.map(({ url }) => url),
 		},
 	],
@@ -53,6 +53,7 @@ const structuredData = {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="author" content={me.name} />
+		<meta name="color-scheme" content="dark light" />
 		<meta name="theme-color" content={COLOURS.ground} media="(prefers-color-scheme: dark)" />
 		<meta name="theme-color" content={COLOURS.lightGround} media="(prefers-color-scheme: light)" />
 		<meta name="generator" content={Astro.generator} />

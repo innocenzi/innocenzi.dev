@@ -7,6 +7,7 @@ import { createCssVariablesTheme } from 'shiki/core';
 import { codeBlocks } from './src/markdown/code_blocks';
 import { codeGroupDirective, codeGroups } from './src/markdown/code_groups';
 import { headingAnchors } from './src/markdown/heading_anchors';
+import { inlineCodePaths } from './src/markdown/inline_code_paths';
 
 export default defineConfig({
 	site: 'https://innocenzi.dev',
@@ -26,7 +27,7 @@ export default defineConfig({
 		processor: satteri({
 			features: { directive: true },
 			mdastPlugins: [codeGroupDirective],
-			hastPlugins: [codeGroups, headingAnchors],
+			hastPlugins: [codeGroups, headingAnchors, inlineCodePaths],
 		}),
 	},
 

@@ -17,7 +17,6 @@
 	},
 	"elsewhere": {
 		"label": "Elsewhere",
-		"email": "email",
 		"feed": "rss"
 	},
 	"home": {

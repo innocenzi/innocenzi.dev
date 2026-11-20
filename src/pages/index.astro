@@ -10,10 +10,7 @@ const links = Object.fromEntries(Object.entries(t.home.links).map(([key, text]) 
 
 const posts = (await getPosts()).slice(0, 3);
 
-const elsewhere = [
-	...me.socials.map(({ network, handle, url }) => ({ network: network.toLowerCase(), handle, href: url })),
-	{ network: t.elsewhere.email, handle: me.email, href: `mailto:${me.email}` },
-];
+const elsewhere = me.socials.map(({ network, handle, url }) => ({ network: network.toLowerCase(), handle, href: url }));
 ---
 
 <PageLayout path="" centered footer={false}>

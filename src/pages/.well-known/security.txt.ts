@@ -10,7 +10,7 @@ export const GET: APIRoute = ({ site }) => {
 	expires.setUTCHours(0, 0, 0, 0);
 
 	const lines = [
-		`Contact: mailto:${me.email}`,
+		`Contact: mailto:${me.securityEmail}`,
 		`Expires: ${expires.toISOString()}`,
 		`Preferred-Languages: ${locale}`,
 		`Canonical: ${new URL('.well-known/security.txt', site)}`,

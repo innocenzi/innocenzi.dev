@@ -1,10 +1,10 @@
 ---
 title: Managing files using Laravel’s scoped driver
-description: Back in september 2022, a new “scoped” filesystem driver has been introduced to Laravel. This article shows how to use it to improve file management and refactoring.
+description: Back in September 2022, a new “scoped” filesystem driver was introduced to Laravel. This article shows how to use it to improve file management and refactoring.
 date: 2023-04-13
 ---
 
-Back in september 2022, [Frank de Jonge](https://twitter.com/frankdejonge) introduced a new [scoped](https://github.com/laravel/framework/pull/44105) filesystem driver to Laravel.
+Back in September 2022, [Frank de Jonge](https://twitter.com/frankdejonge) introduced a new [scoped](https://github.com/laravel/framework/pull/44105) filesystem driver to Laravel.
 
 This driver works by extending an existing disk and configuring a <span class="whitespace-pre">`prefix`,</span> which would be a path to a directory in the extended disk.
 
@@ -18,7 +18,7 @@ This driver works by extending an existing disk and configuring a <span class="w
     // ...
     'throw' => false,
 ],
-'s3_videos' =>
+'s3_videos' => [
     'driver' => 'scoped', // This is the new scoped driver!
     'disk' => 's3',       // It uses the `s3` disk above
     'prefix' => 'path/for/videos',
@@ -27,7 +27,7 @@ This driver works by extending an existing disk and configuring a <span class="w
 
 ## The issue with using a single disk
 
-Usually, you would use the `Storage` facade and either specify a disk (eg. `s3`, `local`) or let Laravel use the globally-configured one:
+Usually, you would use the `Storage` facade and either specify a disk (e.g. `s3`, `local`) or let Laravel use the globally-configured one:
 
 ```php
 // Using FILESYSTEM_DISK=local

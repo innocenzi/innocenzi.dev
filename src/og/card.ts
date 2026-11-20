@@ -14,7 +14,7 @@ const host = new URL(import.meta.env.SITE).host;
 // Satori reads WOFF but not WOFF2 or variable fonts.
 const fonts = await Promise.all([
 	loadFont('iA Writer Quattro', '@fontsource/ia-writer-quattro/files/ia-writer-quattro-latin-400-normal.woff', 400),
-	loadFont('iA Writer Quattro', '@fontsource/ia-writer-quattro/files/ia-writer-quattro-latin-700-normal.woff', 700),
+	loadFont('Instrument Serif', '@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff', 400),
 	loadFont('JetBrains Mono', '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff', 400),
 ]);
 
@@ -64,11 +64,10 @@ export async function renderSocialCard({ title, description, date }: SocialCard)
 									style: {
 										display: 'block',
 										lineClamp: 2,
-										fontFamily: 'iA Writer Quattro',
-										fontWeight: 700,
-										fontSize: 60,
-										lineHeight: 1.15,
-										letterSpacing: -1.2,
+										fontFamily: 'Instrument Serif',
+										fontSize: 76,
+										lineHeight: 1.04,
+										letterSpacing: -0.76,
 										color: COLOURS.ink,
 									},
 									children: title,
@@ -79,7 +78,7 @@ export async function renderSocialCard({ title, description, date }: SocialCard)
 								props: {
 									style: {
 										display: 'block',
-										lineClamp: 3,
+										lineClamp: 2,
 										marginTop: 24,
 										fontFamily: 'iA Writer Quattro',
 										fontSize: 32,
