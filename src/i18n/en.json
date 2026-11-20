@@ -21,7 +21,7 @@
 		"feed": "rss"
 	},
 	"home": {
-		"tagline": "A software engineer and open-source contributor.",
+		"tagline": "Software engineer and open-source contributor",
 		"sections": {
 			"about": "about",
 			"now": "now",
